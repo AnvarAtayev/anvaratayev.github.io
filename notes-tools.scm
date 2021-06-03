@@ -91,9 +91,9 @@
         (!document 
             (title ,(if (null? title) "(no title)" (car title)))
             (link (@ (rel "alternate") (type "text/html") (hreflang "en") (href 
-                ,(string-append "http://texmacs.github.io/notes/docs/" 
+                ,(string-append "http://anvaratayev.github.io/notes/docs/" 
                                 (string-drop-right file 3) ".html" ))))
-            (id ,(string-append "texmacs.github.io/notes/" file ":" 
+            (id ,(string-append "anvaratayev.github.io/notes/" file ":" 
                                 (strftime "%Y-%m-%dT%H:%M:%SZ"  (localtime mdate "UTC"))))
             (updated   ,(strftime "%Y-%m-%dT%H:%M:%SZ"  (localtime mdate "UTC")))
             (published ,(strftime "%Y-%m-%dT%H:%M:%SZ"  (localtime cdate "UTC")))
@@ -105,18 +105,19 @@
         `(*TOP* (!document 
             (*PI* xml "version=\"1.0\" encoding=\"utf-8\"") 
             (feed (@ (xmlns "http://www.w3.org/2005/Atom") (xml:lang "en")) (!document
-                (title "Notes on TeXmacs")
+                (title "
+                Notes on TeXmacs")
                 (link (@ (rel "alternate") (type "text/html") 
-                         (href "http://texmacs.github.io/notes")))
+                         (href "http://anvaratayev.github.io/notes")))
                 (link (@ (rel "self") (type "application/atom+xml") 
-                         (href "http://texmacs.github.io/notes/docs/notes.atom")))
+                         (href "http://anvaratayev.github.io/notes/docs/notes.atom")))
                 (updated ,(strftime "%Y-%m-%dT%H:%M:%SZ"  (gmtime (current-time))))
                 (author (!document
                     (name "The TeXmacs organisation")
                     (uri "http://www.texmacs.org")))
-                (id "texmacs.github.io/notes,2020,1")
-                (icon "http://texmacs.github.io/notes/misc/blog-icon.ico")
-                (logo "http://texmacs.github.io/notes/misc/texmacs-blog-transparent.png")
+                (id "anvaratayev.github.io/notes,2020,1")
+                (icon "http://anvaratayev.github.io/notes/misc/blog-icon.ico")
+                (logo "http://anvaratayev.github.io/notes/misc/texmacs-blog-transparent.png")
                 ,@(map (lambda (entry) (apply make-atom-entry entry)) articles))))))
         (string-append (dest-dir) "/notes.atom")))
 
