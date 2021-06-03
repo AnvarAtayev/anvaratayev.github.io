@@ -1,4 +1,4 @@
-<TeXmacs|1.99.19>
+<TeXmacs|1.99.21>
 
 <style|<tuple|generic|british>>
 
@@ -6,12 +6,7 @@
   <doc-data|<\doc-title>
     <with|font-shape||The Internal Geometry of Crystals -The Feynman Lectures
     on Physics, Volume II>
-  </doc-title>|<doc-author|<author-data|<author-name|Anvarbek
-  Atayev>|<\author-affiliation>
-    University of Warwick
-
-    England
-  </author-affiliation>>>|<doc-subtitle|A Summary>>
+  </doc-title>|<doc-subtitle|A Summary>>
 
   <section|The Internal Geometry of Crystals (30-1)>
 
@@ -264,8 +259,6 @@
     <associate|auto-1|<tuple|1|1>>
     <associate|auto-10|<tuple|9|4>>
     <associate|auto-11|<tuple|9|4>>
-    <associate|auto-12|<tuple|10|?>>
-    <associate|auto-13|<tuple|1|?>>
     <associate|auto-2|<tuple|2|1>>
     <associate|auto-3|<tuple|3|1>>
     <associate|auto-4|<tuple|4|2>>
