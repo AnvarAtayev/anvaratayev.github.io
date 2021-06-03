@@ -6,7 +6,7 @@
   <doc-data|<\doc-title>
     <with|font-shape||The Internal Geometry of Crystals -The Feynman Lectures
     on Physics, Volume II>
-  </doc-title>|<doc-subtitle|Test Change>>
+  </doc-title>|<doc-subtitle|Test Change 3>>
 
   <section|The Internal Geometry of Crystals (30-1)>
 
