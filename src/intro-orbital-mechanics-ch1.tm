@@ -4,30 +4,15 @@
 
 <\body>
   <\wide-tabular>
-    <tformat|<cwith|1|1|2|-1|cell-halign|r>|<table|<row|<\cell>
-      \;
-    </cell>|<\cell>
-      \;
-    </cell>|<\cell>
-      \;
-    </cell>|<\cell>
-      \;
-    </cell>|<\cell>
-      \;
-    </cell>|<\cell>
-      \;
-    </cell>|<\cell>
-      \;
-    </cell>|<\cell>
-      \;
-    </cell>|<\cell>
-      <hlink|Home|main.tm>
-    </cell>|<\cell>
-      <hlink|About|about.tm>
-    </cell>|<\cell>
-      <hlink|Intro to Astrodynamics|intro-orbital-mechanics.tm>
+    <tformat|<table|<row|<\cell>
+      <\wide-tabular>
+        <tformat|<cwith|1|1|1|-1|cell-hyphen|n>|<cwith|1|1|1|-1|cell-halign|c>|<cwith|1|1|1|-1|cell-width|10>|<cwith|1|1|1|-1|cell-hmode|exact>|<table|<row|<cell|<hlink|Home|main.tm>>|<cell|<hlink|About|about.tm>>|<cell|<hlink|Intro
+        to Astrodynamics|intro-orbital-mechanics.tm>>>>>
+      </wide-tabular>
     </cell>>>>
   </wide-tabular>
+
+  \;
 
   <doc-data|<doc-title|Chapter 1 - Basics of Orbital Mechanics>>
 
