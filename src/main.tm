@@ -3,8 +3,6 @@
 <style|<tuple|generic|british>>
 
 <\body>
-  <stlye\|notes>
-
   <doc-data|<doc-title|Hello there!>>
 
   This is a personal blog about myself and a place where I can write about
