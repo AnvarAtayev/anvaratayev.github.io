@@ -3,6 +3,32 @@
 <style|<tuple|generic|british>>
 
 <\body>
+  <\wide-tabular>
+    <tformat|<cwith|1|1|2|-1|cell-halign|r>|<table|<row|<\cell>
+      \;
+    </cell>|<\cell>
+      \;
+    </cell>|<\cell>
+      \;
+    </cell>|<\cell>
+      \;
+    </cell>|<\cell>
+      \;
+    </cell>|<\cell>
+      \;
+    </cell>|<\cell>
+      \;
+    </cell>|<\cell>
+      \;
+    </cell>|<\cell>
+      <hlink|Home|main.tm>
+    </cell>|<\cell>
+      <hlink|About|about.tm>
+    </cell>|<\cell>
+      <hlink|Intro to Astrodynamics|intro-orbital-mechanics.tm>
+    </cell>>>>
+  </wide-tabular>
+
   <doc-data|<doc-title|Introduction to Orbital Mechanics and Astrodynamics>>
 
   In this blog series, we will cover the basics of orbital mechanics and
@@ -14,7 +40,7 @@
   <section*|List of Articles>
 
   1. <hlink|Chapter 1 - Basics of Orbital
-  Mechanics|intro-orbitral-mechanics-ch1.tm>
+  Mechanics|intro-orbital-mechanics-ch1.tm>
 </body>
 
 <\initial>
