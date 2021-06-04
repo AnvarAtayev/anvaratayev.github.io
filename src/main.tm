@@ -11,6 +11,16 @@
   primarily be using<nbsp><hlink|TeXmacs|http://www.texmacs.org/>, and the
   format of this blog is motivated by the blog format developed and described
   at<nbsp><hlink|TeXmacs Notes|https://github.com/texmacs/notes>.
+
+  I will begin my blog with the self-teaching of
+  <with|font-shape|italic|Fundamentals of Astrodynamics> by Roger R Bate,
+  Donald D. Mueller and Jerry E. White. My aims are to slowly progress
+  through the book, making notes where necessary and providing a space
+  formyself to discuss solutions to the problems.
+
+  I hope that, once this book is complete, we can move on to more advanced
+  texts on <with|font-shape|italic|astrodynamics> and
+  <with|font-shape|italic|orbital mechanics>.
 </body>
 
 <\initial>
@@ -18,9 +28,3 @@
     <associate|page-medium|paper>
   </collection>
 </initial>
-
-<\references>
-  <\collection>
-    <associate|auto-1|<tuple|?|?>>
-  </collection>
-</references>
