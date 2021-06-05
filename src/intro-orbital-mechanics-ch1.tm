@@ -224,9 +224,14 @@
   vary with time, i.e. <math|<wide|m|\<dot\>><rsub|i><around*|(|t|)>=0> for
   all <math|t>, and also that body <math|i> does not experience forces other
   than those imposed upon it by graviational forces, i.e.
-  <math|<with|font-series|bold|F><rsub|other><rsup|i>=0>.
+  <math|<with|font-series|bold|F><rsub|other><rsup|i>=0>. Then, Equation
+  <reference|Full Equation of Motion> reduces to
 
-  \;
+  <\equation>
+    <label|Full Equation of Motion><wide|<with|font-series|bold|r>|\<ddot\>><rsub|i>+G<big|sum><rsub|j=1,j\<neq\>i><rsup|N><frac|m<rsub|j>|r<rsub|i,j><rsup|3>><around*|(|<with|font-series|bold|r><rsub|i>-<with|font-series|bold|r><rsub|j>|)><with|font-series|bold|>=0,
+  </equation>
+
+  a much simpler equation, with less varying terms.
 </body>
 
 <\initial>
@@ -237,7 +242,7 @@
 
 <\references>
   <\collection>
-    <associate|Full Equation of Motion|<tuple|7|?>>
+    <associate|Full Equation of Motion|<tuple|8|?>>
     <associate|NL2|<tuple|1|1>>
     <associate|NLG|<tuple|2|1>>
     <associate|Sum Grav Forces|<tuple|3|?>>
