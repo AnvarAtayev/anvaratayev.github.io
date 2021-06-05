@@ -20,7 +20,7 @@
   at<nbsp><hlink|TeXmacs Notes|https://github.com/texmacs/notes>.
 
   I will begin my blog with the <hlink|self-teaching|intro-orbital-mechanics.tm>
-  of <with|font-shape|italic|Fundamentals of Astrodynamics> by Roger R Bate,
+  of <with|font-shape|italic|Fundamentals of Astrodynamics> by Roger R. Bate,
   Donald D. Mueller and Jerry E. White. My aims are to slowly progress
   through the book, making notes where necessary and providing a space
   formyself to discuss solutions to the problems.
