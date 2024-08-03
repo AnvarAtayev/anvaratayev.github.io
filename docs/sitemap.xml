@@ -2,41 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://anvaratayev.github.io/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://anvaratayev.github.io/docs/about/</loc>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
+  </url><url>
+    <loc>https://anvaratayev.github.io/</loc>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/posts/mathematics/fermats_little_theorem/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/posts/general/useful_links/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://anvaratayev.github.io/posts/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/categories/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/tags/combinatorics/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/categories/mathematics/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/tags/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/tags/Tools/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/tags/Utility/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/categories/Utility/</loc>
-    <lastmod>2024-08-02T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
+  </url><url>
+    <loc>https://anvaratayev.github.io/posts/</loc>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url><url>
     <loc>https://anvaratayev.github.io/docs/</loc>
+    <lastmod>2024-08-03T22:46:36+01:00</lastmod>
   </url>
 </urlset>

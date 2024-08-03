@@ -12,6 +12,9 @@ enableGitInfo = true
 # Enable emojis
 enableEmoji = true
 
+# make compatible with github pages
+publishDir = "docs"
+
 # Needed for mermaid/katex shortcodes
 # visit https://gohugo.io/getting-started/configuration-markup/#goldmark for more information
 [markup]
