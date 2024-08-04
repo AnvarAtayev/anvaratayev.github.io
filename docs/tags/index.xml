@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Anvar A.</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://anvaratayev.github.io/tags/</link>
     <description>Recent content in Tags on Anvar A.</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Sat, 03 Aug 2024 22:46:36 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://anvaratayev.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Combinatorics</title>
-      <link>http://localhost:1313/tags/combinatorics/</link>
+      <link>https://anvaratayev.github.io/tags/combinatorics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/combinatorics/</guid>
+      <guid>https://anvaratayev.github.io/tags/combinatorics/</guid>
       <description></description>
     </item>
     <item>
       <title>Tools</title>
-      <link>http://localhost:1313/tags/Tools/</link>
+      <link>https://anvaratayev.github.io/tags/Tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/Tools/</guid>
+      <guid>https://anvaratayev.github.io/tags/Tools/</guid>
       <description></description>
     </item>
     <item>
       <title>Utility</title>
-      <link>http://localhost:1313/tags/Utility/</link>
+      <link>https://anvaratayev.github.io/tags/Utility/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/Utility/</guid>
+      <guid>https://anvaratayev.github.io/tags/Utility/</guid>
       <description></description>
     </item>
   </channel>
