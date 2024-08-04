@@ -14,12 +14,5 @@
       <guid>https://anvaratayev.github.io/posts/mathematics/fermats_little_theorem/</guid>
       <description>This is an oldie, but a cute little trick to solving Fermat&amp;rsquo;s Little Theorem that I came across back when I was an undergraduate. This is a well known proof and can be found in Wikipedia1, although I found this proof in an article posted by Fermat&amp;rsquo;s Library 2.&#xA;Theorem &amp;nbsp;(Fermat&amp;#39;s Little Theorem) If $p$ is a prime number and $p \nmid n$ for $n \in \mathbb{N}$, then $n^p \equiv n \mod p$.</description>
     </item>
-    <item>
-      <title>Useful Links</title>
-      <link>https://anvaratayev.github.io/posts/general/useful_links/</link>
-      <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://anvaratayev.github.io/posts/general/useful_links/</guid>
-      <description>A list of useful links/tools that I have found relating to the construction of this blog, or general matters.&#xA;Hugo Quick Reference Guide Hugo Customisations Adding Footnotes to Hugo </description>
-    </item>
   </channel>
 </rss>
