@@ -2,17 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mathematics on Anvar A.</title>
-    <link>https://anvaratayev.github.io/categories/mathematics/</link>
+    <link>http://localhost:1313/categories/mathematics/</link>
     <description>Recent content in Mathematics on Anvar A.</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 02 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://anvaratayev.github.io/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Even Split in Probability</title>
+      <link>http://localhost:1313/posts/mathematics/20240824_even_split_probability/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mathematics/20240824_even_split_probability/</guid>
+      <description>This is Q18 from 50 Challenging Problems in Probability.&#xA;Q: When 100 coins are tossed, what is the probability that exactly 50 are heads? We wish to determine what is the probability that $\RR$</description>
+    </item>
+    <item>
+      <title>The Discrete Fourier Transform</title>
+      <link>http://localhost:1313/posts/mathematics/20240817_dft/</link>
+      <pubDate>Sat, 17 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mathematics/20240817_dft/</guid>
+      <description> The Fourier Transform # The Discrete Fourier Transform # </description>
+    </item>
     <item>
       <title>Fermat&#39;s Little Theorem</title>
-      <link>https://anvaratayev.github.io/posts/mathematics/20240802_fermats_little_theorem/</link>
+      <link>http://localhost:1313/posts/mathematics/20240802_fermats_little_theorem/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://anvaratayev.github.io/posts/mathematics/20240802_fermats_little_theorem/</guid>
+      <guid>http://localhost:1313/posts/mathematics/20240802_fermats_little_theorem/</guid>
       <description>This is an oldie, but a cute little trick to solving Fermat&amp;rsquo;s Little Theorem that I came across back when I was an undergraduate. This is a well known proof and can be found in Wikipedia1, although I found this proof in an article posted by Fermat&amp;rsquo;s Library 2.&#xA;Theorem &amp;nbsp;(Fermat&amp;#39;s Little Theorem) If $p$ is a prime number and $p \nmid n$ for $n \in \mathbb{N}$, then $n^p \equiv n \mod p$.</description>
     </item>
   </channel>

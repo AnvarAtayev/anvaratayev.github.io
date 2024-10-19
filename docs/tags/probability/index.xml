@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Probability on Anvar A.</title>
+    <link>http://localhost:1313/tags/probability/</link>
+    <description>Recent content in Probability on Anvar A.</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sat, 24 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/probability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Even Split in Probability</title>
+      <link>http://localhost:1313/posts/mathematics/20240824_even_split_probability/</link>
+      <pubDate>Sat, 24 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/mathematics/20240824_even_split_probability/</guid>
+      <description>This is Q18 from 50 Challenging Problems in Probability.&#xA;Q: When 100 coins are tossed, what is the probability that exactly 50 are heads? We wish to determine what is the probability that $\RR$</description>
+    </item>
+  </channel>
+</rss>

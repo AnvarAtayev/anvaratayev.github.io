@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Combinatorics on Anvar A.</title>
-    <link>https://anvaratayev.github.io/tags/combinatorics/</link>
+    <link>http://localhost:1313/tags/combinatorics/</link>
     <description>Recent content in Combinatorics on Anvar A.</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 02 Aug 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://anvaratayev.github.io/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Aug 2024 10:41:47 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/combinatorics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fermat&#39;s Little Theorem</title>
-      <link>https://anvaratayev.github.io/posts/mathematics/20240802_fermats_little_theorem/</link>
+      <link>http://localhost:1313/posts/mathematics/20240802_fermats_little_theorem/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>https://anvaratayev.github.io/posts/mathematics/20240802_fermats_little_theorem/</guid>
+      <guid>http://localhost:1313/posts/mathematics/20240802_fermats_little_theorem/</guid>
       <description>This is an oldie, but a cute little trick to solving Fermat&amp;rsquo;s Little Theorem that I came across back when I was an undergraduate. This is a well known proof and can be found in Wikipedia1, although I found this proof in an article posted by Fermat&amp;rsquo;s Library 2.&#xA;Theorem &amp;nbsp;(Fermat&amp;#39;s Little Theorem) If $p$ is a prime number and $p \nmid n$ for $n \in \mathbb{N}$, then $n^p \equiv n \mod p$.</description>
     </item>
   </channel>
