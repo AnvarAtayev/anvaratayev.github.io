@@ -8,31 +8,19 @@
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-08-04T11:53:04+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/mathematics/20240824_even_split_probability/</loc>
-    <lastmod>2024-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/mathematics/20240817_dft/</loc>
-    <lastmod>2024-08-17T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/mathematics/20240802_fermats_little_theorem/</loc>
     <lastmod>2024-08-05T10:41:47+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/categories/mathematics/</loc>
-    <lastmod>2024-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/probability/</loc>
-    <lastmod>2024-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2024-08-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ft/</loc>
-    <lastmod>2024-08-17T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-05T10:41:47+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/combinatorics/</loc>
+    <lastmod>2024-08-05T10:41:47+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/mathematics/</loc>
+    <lastmod>2024-08-05T10:41:47+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-08-05T10:41:47+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
