@@ -12,7 +12,8 @@ title: "About"
 
 ## Experience
 
-{{< align-text left="**Junior Quantitative Researcher** _Man AHL_" right="2023 - Present" >}}
+{{< align-text left="**Quantitative Researcher** _Man AHL_" right="2025 - Present" >}}
+{{< align-text left="**Junior Quantitative Researcher** _Man AHL_" right="2023 - 2025" >}}
 {{< align-text left="**Optimisation Engineer** _Smallspark Space Systems & University of Southampton_" right="2021 - 2022" >}}
 {{< align-text left="**Mathematics Consultant** _Self Employed_" right="2020 - 2022" >}}
 {{< align-text left="**Teaching Assistant** _University of Warwick & University of Bath_" right="2016 - 2021" >}}

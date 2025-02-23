@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mathematics on Anvar A.</title>
-    <link>http://localhost:1313/categories/mathematics/</link>
+    <link>https://anvaratayev.github.io/categories/mathematics/</link>
     <description>Recent content in Mathematics on Anvar A.</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 05 Aug 2024 10:41:47 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://anvaratayev.github.io/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fermat&#39;s Little Theorem</title>
-      <link>http://localhost:1313/posts/mathematics/20240802_fermats_little_theorem/</link>
+      <link>https://anvaratayev.github.io/posts/mathematics/20240802_fermats_little_theorem/</link>
       <pubDate>Fri, 02 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/mathematics/20240802_fermats_little_theorem/</guid>
-      <description>This is an oldie, but a cute little trick to solving Fermat&amp;rsquo;s Little Theorem that I came across back when I was an undergraduate. This is a well known proof and can be found in Wikipedia1, although I found this proof in an article posted by Fermat&amp;rsquo;s Library 2.&#xA;Theorem &amp;nbsp;(Fermat&amp;#39;s Little Theorem) If $p$ is a prime number and $p \nmid n$ for $n \in \mathbb{N}$, then $n^p \equiv n \mod p$.</description>
+      <guid>https://anvaratayev.github.io/posts/mathematics/20240802_fermats_little_theorem/</guid>
+      <description>&lt;p&gt;This is an oldie, but a cute little trick to solving Fermat&amp;rsquo;s Little Theorem that I came across back when I was an undergraduate. This is a  well known proof and can be found in Wikipedia&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, although I found this proof in an article posted by Fermat&amp;rsquo;s Library &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&#34;thmlike&#34;&gt;&#xA;    &lt;div class=&#34;thmheader&#34;&gt;&#xA;        &lt;span class=&#34;thmtype&#34;&gt;&#xA;            &#xA;            Theorem&#xA;            &#xA;            &#xA;        &lt;/span&gt;&#xA;         &amp;nbsp;(Fermat&amp;#39;s Little Theorem) &#xA;    &lt;/div&gt;&#xA;    &lt;div class=&#34;thmbody&#34;&gt;If $p$ is a prime number and $p \nmid n$ for $n \in \mathbb{N}$, then $n^p \equiv n \mod p$.&lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&lt;div class=&#34;proof&#34;&gt;&#xA;    &lt;div class=&#34;proofheader&#34;&gt;Proof&lt;/div&gt;&#xA;    &lt;div class=&#34;proofbodycontainer&#34;&gt;&#xA;        &lt;div class=&#34;proofbody&#34;&gt;&lt;p&gt;Let&amp;rsquo;s say that you want to make as many distinct types of necklaces as you can with $p$ (colourless) beads at your disposal, and where you can colour each bead with $n$ different colours. Assume also you only want to make multi-coloured necklaces, and that $p$ is prime.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
