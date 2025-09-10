@@ -5,7 +5,6 @@ weight: 10
 math: true
 tags: ["probability"]
 categories: "mathematics"
-draft: true
 ---
 
 This is a generalisation of Q18 from *50 Challenging Problems in Probability*.
