@@ -1,6 +1,6 @@
 # hugo server --minify --themesDir ../.. --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
-baseURL = 'https://anvaratayev.github.io/'
+baseURL = 'https://anvaratayev.com/'
 languageCode = 'en-gb'
 title = 'Anvar A.'
 theme = 'hugo-book'
@@ -13,7 +13,7 @@ enableGitInfo = true
 enableEmoji = true
 
 # make compatible with github pages
-publishDir = "docs"
+publishDir = "public"
 
 # Needed for mermaid/katex shortcodes
 # visit https://gohugo.io/getting-started/configuration-markup/#goldmark for more information
