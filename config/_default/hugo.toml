@@ -1,0 +1,36 @@
+# hugo server --minify --themesDir ../.. --baseURL=http://0.0.0.0:1313/theme/hugo-book/
+
+baseURL = 'https://anvaratayev.com/'
+languageCode = 'en-gb'
+title = 'Anvar A.'
+
+# Theme settings
+[module]
+    [[module.imports]]
+        path = 'github.com/alex-shpak/hugo-book'
+
+# Core Hugo settings
+disablePathToLower = true # book configuration
+enableGitInfo = true
+enableEmoji = true  # enable emojis
+publishDir = "public" # make compatible with github pages
+
+# Needed for mermaid/katex shortcodes
+# visit https://gohugo.io/getting-started/configuration-markup/#goldmark for more information
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
+
+        [markup.goldmark.extensions]
+            footnote = true
+
+            [markup.goldmark.extensions.passthrough]
+                enable = true
+
+                [markup.goldmark.extensions.passthrough.delimiters]
+                    block = [['\[', '\]'], ['$$', '$$']]
+                    inline = [['\(', '\)'], ['$', '$']]
+
+    [markup.tableOfContents]
+        startLevel = 1

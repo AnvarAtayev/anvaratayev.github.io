@@ -45,13 +45,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      
-      - name: Debug - show directory structure
-        run: |
-          echo "Theme directory:"
-          ls -la themes/ || echo "No themes directory"
-          echo "Content directory:"
-          ls -la content/ || echo "No content directory"
 
       - name: Setup Pages
         id: pages
