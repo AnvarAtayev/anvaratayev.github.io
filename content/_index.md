@@ -9,5 +9,5 @@ bookToc: false
 
 # Hello :wave:
 
-My name is Anvar, and I'm currently a Junior Quantitative Researcher at Man AHL.
+My name is Anvar, and I'm currently a Quantitative Researcher at Man AHL.
 This is a small blog on the many things that I enjoy and just simply want to record, and will include discussions on space, maths, the sciences, and finance.
