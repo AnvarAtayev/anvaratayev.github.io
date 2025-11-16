@@ -1,0 +1,36 @@
+{{ $bibEntries := .Site.Data.bib }}
+{{ $page := .Page }}
+{{ $citationList := $page.Store.Get "citationList" | default dict }}
+
+{{ if and $bibEntries $citationList }}
+<section class="bibliography">
+    <h2>References</h2>
+    <ol>
+    {{ range $bibentryId, $number := $citationList }}
+        {{ $entry := where $bibEntries "id" "eq" $bibentryId | first 1 }}
+        {{ if $entry }}
+            {{ $entry = index $entry 0 }}
+            <li id="ref-{{ $number }}">
+                {{ $authorCount := len $entry.author }}
+                {{ range $index, $author := $entry.author }}
+                    {{ if $index }}
+                        {{ if eq (add $index 1) $authorCount }} and {{ else }}, {{ end }}
+                    {{ end }}
+                    {{ $author.given }} {{ $author.family }}
+                {{ end }}
+                ({{ index $entry.issued "date-parts" 0 0 }}).
+                {{ if $entry.title }} <em>{{ $entry.title }}</em>.{{ end }}
+                {{ if $entry.volume }} {{ $entry.volume }}{{ end }}
+                {{ if $entry.issue }}({{ $entry.issue }}){{ end }}
+                {{ if $entry.page }}: {{ $entry.page }}.{{ end }}
+                {{ if $entry.DOI }} <a href="https://doi.org/{{ $entry.DOI }}">doi:{{ $entry.DOI }}</a>{{ end }}
+            </li>
+        {{ end }}
+    {{ end }}
+    </ol>
+</section>
+{{ else if $bibEntries }}
+<p>No citations found in this document.</p>
+{{ else }}
+<p>References not available.</p>
+{{ end }}

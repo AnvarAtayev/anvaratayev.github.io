@@ -1,0 +1,33 @@
+{{ $bibEntries := .Site.Data.bib }}
+{{ $bibentryId := .Get 0 }}
+
+{{ if $bibEntries }}
+    {{ $entry := where $bibEntries "id" "eq" $bibentryId | first 1 }}
+    {{ if $entry }}
+        {{ $page := .Page }}
+        {{ $citationList := $page.Store.Get "citationList" | default dict }}
+        
+        {{ if not (index $citationList $bibentryId) }}
+            {{ $newNumber := len $citationList | add 1 }}
+            {{ $citationList = merge $citationList (dict $bibentryId $newNumber) }}
+            {{ $page.Store.Set "citationList" $citationList }}
+        {{ end }}
+        
+        {{ $citationNumber := index $citationList $bibentryId }}
+        {{ $entry := index $entry 0 }}
+        
+        {{/* Build the tooltip content */}}
+        {{ $author := index $entry.author 0 }}
+        {{ $tooltipContent := printf "%s %s (%s)" $author.given $author.family (index $entry.issued "date-parts" 0 0) }}
+        {{ with $entry.title }}{{ $tooltipContent = printf "%s: %s" $tooltipContent . }}{{ end }}
+        
+        {{/* Output the citation with a data-tooltip attribute */}}
+        <span class="citation" data-tooltip="{{ $tooltipContent }}">
+            [<a href="#ref-{{ $citationNumber }}">{{ $citationNumber }}</a>]
+        </span>
+    {{ else }}
+        <span class="citation-error">[?]</span>
+    {{ end }}
+{{ else }}
+    <span class="citation-error">[!]</span>
+{{ end }}

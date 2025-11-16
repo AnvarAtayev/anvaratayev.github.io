@@ -1,0 +1,152 @@
+[
+  {
+    "id": "KellyJr.1956",
+    "author": [
+      {
+        "family": "Kelly Jr.",
+        "given": "J. L."
+      }
+    ],
+    "citation-key": "KellyJr.1956",
+    "container-title": "Bell System Technical Journal",
+    "DOI": "10.1002/j.1538-7305.1956.tb03809.x",
+    "ISSN": "1538-7305",
+    "issue": "4",
+    "issued": {
+      "date-parts": [
+        [
+          "1956"
+        ]
+      ]
+    },
+    "language": "en",
+    "license": "© 1956 The Bell System Technical Journal",
+    "page": "917–926",
+    "source": "Wiley Online Library",
+    "title": "A New Interpretation of Information Rate",
+    "type": "article-journal",
+    "URL": "https://onlinelibrary.wiley.com/doi/abs/10.1002/j.1538-7305.1956.tb03809.x",
+    "volume": "35"
+  },
+  {
+    "id": "Ferguson2009",
+    "author": [
+      {
+        "family": "Ferguson",
+        "given": "Thomas"
+      }
+    ],
+    "citation-key": "Ferguson2009",
+    "collection-title": "UCLA",
+    "container-title": "Game Theory for Statisticians",
+    "issued": {
+      "date-parts": [
+        [
+          "2009"
+        ]
+      ]
+    },
+    "language": "en",
+    "source": "Zotero",
+    "title": "The Kelly Betting System for Favorable Games.",
+    "type": "article-journal",
+    "URL": "https://www.math.ucla.edu/~tom/stat596.html"
+  },
+  {
+    "id": "Thorp2006",
+    "author": [
+      {
+        "family": "Thorp",
+        "given": "Edward O."
+      }
+    ],
+    "citation-key": "Thorp2006",
+    "container-title": "Handbook of Asset and Liability Management",
+    "DOI": "10.1016/S1872-0978(06)01009-X",
+    "ISBN": "978-0-444-50875-1",
+    "issued": {
+      "date-parts": [
+        [
+          "2006"
+        ]
+      ]
+    },
+    "language": "en",
+    "page": "385–428",
+    "publisher": "Elsevier",
+    "source": "DOI.org (Crossref)",
+    "title": "Chapter 9 The Kelly Criterion in Blackjack Sports Betting, and the Stock Market",
+    "type": "chapter",
+    "URL": "https://linkinghub.elsevier.com/retrieve/pii/S187209780601009X",
+    "volume": "1"
+  },
+  {
+    "id": "VonNeumann2007",
+    "author": [
+      {
+        "family": "Von Neumann",
+        "given": "John"
+      },
+      {
+        "family": "Morgenstern",
+        "given": "Oskar"
+      }
+    ],
+    "citation-key": "VonNeumann2007",
+    "collection-title": "A Princeton classic edition",
+    "edition": "60. anniversary ed., 4. print., and 1. paperb. print",
+    "event-place": "Princeton, NJ",
+    "ISBN": "978-0-691-13061-3 978-1-4008-2946-0",
+    "issued": {
+      "date-parts": [
+        [
+          "2007"
+        ]
+      ]
+    },
+    "language": "eng",
+    "number-of-pages": "739",
+    "publisher": "Princeton University Press",
+    "publisher-place": "Princeton, NJ",
+    "source": "K10plus ISBN",
+    "title": "Theory of games and economic behavior",
+    "type": "book"
+  },
+  {
+    "id": "MacLean2010",
+    "author": [
+      {
+        "family": "MacLean",
+        "given": "Leonard C"
+      },
+      {
+        "family": "Chair",
+        "given": "Herbert Lamb"
+      },
+      {
+        "family": "Thorp",
+        "given": "Edward O"
+      },
+      {
+        "family": "Beach",
+        "given": "Newport"
+      },
+      {
+        "family": "Ziemba",
+        "given": "William T"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2010"
+        ]
+      ]
+    },
+    "citation-key": "MacLean2010",
+    "language": "en",
+    "source": "Zotero",
+    "title": "Good and bad properties of the Kelly criterion",
+    "type": "article-journal"
+  }
+]
