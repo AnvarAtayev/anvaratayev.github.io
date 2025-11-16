@@ -18,19 +18,16 @@ publishDir = "public" # make compatible with github pages
 # Needed for mermaid/katex shortcodes
 # visit https://gohugo.io/getting-started/configuration-markup/#goldmark for more information
 [markup]
-    [markup.goldmark]
-        [markup.goldmark.renderer]
-            unsafe = true
-
-        [markup.goldmark.extensions]
-            footnote = true
-
-            [markup.goldmark.extensions.passthrough]
-                enable = true
-
-                [markup.goldmark.extensions.passthrough.delimiters]
-                    block = [['\[', '\]'], ['$$', '$$']]
-                    inline = [['\(', '\)'], ['$', '$']]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      footnote = true
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\\[', '\\]'], ['$$', '$$'], ['\\begin{', '\\end{']]
+          inline = [['\\(', '\\)'], ['$', '$']]
 
     [markup.tableOfContents]
         startLevel = 1
