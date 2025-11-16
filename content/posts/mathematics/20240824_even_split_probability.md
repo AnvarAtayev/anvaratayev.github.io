@@ -1,7 +1,6 @@
 ---
 date: 2024-08-24
 title: An Even Split in Probability
-weight: 10
 math: true
 tags: ["probability"]
 categories: "mathematics"

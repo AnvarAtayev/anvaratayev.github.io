@@ -1,7 +1,6 @@
 ---
 date: 2024-08-02
 title: Fermat's Little Theorem
-weight: 10
 math: true
 tags: ["combinatorics"]
 categories: "mathematics"
