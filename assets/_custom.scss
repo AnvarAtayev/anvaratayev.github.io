@@ -77,29 +77,13 @@
 
 .citation a {
     text-decoration: none;
-    color: #2c5aa0;
+    color: var(--color-link);
     font-weight: bold;
 }
 
 .citation a:hover {
     text-decoration: underline;
 }
-// Citation styles for inline numeric references
-.citation {
-    font-size: 1em;
-    margin: 0 2px;
-}
-
-.citation a {
-    text-decoration: none;
-    color: #2c5aa0;
-    font-weight: bold;
-}
-
-.citation a:hover {
-    text-decoration: underline;
-}
-
 // Enhanced citation tooltips
 // CSS-only Tooltip Styling with text wrapping and simplecite style
 .citation {
@@ -113,8 +97,8 @@
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(5px);
-    background: #333;
-    color: white;
+    background: var(--tooltip-bg);
+    color: var(--tooltip-color);
     padding: 1px 6px;
     border-radius: 4px;
     font-size: 0.6em;
@@ -129,6 +113,7 @@
     pointer-events: none;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow like simplecite */
     line-height: 1.4;     /* Better line spacing for wrapped text */
+    border: 1px solid var(--gray-200)
   }
 
   // Tooltip arrow
@@ -139,7 +124,7 @@
     left: 50%;
     transform: translateX(-50%) translateY(0);
     border: 5px solid transparent;
-    border-top-color: #333;
+    border-top-color: var(--tooltip-bg);
     opacity: 0;
     visibility: hidden;
     transition: all 0.2s ease;
@@ -161,40 +146,40 @@
   width: 250px;
   font-size: 0.75em;
   padding: 6px 10px;
-  background: #2c3e50; /* Dark blue-grey like academic tools */
-  border: 1px solid #34495e;
+  background: var(--tooltip-bg); /* Dark blue-grey like academic tools */
+  border: 1px solid var(--gray-200);
 }
 
 .citation.compact-tooltip::after {
-  border-top-color: #2c3e50;
+  border-top-color: var(--gray-500);
 }
 
 // Ultra-compact bibliography with hover effects
 .bibliography {
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--gray-200);
     margin-top: 1.5rem;
     padding-top: 0.75rem;
     font-size: 0.8em;
-    color: #666;
+    color: var(--gray-500);
     line-height: 1.2;
     transition: all 0.3s ease;
 }
 
 /* Hover effect for entire bibliography */
 .bibliography:hover {
-    color: #444;  /* Darker text on hover */
-    border-top-color: #2c5aa0;  /* Blue line on hover */
+    color: var(--body-font-color);  /* Darker text on hover */
+    border-top-color: var(--color-link);  /* Blue line on hover */
 }
 
 .bibliography h2 {
     font-size: 1.1em;
-    color: #444;
+    color: var(--body-font-color);
     margin-bottom: 0.5rem;
     transition: color 0.3s ease;
 }
 
 .bibliography:hover h2 {
-    color: #2c5aa0;  /* Blue heading on hover */
+    color: var(--color-link);  /* Blue heading on hover */
 }
 
 .bibliography ol {
@@ -212,8 +197,8 @@
 
 /* Hover effect for individual reference items */
 .bibliography li:hover {
-    background-color: #f8f9fa;  /* Light grey background */
-    color: #333;  /* Darker text */
+    background-color: var(--gray-100);  /* Light grey background */
+    color: var(--body-font-color);  /* Darker text */
     transform: translateX(2px);  /* Slight shift to the right */
 }
 
@@ -222,24 +207,24 @@
 }
 
 .bibliography em {
-    color: #555;
+    color: var(--gray-200);
     font-style: italic;
 }
 
 .bibliography a {
-    color: #2c5aa0;
+    color: var(--color-link);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .bibliography a:hover {
     text-decoration: underline;
-    color: #1e3d6d;  /* Darker blue on hover */
+    color: var(--color-visited-link);  /* Darker blue on hover */
 }
 
 /* Individual item link hover */
 .bibliography li:hover a {
-    color: #1e3d6d;
+    color: var(--color-visited-link);
 }
 
 .citation-error {

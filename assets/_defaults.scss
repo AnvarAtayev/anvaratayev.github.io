@@ -45,6 +45,9 @@ $hint-colors: (
   --hint-color-info: #6bf;
   --hint-color-warning: #fd6;
   --hint-color-danger: #f66;
+
+  --tooltip-bg: #333;
+  --tooltip-color: #fff;
 }
 
 @mixin theme-dark {
@@ -55,12 +58,15 @@ $hint-colors: (
   --color-link: #84b2ff;
   --color-visited-link: #b88dff;
 
-  --body-background: #343a40;
-  --body-font-color: #e9ecef;
+  --body-background: #0D0D0D;
+  --body-font-color: #FFFFFF;
 
   --icon-filter: brightness(0) invert(1);
 
   --hint-color-info: #6bf;
   --hint-color-warning: #fd6;
   --hint-color-danger: #f66;
+
+  --tooltip-bg: rgba(0,0,0,0.8);
+  --tooltip-color: #fff;
 }
