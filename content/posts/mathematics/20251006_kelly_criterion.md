@@ -8,6 +8,8 @@ refs:
   - "VonNeumann2007"
   - "MacLean2010"
 title: "The Kelly Criterion"
+tags: ["mathematics", "finance"]
+categories: ["mathematics"]
 ---
 
 
