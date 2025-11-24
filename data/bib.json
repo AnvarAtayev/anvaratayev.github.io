@@ -149,9 +149,14 @@
     "title": "Good and bad properties of the Kelly criterion",
     "type": "article-journal"
   },
-  { "id": "Conway",
-    "author" : [{"family": "Wikipedia contributors"}],
-    "title" : "Conway's Game of Life - Wikipedia, The Free Encyclopedia",
+  {
+    "id": "Conway",
+    "author": [
+      {
+        "family": "Wikipedia contributors"
+      }
+    ],
+    "title": "Conway's Game of Life - Wikipedia, The Free Encyclopedia",
     "issued": {
       "date-parts": [
         [
@@ -159,6 +164,308 @@
         ]
       ]
     },
-    "URL" : "https://en.wikipedia.org/w/index.php?title=Conway%27s_Game_of_Life&oldid=1323115836"
+    "URL": "https://en.wikipedia.org/w/index.php?title=Conway%27s_Game_of_Life&oldid=1323115836"
+  },
+  {
+    "id": "Gappy2025",
+    "abstract": "We were born to suffer",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          24
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Gappy",
+        "given": ""
+      }
+    ],
+    "citation-key": "Gappy2025",
+    "container-title": "At night we walk in circles and are consumed by fire",
+    "genre": "Substack newsletter",
+    "issued": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          20
+        ]
+      ]
+    },
+    "title": "Reading, Writing and Drawdown Arithmetic",
+    "type": "post-weblog",
+    "URL": "https://byfire.substack.com/p/reading-writing-and-drawdown-arithmetic?utm_medium=ios"
+  },
+  {
+    "id": "Zhang2012",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          24
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Zhang",
+        "given": "Hongzhong"
+      },
+      {
+        "family": "Hadjiliadis",
+        "given": "Olympia"
+      }
+    ],
+    "citation-key": "Zhang2012",
+    "container-title": "Methodology and Computing in Applied Probability",
+    "container-title-short": "Methodol Comput Appl Probab",
+    "DOI": "10.1007/s11009-011-9262-7",
+    "ISSN": "1387-5841, 1573-7713",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          "2012",
+          9
+        ]
+      ]
+    },
+    "language": "en",
+    "license": "http://www.springer.com/tdm",
+    "page": "739–752",
+    "source": "DOI.org (Crossref)",
+    "title": "Drawdowns and the Speed of Market Crash",
+    "type": "article-journal",
+    "URL": "http://link.springer.com/10.1007/s11009-011-9262-7",
+    "volume": "14"
+  },
+  {
+    "id": "Salminen2025",
+    "abstract": "In this paper, using the excursion theory, we provide new proofs of, firstly, Lehoczky’s formula (in an extended form allowing a lower bound for the underlying diffusion) for the joint distribution of the first drawdown time and the maximum before this time, and, secondly, of Malyutin’s formula for the joint distribution of the first hitting time and the maximum drawdown before this time. It is remarkable – but there is a clean explanation – that the excursion theoretical approach which we developed first for Lehoczky’s formula also provides a proof for Malyutin’s formula. Moreover, we discuss some generalizations and analyze the pure jump process describing the maximum before the first drawdown time when the size of the drawdown is varying.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          22
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Salminen",
+        "given": "Paavo"
+      },
+      {
+        "family": "Vallois",
+        "given": "Pierre"
+      }
+    ],
+    "citation-key": "Salminen2025",
+    "container-title": "ESAIM: Probability and Statistics",
+    "container-title-short": "ESAIM: PS",
+    "DOI": "10.1051/ps/2025010",
+    "ISSN": "1262-3318",
+    "issued": {
+      "date-parts": [
+        [
+          "2025"
+        ]
+      ]
+    },
+    "license": "https://creativecommons.org/licenses/by/4.0",
+    "page": "357–380",
+    "source": "DOI.org (Crossref)",
+    "title": "Drawdowns of Diffusions",
+    "type": "article-journal",
+    "URL": "https://www.esaim-ps.org/10.1051/ps/2025010",
+    "volume": "29"
+  },
+  {
+    "id": "Taylor1975",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          23
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Taylor",
+        "given": "Howard M."
+      }
+    ],
+    "citation-key": "Taylor1975",
+    "container-title": "The Annals of Probability",
+    "container-title-short": "Ann. Probab.",
+    "DOI": "10.1214/aop/1176996395",
+    "ISSN": "0091-1798",
+    "issue": "2",
+    "issued": {
+      "date-parts": [
+        [
+          "1975",
+          4,
+          1
+        ]
+      ]
+    },
+    "source": "DOI.org (Crossref)",
+    "title": "A Stopped Brownian Motion Formula",
+    "type": "article-journal",
+    "URL": "https://projecteuclid.org/journals/annals-of-probability/volume-3/issue-2/A-Stopped-Brownian-Motion-Formula/10.1214/aop/1176996395.full",
+    "volume": "3"
+  },
+  {
+    "id": "Borodin2002",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          24
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Borodin",
+        "given": "Andrei N."
+      },
+      {
+        "family": "Salminen",
+        "given": "Paavo"
+      }
+    ],
+    "citation-key": "Borodin2002",
+    "collection-title": "Probability and Its Applications",
+    "DOI": "10.1007/978-3-0348-8163-0",
+    "event-place": "Basel",
+    "ISBN": "978-3-7643-6705-3 978-3-0348-8163-0",
+    "issued": {
+      "date-parts": [
+        [
+          "2002"
+        ]
+      ]
+    },
+    "license": "http://www.springer.com/tdm",
+    "publisher": "Birkhäuser",
+    "publisher-place": "Basel",
+    "source": "DOI.org (Crossref)",
+    "title": "Handbook of Brownian Motion - Facts and Formulae",
+    "type": "book",
+    "URL": "http://link.springer.com/10.1007/978-3-0348-8163-0"
+  },
+  {
+    "id": "Shreve2008",
+    "author": [
+      {
+        "family": "Shreve",
+        "given": "Steven"
+      }
+    ],
+    "citation-key": "Shreve2008",
+    "collection-title": "Springer finance textbook",
+    "edition": "Corr. print",
+    "event-place": "New York, NY",
+    "ISBN": "978-0-387-40101-0",
+    "issued": {
+      "date-parts": [
+        [
+          "2008"
+        ]
+      ]
+    },
+    "language": "eng",
+    "number-of-pages": "550",
+    "publisher": "Springer",
+    "publisher-place": "New York, NY",
+    "source": "K10plus ISBN",
+    "title": "Stochastic calculus for finance. 2: Continuous-time models",
+    "title-short": "Stochastic calculus for finance. 2",
+    "type": "chapter"
+  },
+  {
+    "id": "WikiExp2025",
+    "abstract": "In probability theory and statistics, the exponential distribution or negative exponential distribution is the probability distribution of the distance between events in a Poisson point process, i.e., a process in which events occur continuously and independently at a constant average rate; the distance parameter could be any meaningful mono-dimensional measure of the process, such as time between production errors, or length along a roll of fabric in the weaving manufacturing process. It is a particular case of the gamma distribution. It is the continuous analogue of the geometric distribution, and it has the key property of being memoryless. In addition to being used for the analysis of Poisson point processes it is found in various other contexts.\nThe exponential distribution is not the same as the class of exponential families of distributions. This is a large class of probability distributions that includes the exponential distribution as one of its members, but also includes many other distributions, like the normal, binomial, gamma, and Poisson distributions.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          24
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Wikipedia Contributors",
+        "given": ""
+      }
+    ],
+    "citation-key": "WikiExp2025",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          6
+        ]
+      ]
+    },
+    "language": "en",
+    "license": "Creative Commons Attribution-ShareAlike License",
+    "note": "Page Version ID: 1320816285",
+    "source": "Wikipedia",
+    "title": "Exponential distribution",
+    "type": "entry-encyclopedia",
+    "URL": "https://en.wikipedia.org/w/index.php?title=Exponential_distribution&oldid=1320816285"
+  },
+  {
+    "id": "WikiIG2025",
+    "abstract": "In probability theory, the inverse Gaussian distribution (also known as the Wald distribution) is a two-parameter family of continuous probability distributions with support on (0,∞).\nIts probability density function is given by\n\n  \n    \n      \n        f\n        (\n        x\n        ;\n        μ\n        ,\n        λ\n        )\n        =\n        \n          \n            \n              λ\n              \n                2\n                π\n                \n                  x\n                  \n                    3\n                  \n                \n              \n            \n          \n        \n        exp\n        ⁡\n        \n          \n            (\n          \n        \n        −\n        \n          \n            \n              λ\n              (\n              x\n              −\n              μ\n              \n                )\n                \n                  2\n                \n              \n            \n            \n              2\n              \n                μ\n                \n                  2\n                \n              \n              x\n            \n          \n        \n        \n          \n            )\n          \n        \n      \n    \n    {\\displaystyle f(x;\\mu ,\\lambda )={\\sqrt {\\frac {\\lambda }{2\\pi x^{3}}}}\\exp {\\biggl (}-{\\frac {\\lambda (x-\\mu )^{2}}{2\\mu ^{2}x}}{\\biggr )}}\n  \n\nfor x > 0, where \n  \n    \n      \n        μ\n        >\n        0\n      \n    \n    {\\displaystyle \\mu >0}\n  \n is the mean and \n  \n    \n      \n        λ\n        >\n        0\n      \n    \n    {\\displaystyle \\lambda >0}\n  \n is the shape parameter.\nThe inverse Gaussian distribution has several properties analogous to a Gaussian distribution.  The name can be misleading:  it is an inverse only in that, while the Gaussian describes a Brownian motion's level at a fixed time, the inverse Gaussian describes the distribution of the time a Brownian motion with positive drift takes to reach a fixed positive level.\nIts cumulant generating function (logarithm of the characteristic function) is the inverse of the cumulant generating function of a Gaussian random variable.\nTo indicate that a random variable X is inverse Gaussian-distributed with mean μ and shape parameter λ we write \n  \n    \n      \n        X\n        ∼\n        IG\n        ⁡\n        (\n        μ\n        ,\n        λ\n        )\n        \n        \n      \n    \n    {\\displaystyle X\\sim \\operatorname {IG} (\\mu ,\\lambda )\\,\\!}\n  \n.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          24
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Wikipedia Contributors",
+        "given": ""
+      }
+    ],
+    "citation-key": "WikiIG2025",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [
+        [
+          "2025",
+          5,
+          25
+        ]
+      ]
+    },
+    "language": "en",
+    "license": "Creative Commons Attribution-ShareAlike License",
+    "note": "Page Version ID: 1292168347",
+    "source": "Wikipedia",
+    "title": "Inverse Gaussian distribution",
+    "type": "entry-encyclopedia",
+    "URL": "https://en.wikipedia.org/w/index.php?title=Inverse_Gaussian_distribution&oldid=1292168347"
   }
 ]
