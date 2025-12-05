@@ -467,5 +467,119 @@
     "title": "Inverse Gaussian distribution",
     "type": "entry-encyclopedia",
     "URL": "https://en.wikipedia.org/w/index.php?title=Inverse_Gaussian_distribution&oldid=1292168347"
+  },
+  {
+    "id": "Ruggles1947",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          27
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Ruggles",
+        "given": "Richard"
+      },
+      {
+        "family": "Brodie",
+        "given": "Henry"
+      }
+    ],
+    "citation-key": "Ruggles1947",
+    "container-title": "Journal of the American Statistical Association",
+    "container-title-short": "Journal of the American Statistical Association",
+    "DOI": "10.1080/01621459.1947.10501915",
+    "ISSN": "0162-1459, 1537-274X",
+    "issue": "237",
+    "issued": {
+      "date-parts": [
+        [
+          "1947",
+          3
+        ]
+      ]
+    },
+    "language": "en",
+    "page": "72–91",
+    "source": "DOI.org (Crossref)",
+    "title": "An Empirical Approach to Economic Intelligence in World War II",
+    "type": "article-journal",
+    "URL": "http://www.tandfonline.com/doi/abs/10.1080/01621459.1947.10501915",
+    "volume": "42"
+  },
+  {
+    "id": "Goodman1952",
+    "abstract": "The problem discussed is that of sampling without replacement from a discrete, finite, uniform population. One source of this problem is the analysis of serial numbers on manufactured items in order to estimate the total number of items manufactured. Minimum variance unbiased estimators of the parameters are obtained and compared with other estimators which have been suggested. Tests of hypothesis and confidence intervals are also discussed.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2025",
+          11,
+          27
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Goodman",
+        "given": "Leo A."
+      }
+    ],
+    "citation-key": "Goodman1952",
+    "container-title": "Journal of the American Statistical Association",
+    "DOI": "10.1080/01621459.1952.10483442",
+    "ISSN": "0162-1459",
+    "issue": "260",
+    "issued": {
+      "date-parts": [
+        [
+          "1952",
+          12,
+          1
+        ]
+      ]
+    },
+    "page": "622–634",
+    "publisher": "ASA Website",
+    "source": "Taylor and Francis+NEJM",
+    "title": "Serial Number Analysis",
+    "type": "article-journal",
+    "URL": "https://www.tandfonline.com/doi/abs/10.1080/01621459.1952.10483442",
+    "volume": "47"
+  },
+  {
+    "id": "Casella2002",
+    "author": [
+      {
+        "family": "Casella",
+        "given": "George"
+      },
+      {
+        "family": "Berger",
+        "given": "Roger L."
+      }
+    ],
+    "citation-key": "Casella2002",
+    "edition": "2. ed",
+    "event-place": "Pacific Grove, Calif",
+    "ISBN": "978-0-534-24312-8",
+    "issued": {
+      "date-parts": [
+        [
+          "2002"
+        ]
+      ]
+    },
+    "language": "eng",
+    "number-of-pages": "660",
+    "publisher": "Duxbury",
+    "publisher-place": "Pacific Grove, Calif",
+    "source": "K10plus ISBN",
+    "title": "Statistical Inference",
+    "type": "book"
   }
 ]
