@@ -1,0 +1,37 @@
+{{/* layouts/shortcodes/tmfigure.html */}}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end }}
+    
+    {{- with $src := .Get "src" }}
+        {{- with $.Page.Resources.GetMatch $src }}
+            {{- $src = .RelPermalink }}
+        {{- else }}
+            {{/* Fallback for external or static images */}}
+        {{- end }}
+        <img src="{{$src | safeURL}}"
+             {{- if or ($.Get "alt") ($.Get "caption") }}
+                 alt="{{ with $.Get "alt" }}{{ . }}{{ else }}{{ $.Get "caption" | markdownify | plainify }}{{ end }}"
+             {{- end -}}
+             {{- with $.Get "width" }} width="{{ . }}"{{ end -}}
+             {{- with $.Get "height" }} height="{{ . }}"{{ end -}}
+        />
+    {{- end }}
+    
+    {{- if .Get "link" }}</a>{{ end -}}
+    
+    {{- if or (.Get "title") (.Get "caption") (.Get "attr") .Inner -}}
+        <figcaption style="font-size: 90%; padding: 0.5em 1.5em; line-height: 1.4;">
+            {{ with (.Get "title") -}}
+                <h4 style="margin-bottom: 0.5em;">{{ . }}</h4>
+            {{- end -}}
+            
+            {{ $caption := or (.Get "caption") .Inner }}
+            {{ with $caption }}
+                {{/* (?s) enables "dot matches newline" mode to catch multi-line P tags */}}
+                {{ . | markdownify | replaceRE "(?s)^<p>(.*)</p>$" "$1" | safeHTML }}
+            {{ end }}
+        </figcaption>
+    {{- end }}
+</figure>

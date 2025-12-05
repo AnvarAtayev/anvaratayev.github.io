@@ -223,3 +223,16 @@
     color: #cc0000;
     font-style: italic;
 }
+
+/* Base Figure Style */
+figure.big-figure {
+    position: relative;
+    width: 100%; /* Or specific width for the main column */
+    margin-bottom: 2rem;
+}
+
+figure.big-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
