@@ -2,6 +2,8 @@
 math: true
 date: 2025-11-27
 title: "German Tank Problem"
+tags: ["statistics", "history"]
+categories: ["mathematics"]
 ---
 
 
