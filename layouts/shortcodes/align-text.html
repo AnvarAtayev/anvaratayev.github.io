@@ -1,4 +1,8 @@
-<div style="display: flex; justify-content: space-between;">
-    <div style="text-align: left;">{{ .Get "left" | markdownify }}</div>
-    <div style="text-align: right;">{{ .Get "right" | markdownify }}</div>
+<div style="display: flex; justify-content: space-between; align-items: baseline;">
+    <div style="text-align: left; flex-grow: 1; margin-right: 1rem;">
+        {{ .Get "left" | markdownify }}
+    </div>
+    <div style="text-align: right; white-space: nowrap; flex-shrink: 0;">
+        {{ .Get "right" | markdownify }}
+    </div>
 </div>
