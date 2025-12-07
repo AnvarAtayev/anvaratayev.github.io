@@ -107,8 +107,7 @@ Hence
 $$
 \begin{eqnarray}
   \mathbb{E} (M) & = & \sum_{m = 1}^N m\mathbb{P} (M = m), \nonumber\\\
-  \text{after much simplification } \rightsquigarrow & = & \frac{k}{k + 1} (N
-  \+ 1), \nonumber
+  \text{after much simplification } \rightsquigarrow & = & \frac{k}{k + 1} (N + 1), \nonumber
 \end{eqnarray}
 $$
 
