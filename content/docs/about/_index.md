@@ -36,6 +36,7 @@ title: "About"
 </div>
 
 ## Workshops, Conferences, & Summer Schools
+{{< align-text left="**Operating in the Future Electromagnetic Environment Symposium** _IET, Savoy Place, London, UK_" right="Nov 2022" >}}
 {{< align-text left="**Anisotropic Isoperimetric Problems & Related Topics** _INDAM, Rome, Italy_" right="Sep 2022" >}}
 {{< align-text left="**Beyond Elasticity: Advances and Research Challenges** _CIRM, Marseille, France_" right="May 2022">}}
 {{< align-text left="**165th European Study Group with Industry** _University of Durham, Durham, UK_" right="Apr 2021">}}
