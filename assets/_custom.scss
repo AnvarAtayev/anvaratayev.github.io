@@ -236,3 +236,14 @@ figure.big-figure img {
     height: auto;
     display: block;
 }
+
+// Styling for the blog post list preview
+.post-preview {
+  font-size: 0.75rem;
+  margin-top: 0.5rem; // Optional spacing
+  
+  // Ensure paragraphs inside don't have huge margins
+  p {
+    margin: 0.5em 0;
+  }
+}

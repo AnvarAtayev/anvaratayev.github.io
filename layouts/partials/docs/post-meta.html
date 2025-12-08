@@ -2,7 +2,8 @@
 <h5>{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</h5>
 {{ end }}
 
-{{ range $taxonomy, $_ := .Site.Taxonomies }}
+{{/*  Uncomment below to show tags and categories underneath post names  */}}
+{{/*  {{ range $taxonomy, $_ := .Site.Taxonomies }}
 {{ with $terms := $.GetTerms $taxonomy }}
 <div>
   {{ range $n, $term := $terms }}{{ if $n }}, {{ end }}
@@ -10,7 +11,7 @@
   {{- end }}
 </div>
 {{ end }}
-{{ end }}
+{{ end }}  */}}
 
 {{ if .Params.image }}
 <p>
