@@ -2,7 +2,7 @@
 {{ range sort .Paginator.Pages }}
 <article class="markdown book-post">
   <h3>
-<strong>    <a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a></strong>
+<strong><a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a></strong>
   </h3>
   {{ partial "docs/post-meta" . }}
   <div class="post-preview">
