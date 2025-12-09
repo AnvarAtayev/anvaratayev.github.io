@@ -4,7 +4,7 @@
   <h3>
 <strong><a href="{{ .RelPermalink }}">{{ partial "docs/title.html" . }}</a></strong>
   </h3>
-  {{ partial "docs/post-meta" . }}
+  <div style="margin-top: -10px">{{ partial "docs/post-meta" . }}</div>
   <div class="post-preview">
     {{- .Summary -}}
     {{ if .Truncated }}
