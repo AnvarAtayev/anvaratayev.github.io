@@ -4,6 +4,7 @@ date: 2025-11-27
 title: "German Tank Problem"
 tags: ["statistics", "history"]
 categories: ["mathematics"]
+summary: "A review of the famous German Tank Problem on estimating the number of German tanks in production conducted by the Allied forces during WW2. A discussion and derivation of the estimator used is also provided."
 ---
 
 
