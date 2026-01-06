@@ -19,7 +19,8 @@
       {{/* Build tooltip content (first author + year + optional title) */}}
       {{ $author := index $entry.author 0 }}
       {{ $year := index $entry.issued "date-parts" 0 0 }}
-      {{ $tooltip := printf "%s %s (%s)" $author.given $author.family $year }}
+      {{ $authorName := cond (and $author.given (ne $author.given "")) (printf "%s %s" $author.given $author.family) $author.family }}
+      {{ $tooltip := printf "%s (%s)" $authorName $year }}
       {{ with $entry.title }}{{ $tooltip = printf "%s: %s" $tooltip . }}{{ end }}
       {{ $tooltip = $tooltip | htmlEscape }}
 
