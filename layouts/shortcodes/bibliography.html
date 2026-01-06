@@ -6,11 +6,15 @@
 <section class="bibliography">
     <h2>References</h2>
     <ol>
+    {{ $items := slice }}
     {{ range $bibentryId, $number := $citationList }}
-        {{ $entry := where $bibEntries "id" "eq" $bibentryId | first 1 }}
+        {{ $items = $items | append (dict "id" $bibentryId "number" $number) }}
+    {{ end }}
+    {{ range sort $items "number" }}
+        {{ $entry := where $bibEntries "id" "eq" .id | first 1 }}
         {{ if $entry }}
             {{ $entry = index $entry 0 }}
-            <li id="ref-{{ $number }}">
+            <li id="ref-{{ .number }}">
                 {{ $authorCount := len $entry.author }}
                 {{ range $index, $author := $entry.author }}
                     {{ if $index }}
