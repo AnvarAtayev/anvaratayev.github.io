@@ -4,6 +4,7 @@ math: true
 categories: "finance"
 tags: ["probability", "finance"]
 title: "Drawdown Formulas"
+summary: "Discuss and document proofs to a recent article by Gappy on a number of drawdown formulas that are useful in evaluating the probability of drawdown events of portfolios."
 ---
 
 

@@ -2,6 +2,7 @@
 title: "The Game of Life"
 date: 2025-11-20
 tags: 'programming'
+summary: "We implement Conway's Game of Life as an exercise in inserting JavaScript into my blog posts."
 ---
 In this article, we implement Conway's Game of Life, see {{< cite "Conway" >}} for more information.
 This is more of an exercise for myself to determine how to insert and play around with JavaScript directly within my Hugo setup.
