@@ -1,0 +1,45 @@
+<script>
+  (() => {
+    const storageKey = "theme";
+    const root = document.documentElement;
+
+    const applyTheme = theme => {
+      root.setAttribute("data-theme", theme);
+      root.style.colorScheme = theme;
+      document.querySelectorAll("[data-theme-toggle]").forEach(btn => {
+        btn.textContent = theme === "dark" ? "☀" : "☾";
+      });
+    };
+
+    const getStored = () => {
+      try {
+        return localStorage.getItem(storageKey);
+      } catch (err) {
+        return null;
+      }
+    };
+
+    const setStored = value => {
+      try {
+        localStorage.setItem(storageKey, value);
+      } catch (err) {}
+    };
+
+    const stored = getStored();
+    if (stored === "light" || stored === "dark") {
+      applyTheme(stored);
+    } else {
+      const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      applyTheme(prefersDark ? "dark" : "light");
+    }
+
+    document.addEventListener("click", event => {
+      const button = event.target.closest("[data-theme-toggle]");
+      if (!button) return;
+      const current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const next = current === "dark" ? "light" : "dark";
+      setStored(next);
+      applyTheme(next);
+    });
+  })();
+</script>

@@ -1,9 +1,12 @@
 <h2 class="book-brand">
-  <a class="flex align-center"
-    href="{{ cond (not .Site.Home.File) .Sites.Default.Home.RelPermalink .Site.Home.RelPermalink }}">
-    {{- with .Site.Params.BookLogo -}}
-    <img src="{{ . | relURL }}" alt="Logo" />
-    {{- end -}}
-    <span>{{ .Site.Title }}</span>
-  </a>
+  <div class="brand-row">
+    <a class="flex align-center"
+      href="{{ cond (not .Site.Home.File) .Sites.Default.Home.RelPermalink .Site.Home.RelPermalink }}">
+      {{- with .Site.Params.BookLogo -}}
+      <img src="{{ . | relURL }}" alt="Logo" />
+      {{- end -}}
+      <span>{{ .Site.Title }}</span>
+    </a>
+    <button class="theme-toggle theme-toggle--inline" type="button" aria-label="Toggle theme" data-theme-toggle>☾</button>
+  </div>
 </h2>
