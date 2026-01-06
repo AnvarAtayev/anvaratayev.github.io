@@ -581,5 +581,161 @@
     "source": "K10plus ISBN",
     "title": "Statistical Inference",
     "type": "book"
+  },
+  {
+    "id": "BBCInfiniteMonkey2025",
+    "author": [
+      {
+        "family": "BBC",
+        "given": "Radio 4"
+      }
+    ],
+    "citation-key": "BBCInfiniteMonkey2025",
+    "container-title": "BBC",
+    "issued": {
+      "date-parts": [
+        [
+          "2025"
+        ]
+      ]
+    },
+    "language": "en",
+    "source": "BBC",
+    "title": "The Infinite Monkey Cage: 2025 Christmas Special",
+    "type": "webpage",
+    "URL": "https://www.bbc.co.uk/programmes/m002kjvk"
+  },
+  {
+    "id": "NOAAWanderingPoles",
+    "author": [
+      {
+        "family": "NOAA",
+        "given": "NCEI"
+      }
+    ],
+    "citation-key": "NOAAWanderingPoles",
+    "container-title": "NOAA National Centers for Environmental Information",
+    "issued": {
+      "date-parts": [
+        [
+          "2025"
+        ]
+      ]
+    },
+    "language": "en",
+    "source": "NOAA NCEI",
+    "title": "Wandering Geomagnetic Poles",
+    "type": "webpage",
+    "URL": "https://www.ncei.noaa.gov/products/wandering-geomagnetic-poles"
+  },
+  {
+    "id": "WikiOymyakon",
+    "author": [
+      {
+        "family": "Wikipedia contributors"
+      }
+    ],
+    "citation-key": "WikiOymyakon",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [
+        [
+          "2025"
+        ]
+      ]
+    },
+    "language": "en",
+    "source": "Wikipedia",
+    "title": "Oymyakon",
+    "type": "webpage",
+    "URL": "https://en.wikipedia.org/wiki/Oymyakon"
+  },
+  {
+    "id": "WikiInaccessibility",
+    "author": [
+      {
+        "family": "Wikipedia contributors"
+      }
+    ],
+    "citation-key": "WikiInaccessibility",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [
+        [
+          "2025"
+        ]
+      ]
+    },
+    "language": "en",
+    "source": "Wikipedia",
+    "title": "Pole of inaccessibility",
+    "type": "webpage",
+    "URL": "https://en.wikipedia.org/wiki/Pole_of_inaccessibility"
+  },
+  {
+    "id": "WikiCelestialPole",
+    "author": [
+      {
+        "family": "Wikipedia contributors"
+      }
+    ],
+    "citation-key": "WikiCelestialPole",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [
+        [
+          "2025"
+        ]
+      ]
+    },
+    "language": "en",
+    "source": "Wikipedia",
+    "title": "Celestial pole",
+    "type": "webpage",
+    "URL": "https://en.wikipedia.org/wiki/Celestial_pole"
+  },
+  {
+    "id": "WikiGeomagneticPole",
+    "author": [
+      {
+        "family": "Wikipedia contributors"
+      }
+    ],
+    "citation-key": "WikiGeomagneticPole",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [
+        [
+          "2025"
+        ]
+      ]
+    },
+    "language": "en",
+    "source": "Wikipedia",
+    "title": "Geomagnetic pole",
+    "type": "webpage",
+    "URL": "https://en.wikipedia.org/wiki/Geomagnetic_pole"
+  },
+  {
+    "id": "WikiMagneticPole",
+    "author": [
+      {
+        "family": "Wikipedia contributors"
+      }
+    ],
+    "citation-key": "WikiMagneticPole",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [
+        [
+          "2025"
+        ]
+      ]
+    },
+    "language": "en",
+    "source": "Wikipedia",
+    "title": "North magnetic pole",
+    "type": "webpage",
+    "URL": "https://en.wikipedia.org/wiki/North_magnetic_pole"
   }
 ]

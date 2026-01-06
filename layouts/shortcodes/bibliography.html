@@ -24,6 +24,7 @@
                 {{ if $entry.issue }}({{ $entry.issue }}){{ end }}
                 {{ if $entry.page }}: {{ $entry.page }}.{{ end }}
                 {{ if $entry.DOI }} <a href="https://doi.org/{{ $entry.DOI }}">doi:{{ $entry.DOI }}</a>{{ end }}
+                {{ if $entry.URL }} <a href="{{ $entry.URL }}">link</a>{{ end }}
             </li>
         {{ end }}
     {{ end }}

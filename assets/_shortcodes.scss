@@ -101,4 +101,18 @@
       }
     }
   }
+
+  // {{< globe >}}
+  .globe-embed {
+    width: 100%;
+    max-width: 100%;
+    margin: $padding-16 0;
+    overflow: hidden;
+  }
+
+  .globe-embed canvas {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+  }
 }

@@ -1,0 +1,57 @@
+<div class="globe-embed" id="{{ .Get "id" }}" style="height:{{ .Get "height" | default "460px" }};"></div>
+<script src="https://unpkg.com/globe.gl"></script>
+<script src="https://unpkg.com/topojson-client@3"></script>
+<script>
+  (function () {
+    const el = document.getElementById("{{ .Get "id" }}");
+    if (!el) return;
+
+    const globe = Globe()(el);
+    globe
+      .globeImageUrl("{{ .Get "texture" | default "https://unpkg.com/three-globe/example/img/earth-dark.jpg" }}")
+      .backgroundColor("rgba(0,0,0,0)")
+      .showAtmosphere(false)
+      .showGraticules(true);
+
+    const resize = () => {
+      const { width, height } = el.getBoundingClientRect();
+      globe.width(Math.max(0, Math.floor(width)));
+      globe.height(Math.max(0, Math.floor(height)));
+    };
+
+    resize();
+    if (window.ResizeObserver) {
+      new ResizeObserver(resize).observe(el);
+    } else {
+      window.addEventListener("resize", resize);
+    }
+
+    globe.pointOfView({ lat: 90, lng: 0, altitude: 2 });
+
+    const countriesUrl = "{{ .Get "countriesUrl" | default "https://unpkg.com/world-atlas@2/countries-110m.json" }}";
+    fetch(countriesUrl)
+      .then(res => res.json())
+      .then(world => {
+        const countries = world.objects ? topojson.feature(world, world.objects.countries).features : world.features;
+        globe.polygonsData(countries)
+          .polygonCapColor(() => "{{ .Get "landColor" | default "#b8b8b8" }}")
+          .polygonSideColor(() => "{{ .Get "landSideColor" | default "#a8a8a8" }}")
+          .polygonStrokeColor(() => "{{ .Get "borderColor" | default "#5f5f5f" }}")
+          .polygonAltitude(0.01);
+      })
+      .catch(() => { });
+
+    globe.pointsData([
+      { name: "Geographic North Pole", lat: 90, lng: 0, color: "{{ .Get "geoColor" | default "#f2f2f2" }}" },
+      { name: "Magnetic North Pole", lat: 86.5, lng: 164.0, color: "{{ .Get "magneticColor" | default "#ff6b6b" }}" },
+      { name: "Geomagnetic North Pole", lat: 80.7, lng: -72.7, color: "{{ .Get "geomagneticColor" | default "#4ea3ff" }}" },
+      { name: "North Pole of Inaccessibility", lat: 84.05, lng: -174.85, color: "{{ .Get "inaccessibilityColor" | default "#f2c14e" }}" },
+      { name: "Pole of Ice (Oymyakon)", lat: 63.46, lng: 142.77, color: "{{ .Get "iceColor" | default "#7bd1c8" }}" }
+    ])
+      .pointLat(d => d.lat)
+      .pointLng(d => d.lng)
+      .pointColor(d => d.color || "{{ .Get "pointColor" | default "#f5f5f5" }}")
+      .pointRadius(0.4)
+      .pointLabel(d => d.name);
+  })();
+</script>
