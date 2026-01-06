@@ -8,10 +8,64 @@
 
     const globe = Globe()(el);
     globe
-      .globeImageUrl("{{ .Get "texture" | default "https://unpkg.com/three-globe/example/img/earth-dark.jpg" }}")
       .backgroundColor("rgba(0,0,0,0)")
       .showAtmosphere(false)
       .showGraticules(true);
+
+    const themeConfig = {
+      dark: {
+        texture: "{{ .Get "textureDark" | default "https://unpkg.com/three-globe/example/img/earth-dark.jpg" }}",
+        landColor: "{{ .Get "landColorDark" | default "#b8b8b8" }}",
+        landSideColor: "{{ .Get "landSideColorDark" | default "#a8a8a8" }}",
+        borderColor: "{{ .Get "borderColorDark" | default "#5f5f5f" }}",
+        graticuleColor: "{{ .Get "graticuleColorDark" | default "rgba(255,255,255,0.15)" }}"
+      },
+      light: {
+        texture: "{{ .Get "textureLight" | default "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1' height='1'><rect width='1' height='1' fill='white'/></svg>" }}",
+        landColor: "{{ .Get "landColorLight" | default "#2b2b2b" }}",
+        landSideColor: "{{ .Get "landSideColorLight" | default "#1f1f1f" }}",
+        borderColor: "{{ .Get "borderColorLight" | default "#6a6a6a" }}",
+        graticuleColor: "{{ .Get "graticuleColorLight" | default "rgba(0,0,0,0.12)" }}"
+      }
+    };
+
+    const points = [
+      {
+        name: "Geographic North Pole",
+        lat: 90,
+        lng: 0,
+        colorDark: "{{ .Get "geoColor" | default "#f2f2f2" }}",
+        colorLight: "{{ .Get "geoColorLight" | default "#1f1f1f" }}"
+      },
+      {
+        name: "Magnetic North Pole",
+        lat: 86.5,
+        lng: 164.0,
+        colorDark: "{{ .Get "magneticColor" | default "#ff6b6b" }}",
+        colorLight: "{{ .Get "magneticColorLight" | default "#c83c3c" }}"
+      },
+      {
+        name: "Geomagnetic North Pole",
+        lat: 80.7,
+        lng: -72.7,
+        colorDark: "{{ .Get "geomagneticColor" | default "#4ea3ff" }}",
+        colorLight: "{{ .Get "geomagneticColorLight" | default "#1f6fd1" }}"
+      },
+      {
+        name: "North Pole of Inaccessibility",
+        lat: 84.05,
+        lng: -174.85,
+        colorDark: "{{ .Get "inaccessibilityColor" | default "#f2c14e" }}",
+        colorLight: "{{ .Get "inaccessibilityColorLight" | default "#b07c1a" }}"
+      },
+      {
+        name: "Pole of Ice (Oymyakon)",
+        lat: 63.46,
+        lng: 142.77,
+        colorDark: "{{ .Get "iceColor" | default "#7bd1c8" }}",
+        colorLight: "{{ .Get "iceColorLight" | default "#2b8a7d" }}"
+      }
+    ];
 
     const resize = () => {
       const { width, height } = el.getBoundingClientRect();
@@ -28,30 +82,64 @@
 
     globe.pointOfView({ lat: 90, lng: 0, altitude: 2 });
 
+    const root = document.documentElement;
+    const prefersDark = () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const getTheme = () => {
+      const attr = root.getAttribute("data-theme");
+      return attr === "dark" || attr === "light" ? attr : (prefersDark() ? "dark" : "light");
+    };
+
+    let countries = null;
+    let currentTheme = getTheme();
+
+    const applyTheme = theme => {
+      const config = themeConfig[theme] || themeConfig.dark;
+      globe.globeImageUrl(config.texture);
+      if (typeof globe.graticulesColor === "function") {
+        globe.graticulesColor(config.graticuleColor);
+      }
+      if (countries) {
+        globe.polygonsData(countries)
+          .polygonCapColor(() => config.landColor)
+          .polygonSideColor(() => config.landSideColor)
+          .polygonStrokeColor(() => config.borderColor)
+          .polygonAltitude(0.01);
+      }
+      globe.pointsData(points.map(point => ({
+        name: point.name,
+        lat: point.lat,
+        lng: point.lng,
+        color: theme === "dark" ? point.colorDark : point.colorLight
+      })));
+    };
+
     const countriesUrl = "{{ .Get "countriesUrl" | default "https://unpkg.com/world-atlas@2/countries-110m.json" }}";
     fetch(countriesUrl)
       .then(res => res.json())
       .then(world => {
-        const countries = world.objects ? topojson.feature(world, world.objects.countries).features : world.features;
-        globe.polygonsData(countries)
-          .polygonCapColor(() => "{{ .Get "landColor" | default "#b8b8b8" }}")
-          .polygonSideColor(() => "{{ .Get "landSideColor" | default "#a8a8a8" }}")
-          .polygonStrokeColor(() => "{{ .Get "borderColor" | default "#5f5f5f" }}")
-          .polygonAltitude(0.01);
+        countries = world.objects ? topojson.feature(world, world.objects.countries).features : world.features;
+        applyTheme(currentTheme);
       })
       .catch(() => { });
 
-    globe.pointsData([
-      { name: "Geographic North Pole", lat: 90, lng: 0, color: "{{ .Get "geoColor" | default "#f2f2f2" }}" },
-      { name: "Magnetic North Pole", lat: 86.5, lng: 164.0, color: "{{ .Get "magneticColor" | default "#ff6b6b" }}" },
-      { name: "Geomagnetic North Pole", lat: 80.7, lng: -72.7, color: "{{ .Get "geomagneticColor" | default "#4ea3ff" }}" },
-      { name: "North Pole of Inaccessibility", lat: 84.05, lng: -174.85, color: "{{ .Get "inaccessibilityColor" | default "#f2c14e" }}" },
-      { name: "Pole of Ice (Oymyakon)", lat: 63.46, lng: 142.77, color: "{{ .Get "iceColor" | default "#7bd1c8" }}" }
-    ])
+    applyTheme(currentTheme);
+
+    globe
       .pointLat(d => d.lat)
       .pointLng(d => d.lng)
-      .pointColor(d => d.color || "{{ .Get "pointColor" | default "#f5f5f5" }}")
+      .pointColor(d => d.color)
       .pointRadius(0.4)
       .pointLabel(d => d.name);
+
+    if (window.MutationObserver) {
+      const observer = new MutationObserver(() => {
+        const nextTheme = getTheme();
+        if (nextTheme !== currentTheme) {
+          currentTheme = nextTheme;
+          applyTheme(currentTheme);
+        }
+      });
+      observer.observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    }
   })();
 </script>
