@@ -14,6 +14,10 @@ BookToC = true
 # If the favicon is /static/favicon.png then the path would be favicon.png
 BookFavicon = 'favicon.png'
 
+# (Optional, default BookFavicon) Set the path to an Apple touch icon.
+# If the icon is /static/apple-touch-icon.png then the path would be apple-touch-icon.png
+BookAppleTouchIcon = 'apple-touch-icon.png'
+
 # (Optional, default none) Set the path to a logo for the book.
 # If the logo is /static/logo.png then the path would be logo.png
 # BookLogo = 'logo.png'
