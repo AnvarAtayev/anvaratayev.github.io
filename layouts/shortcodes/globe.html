@@ -29,43 +29,41 @@
       }
     };
 
-    const points = [
-      {
-        name: "Geographic North Pole",
-        lat: 90,
-        lng: 0,
-        colorDark: "{{ .Get "geoColor" | default "#f2f2f2" }}",
-        colorLight: "{{ .Get "geoColorLight" | default "#1f1f1f" }}"
+    {{- $poles := .Site.Data.poles | default (slice) -}}
+    const poleData = {{ $poles | jsonify | safeJS }};
+    const pointColors = {
+      geographic: {
+        dark: "{{ .Get "geoColor" | default "#f2f2f2" }}",
+        light: "{{ .Get "geoColorLight" | default "#1f1f1f" }}"
       },
-      {
-        name: "Magnetic North Pole",
-        lat: 86.5,
-        lng: 164.0,
-        colorDark: "{{ .Get "magneticColor" | default "#ff6b6b" }}",
-        colorLight: "{{ .Get "magneticColorLight" | default "#c83c3c" }}"
+      magnetic: {
+        dark: "{{ .Get "magneticColor" | default "#ff6b6b" }}",
+        light: "{{ .Get "magneticColorLight" | default "#c83c3c" }}"
       },
-      {
-        name: "Geomagnetic North Pole",
-        lat: 80.7,
-        lng: -72.7,
-        colorDark: "{{ .Get "geomagneticColor" | default "#4ea3ff" }}",
-        colorLight: "{{ .Get "geomagneticColorLight" | default "#1f6fd1" }}"
+      geomagnetic: {
+        dark: "{{ .Get "geomagneticColor" | default "#4ea3ff" }}",
+        light: "{{ .Get "geomagneticColorLight" | default "#1f6fd1" }}"
       },
-      {
-        name: "North Pole of Inaccessibility",
-        lat: 84.05,
-        lng: -174.85,
-        colorDark: "{{ .Get "inaccessibilityColor" | default "#f2c14e" }}",
-        colorLight: "{{ .Get "inaccessibilityColorLight" | default "#b07c1a" }}"
+      inaccessibility: {
+        dark: "{{ .Get "inaccessibilityColor" | default "#f2c14e" }}",
+        light: "{{ .Get "inaccessibilityColorLight" | default "#b07c1a" }}"
       },
-      {
-        name: "Pole of Ice (Oymyakon)",
-        lat: 63.46,
-        lng: 142.77,
-        colorDark: "{{ .Get "iceColor" | default "#7bd1c8" }}",
-        colorLight: "{{ .Get "iceColorLight" | default "#2b8a7d" }}"
+      ice: {
+        dark: "{{ .Get "iceColor" | default "#7bd1c8" }}",
+        light: "{{ .Get "iceColorLight" | default "#2b8a7d" }}"
       }
-    ];
+    };
+
+    const points = poleData.map(pole => {
+      const colors = pointColors[pole.id] || {};
+      return {
+        name: pole.name,
+        lat: Number(pole.lat),
+        lng: Number(pole.lng),
+        colorDark: colors.dark || "#f2f2f2",
+        colorLight: colors.light || "#1f1f1f"
+      };
+    });
 
     const resize = () => {
       const { width, height } = el.getBoundingClientRect();

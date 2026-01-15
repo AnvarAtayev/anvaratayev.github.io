@@ -1,0 +1,13 @@
+{{- $poles := .Site.Data.poles -}}
+{{- $id := .Get "id" -}}
+{{- if and $poles $id -}}
+  {{- $matches := where $poles "id" "eq" $id -}}
+  {{- if gt (len $matches) 0 -}}
+    {{- $pole := index $matches 0 -}}
+    {{- printf "(%s, %s)" $pole.lat $pole.lng -}}
+  {{- else -}}
+    (?)
+  {{- end -}}
+{{- else -}}
+  (?)
+{{- end -}}

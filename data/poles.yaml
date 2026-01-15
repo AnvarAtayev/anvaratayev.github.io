@@ -1,0 +1,20 @@
+- id: geographic
+  name: Geographic North Pole
+  lat: "90.00"
+  lng: "0.00"
+- id: magnetic
+  name: Magnetic North Pole
+  lat: "85.762"
+  lng: "139.078"
+- id: geomagnetic
+  name: Geomagnetic North Pole
+  lat: "80.70"
+  lng: "-72.70"
+- id: inaccessibility
+  name: North Pole of Inaccessibility
+  lat: "84.48"
+  lng: "-176.9"
+- id: ice
+  name: Pole of Ice (Oymyakon)
+  lat: "63.46"
+  lng: "142.78"
