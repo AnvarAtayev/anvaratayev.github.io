@@ -16,12 +16,7 @@ title: "Waiting Time and the Inspection Paradox"
 ---
 
 
-Abstract:*Faced with the choice of walking or waiting for a shuttle at 
-Auckland Airport, we explore the optimal strategy in expectation. Starting 
-from a simple deterministic model, we introduce uncertainty in bus headways 
-and discover the inspection paradox: under any variance in arrival times, the 
-expected wait is always longer than the naive estimate of half the mean 
-headway.*
+
 
 I was recently at Auckland Airport for some travelling, where I arrived at the 
 Domestic Airport to drop off my car and had to transfer to the International 
