@@ -162,7 +162,7 @@
 /* Base Figure Style */
 figure.big-figure {
     position: relative;
-    width: 100%; /* Or specific width for the main column */
+    width: 100%;
     margin-bottom: 2rem;
 }
 
@@ -170,6 +170,25 @@ figure.big-figure img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+/* Image with source caption */
+figure.image-with-source {
+    text-align: center;
+    margin: $padding-16 0;
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    figcaption {
+        font-size: $font-size-12;
+        font-style: italic;
+        color: var(--gray-500);
+        margin-top: 0.4rem;
+    }
 }
 
 // Styling for the blog post list preview

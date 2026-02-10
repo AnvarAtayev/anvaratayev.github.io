@@ -1,50 +1,14 @@
-/* roboto-regular - latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local(''),
-       url('fonts/roboto-v27-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/roboto-v27-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* roboto-700 - latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local(''),
-       url('fonts/roboto-v27-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/roboto-v27-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* roboto-mono-regular - latin */
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local(''),
-       url('fonts/roboto-mono-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('fonts/roboto-mono-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 14px; /* Adjust this value as needed */
+  font-family: 'Crimson Pro', serif;
 }
-
 
 code {
   font-family: 'Roboto Mono', monospace;
 }
 
-
-/* Optional: Adjust heading sizes proportionally */
-h1 { font-size: 1.3rem; font-weight: bold !important}
-h2 { font-size: 1.2rem; }
-h3 { font-size: 1.1rem; }
-h4 { font-size: 1.0rem; }
-h5 { font-size: 0.9rem; }
-h6 { font-size: 0.8rem; }
+h1 { font-size: 1.6rem; font-weight: bold !important}
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1.1rem; }
+h5 { font-size: 1.0rem; }
+h6 { font-size: 0.9rem; }
