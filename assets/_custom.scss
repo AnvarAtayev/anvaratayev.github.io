@@ -261,10 +261,16 @@ figure.big-figure img {
   border: 0;
   background: var(--body-background);
   color: var(--body-font-color);
-  font-size: $font-size-12;
-  line-height: 1;
+  line-height: 0;
   cursor: pointer;
   box-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    transition: opacity 0.2s ease;
+  }
 }
 
 .theme-toggle:hover {
