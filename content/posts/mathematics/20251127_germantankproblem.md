@@ -221,8 +221,8 @@ used in literature is finding estimators that minimise the mean squared error
 {{< cite "Casella2002" >}} for a discussion on the use of alternative 
 loss functions.
 
-**Definition:** *The mean squared error of an estimator $W$ of a parameter $\theta$ 
-is*
+{{% env type="definition" style="plain" %}}
+The mean squared error of an estimator $W$ of a parameter $\theta$ is
 
 $$
 \begin{eqnarray}
@@ -231,7 +231,8 @@ $$
 \end{eqnarray}
 $$
 
-*where $\text{Bias}_{\theta} (W) := \mathbb{E}_{\theta} (W) - \theta$.*
+where $\text{Bias}_{\theta} (W) := \mathbb{E}_{\theta} (W) - \theta$.
+{{% /env %}}
 
 Having defined the MSE, we can now search for an estimator that has the best 
 MSE across all parameters $\theta$. But this is not always possible, in fact, 
@@ -252,11 +253,13 @@ large improvement on the variance by forgiving some unbiasedness, and with
 that achieve a much better MSE. Although unbiased estimators as ideal, they 
 are not always the best!
 
-**Definition:**  *(UMVUE) An estimator $W^{\ast}$ is the uniform minimum variance 
-unbiased estimator (UMVUE) of $\theta$ if it satisfies $\mathbb{E}_{\theta} 
-(W^{\ast}) = \theta$ for all $\theta$, and for any other estimator $W$ with 
-$\mathbb{E}_{\theta} (W) = \theta$, we have $\mathbb{V}_{\theta} (W^{\ast}) 
-\leqslant \mathbb{V}_{\theta} (W)$ for all $\theta$.*
+{{% env type="definition" title="UMVUE" style="plain" %}}
+An estimator $W^{\ast}$ is the uniform minimum variance
+unbiased estimator (UMVUE) of $\theta$ if it satisfies $\mathbb{E}_{\theta}
+(W^{\ast}) = \theta$ for all $\theta$, and for any other estimator $W$ with
+$\mathbb{E}_{\theta} (W) = \theta$, we have $\mathbb{V}_{\theta} (W^{\ast})
+\leqslant \mathbb{V}_{\theta} (W)$ for all $\theta$.
+{{% /env %}}
 
 Finding the UMVUE is not an easy task, it may not exist, and even if it does, 
 it is difficult to know from first principles how to obtain one. It could be 
@@ -271,10 +274,11 @@ is the lowest possible variance one could possible strive to obtain, and then
 check if your estimator attains this bound – this is where the Cramér-Rao 
 inequality comes in.
 
-**Theorem:**  *(Cramér-Rao Inequality) Let $X_{1}, \ldots, X_{n}$ be a sample with 
-pdf $f (\boldsymbol{x} | \theta)$, sample space $\mathcal{X}$, and parameter 
-$\theta$, and let $W (\boldsymbol{X}) = W (X_{1}, \ldots, X_{n})$ be any 
-estimator satisfying*
+{{% env type="theorem" title="Cramér-Rao Inequality" %}}
+Let $X_{1}, \ldots, X_{n}$ be a sample with
+pdf $f (\boldsymbol{x} | \theta)$, sample space $\mathcal{X}$, and parameter
+$\theta$, and let $W (\boldsymbol{X}) = W (X_{1}, \ldots, X_{n})$ be any
+estimator satisfying
 
 $$
 \begin{eqnarray}
@@ -286,7 +290,7 @@ $$
 \end{eqnarray}
 $$
 
-*or equivalent for discrete random variables. Then*
+or equivalent for discrete random variables. Then
 
 $$
 \begin{eqnarray}
@@ -297,8 +301,8 @@ $$
 \end{eqnarray}
 $$
 
-*where $\mathbb{I}_{\theta}$ is called the information number, or Fischer
-information of the sample, and is defined as*
+where $\mathbb{I}_{\theta}$ is called the information number, or Fischer
+information of the sample, and is defined as
 
 $$
 \begin{eqnarray}
@@ -309,11 +313,13 @@ $$
   \log f (\boldsymbol{X}| \theta) \right) \nonumber
 \end{eqnarray}
 $$
+{{% /env %}}
 
-**Corollary:**  *(Cramér-Rao Inequality - Unbiased Case) Let $X_{1}, \ldots, 
-X_{n}$ be a sample with pdf $f (\boldsymbol{x} | \theta)$ and let $W 
-(\boldsymbol{X}) = W (X_{1}, \ldots, X_{n})$ be an unbiased estimator with 
-$\mathbb{V}_{\theta} (W (\boldsymbol{X})) < \infty$. Then*
+{{% env type="corollary" title="Cramér-Rao Inequality - Unbiased Case" %}}
+Let $X_{1}, \ldots,
+X_{n}$ be a sample with pdf $f (\boldsymbol{x} | \theta)$ and let $W
+(\boldsymbol{X}) = W (X_{1}, \ldots, X_{n})$ be an unbiased estimator with
+$\mathbb{V}_{\theta} (W (\boldsymbol{X})) < \infty$. Then
 
 $$
 \begin{eqnarray}
@@ -321,6 +327,7 @@ $$
   \frac{1}{\mathbb{I}_{\theta} (\boldsymbol{X})} . \nonumber
 \end{eqnarray}
 $$
+{{% /env %}}
 
 The Cramér-Rao inequality is quite remarkable and also quite intuitive - it 
 tells us that as more information is made available (i.e. as 
@@ -334,11 +341,12 @@ variance, and is a UMVUE if it is also unbiased. Thankfully, the requirements
 for attainment of the Cramér-Rao bound are simple, although again, these 
 requirements do not provide a means of constructing the optimal estimator.
 
-**Corollary:**  *(Attainment) Let $X_{1}, \ldots, X_{n}$ be a sample with pdf $f 
-(\boldsymbol{x} | \theta)$ and let $W (\boldsymbol{X}) = W (X_{1}, \ldots, 
-X_{n})$ be any estimator satisfying the Cramér-Rao conditions. Then $W 
-(\boldsymbol{X})$ attains the Cramér-Rao lower bound if and only if there 
-exists a function $a (\theta)$ such that*
+{{% env type="corollary" title="Attainment" %}}
+Let $X_{1}, \ldots, X_{n}$ be a sample with pdf $f
+(\boldsymbol{x} | \theta)$ and let $W (\boldsymbol{X}) = W (X_{1}, \ldots,
+X_{n})$ be any estimator satisfying the Cramér-Rao conditions. Then $W
+(\boldsymbol{X})$ attains the Cramér-Rao lower bound if and only if there
+exists a function $a (\theta)$ such that
 
 $$
 \begin{eqnarray}
@@ -347,6 +355,7 @@ $$
   \nonumber
 \end{eqnarray}
 $$
+{{% /env %}}
 
 We should note that the key assumption of the Cramér-Rao theorem is the 
 requirement that we can differentiate under the integral sign, a condition 
@@ -395,26 +404,30 @@ sample, i.e. if $T (\boldsymbol{X})$ is a sufficient statistic for $\theta$,
 then any inference about $\theta$ should depend on the sample $\boldsymbol{X}$ 
 only through the value of $T (\boldsymbol{X})$.
 
-**Definition:** *(Sufficient Statistic) A statistic $T (\boldsymbol{X})$ is a 
-sufficient statistic for $\theta$ if the conditional distribution of the 
-sample $\boldsymbol{X}$ given the value of $T (\boldsymbol{X})$ does not 
-depend on $\theta$.*
+{{% env type="definition" title="Sufficient Statistic" style="plain" %}}
+A statistic $T (\boldsymbol{X})$ is a
+sufficient statistic for $\theta$ if the conditional distribution of the
+sample $\boldsymbol{X}$ given the value of $T (\boldsymbol{X})$ does not
+depend on $\theta$.
+{{% /env %}}
 
 How can we know if we have a sufficient statistic? For this, there is a simple 
 result called the Factorisation Theorem, see {{< cite 
 "Casella2002" >}} (Theorem 6.2.6), that allows to us to quickly identify 
 such statistics.
 
-**Theorem:** *(Factorisation Theorem) Let $f (\boldsymbol{x} | \theta)$ denote the 
-joint pdf of a sample $\boldsymbol{X}$. A statistic $T (\boldsymbol{X})$ is a 
-sufficient statistic for $\theta$ if and only if there exists functions $g (t| 
-\theta)$ and $h (\boldsymbol{x})$ such that, for all sample points 
-$\boldsymbol{x}$ and all parameters $\theta$*
+{{% env type="theorem" title="Factorisation Theorem" %}}
+Let $f (\boldsymbol{x} | \theta)$ denote the
+joint pdf of a sample $\boldsymbol{X}$. A statistic $T (\boldsymbol{X})$ is a
+sufficient statistic for $\theta$ if and only if there exists functions $g (t|
+\theta)$ and $h (\boldsymbol{x})$ such that, for all sample points
+$\boldsymbol{x}$ and all parameters $\theta$
 
 $$
  f (\boldsymbol{x} | \theta) = g (T (\boldsymbol{x}) | \theta) h
    (\boldsymbol{x}) .
 $$
+{{% /env %}}
 
 Through the concept of sufficiency, we arrive at the remarkable result by 
 Rao-Blackwell, see {{< cite "Casella2002" >}} (Theorem 7.3.17), which 
@@ -422,12 +435,14 @@ allows us to improve upon any unbiased estimator if one has access to any
 sufficient statistic for $\theta$, no matter how crude. This process of 
 applying the Rao-Blackwell theorem is called *Rao-Blackwellisation*.
 
-**Theorem:**  ***(Rao-Blackwell)** Let $W$ be any unbiased estimator of $\theta$, 
-and $T$ be a sufficient statistic for $\theta$. Define by $\phi (T) := 
-\mathbb{E} (W|T)$. Then $\mathbb{E}_{\theta} (\phi (T)) = \theta$ and 
-$\mathbb{V}_{\theta} (\phi (T)) \leqslant \mathbb{V}_{\theta} (W)$ for all 
-$\theta$, that is $\phi (T)$ is a uniformly better unbiased estimator of 
-$\theta$ (note, $\phi$ is not necessarily the UMVUE).*
+{{% env type="theorem" title="Rao-Blackwell" %}}
+Let $W$ be any unbiased estimator of $\theta$,
+and $T$ be a sufficient statistic for $\theta$. Define by $\phi (T) :=
+\mathbb{E} (W|T)$. Then $\mathbb{E}_{\theta} (\phi (T)) = \theta$ and
+$\mathbb{V}_{\theta} (\phi (T)) \leqslant \mathbb{V}_{\theta} (W)$ for all
+$\theta$, that is $\phi (T)$ is a uniformly better unbiased estimator of
+$\theta$ (note, $\phi$ is not necessarily the UMVUE).
+{{% /env %}}
 
 How about if I wanted to construct the UMVUE, and not just improve upon my 
 estimator? For that, we rely on the concept of completeness and the 
@@ -435,16 +450,20 @@ Lehmann-Scheffé theorem, see {{< cite "Casella2002" >}}
 (Theorem 7.3.19, Theorem 7.3.23, Theorem 7.5.1) which also tells us that any 
 UMVUE is unique!
 
-**Definition:** *(Completeness) Let $f (t| \theta)$ be a family of densities for a 
-statistic $T (\boldsymbol{X})$. The family of probability distributions is 
-called complete if $\mathbb{E}_{\theta} (g (T)) = 0$ for all $\theta$ implies 
-$\mathbb{P}_{\theta} (g (T) = 0) = 1$ for all $\theta$. Equivalently, $T 
-(\boldsymbol{X})$ is called a complete statistic.*
+{{% env type="definition" title="Completeness" style="plain" %}}
+Let $f (t| \theta)$ be a family of densities for a
+statistic $T (\boldsymbol{X})$. The family of probability distributions is
+called complete if $\mathbb{E}_{\theta} (g (T)) = 0$ for all $\theta$ implies
+$\mathbb{P}_{\theta} (g (T) = 0) = 1$ for all $\theta$. Equivalently, $T
+(\boldsymbol{X})$ is called a complete statistic.
+{{% /env %}}
 
-**Theorem:** *(Lehmann-Scheffé) Let $T$ be a complete sufficient statistic for a 
-parameter $\theta$, and let $\phi (T)$ be any estimator based only on $T$ such 
-that $\mathbb{E} (\phi (T)) = \theta$. Then $\phi (T)$ is the unique UMVUE of 
-$\theta$.*
+{{% env type="theorem" title="Lehmann-Scheffé" %}}
+Let $T$ be a complete sufficient statistic for a
+parameter $\theta$, and let $\phi (T)$ be any estimator based only on $T$ such
+that $\mathbb{E} (\phi (T)) = \theta$. Then $\phi (T)$ is the unique UMVUE of
+$\theta$.
+{{% /env %}}
 
 That is, if we are able to find a complete sufficient statistic of our 
 parameter $\theta$, then by conditioning any estimator on this statistic will 

@@ -54,15 +54,17 @@ $$
 \end{eqnarray}
 $$
 
-Remark. Here, for a process $(X_{t})_{t}$ that describes capital, $\mu$ can be 
+{{% env type="remark" style="plain" %}}
+Here, for a process $(X_{t})_{t}$ that describes capital, $\mu$ can be
 interpreted as the expected daily PnL, and $\sigma$ as the daily volatility.
 
-In such a scenario, define the Sharpe ratio across a time horizon $T$ (in 
-business days) as $\operatorname{SR}_{T} := \frac{\mu}{\sigma} \sqrt{T}$ and a 
-period specific volatility as $\sigma _{T} := \sigma \sqrt{T}$. In addition, 
-when considering a drawdown $- b$, for some $b \geqslant 0$, define the 
-vol-normalised drawdown as $b_{\sigma} := \frac{b}{\sigma}$. Furthermore, for 
+In such a scenario, define the Sharpe ratio across a time horizon $T$ (in
+business days) as $\operatorname{SR}_{T} := \frac{\mu}{\sigma} \sqrt{T}$ and a
+period specific volatility as $\sigma _{T} := \sigma \sqrt{T}$. In addition,
+when considering a drawdown $- b$, for some $b \geqslant 0$, define the
+vol-normalised drawdown as $b_{\sigma} := \frac{b}{\sigma}$. Furthermore, for
 brevity, we write $\operatorname{SR}_{1}$ as $\operatorname{SR}$.
+{{% /env %}}
 
 ## Questions of Interest
 
@@ -227,7 +229,8 @@ where we have restated the last equation in volatility units. One can check
 that as $T \rightarrow \infty$, the right hand side of the equation approaches 
 $e^{- \frac{2 \mu b}{\sigma^2}}$, the eventual hitting probability.
 
-Remark. The probability of hitting the barrier $- b$ within a finite $T$ is 
+{{% env type="remark" style="plain" %}}
+The probability of hitting the barrier $- b$ within a finite $T$ is
 given in two terms, where
 
 $$
@@ -240,6 +243,7 @@ $$
   positive drift.} \nonumber
 \end{eqnarray}
 $$
+{{% /env %}}
 
 ### Question 3: Distribution of Drawdown Values
 
