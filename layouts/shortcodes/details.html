@@ -1,7 +1,37 @@
-<details {{ if or (.Get "open") (in .Params "open") }}open{{ end }}>
-  {{- $summary := cond .IsNamedParams (.Get "title") (.Get 0) -}}
-  <summary>{{ $summary | .Page.RenderString }}</summary>
-  <div class="markdown-inner">
-    {{ .Inner | .Page.RenderString }}
-  </div>
-</details>
+{{/* Collapsible block for folded environments.
+Expects inner content with summary and body separated by <!-- split -->.
+
+Usage:
+
+{{% details %}}
+Summary content with $math$ support
+<!-- split -->
+Body content with $$display math$$ and nested shortcodes
+{{% /details %}}
+
+The summary is the text before the <!-- split --> separator.
+The body is the text after it.
+Both support full markdown, math, and nested shortcodes.
+
+NOTE: Use {{% %}} (percent signs) so nested shortcodes are processed.
+The <!-- split --> HTML comment survives markdown processing intact.
+NOTE: HTML output lines must have fewer than 4 leading spaces to avoid
+Goldmark treating them as indented code blocks.
+*/}}
+{{- $parts := split .Inner "<!-- split -->" -}}
+{{- $summary := index $parts 0 -}}
+{{- $body := "" -}}
+{{- if gt (len $parts) 1 -}}
+{{- $body = index $parts 1 -}}
+{{- end -}}
+<div class="details-collapse">
+<div class="details-collapse-header">
+<div class="details-collapse-content">{{ $summary | safeHTML }}</div>
+<button class="details-collapse-toggle" aria-expanded="false" aria-label="Toggle details">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+</div>
+<div class="details-collapse-body">
+{{ $body | safeHTML }}
+</div>
+</div>

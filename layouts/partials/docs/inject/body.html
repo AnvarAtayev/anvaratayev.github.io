@@ -54,4 +54,14 @@
       applyTheme(next);
     });
   })();
+
+  // Collapsible details blocks
+  document.addEventListener("click", event => {
+    const btn = event.target.closest(".details-collapse-toggle");
+    if (!btn) return;
+    const body = btn.closest(".details-collapse").querySelector(".details-collapse-body");
+    const open = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", !open);
+    body.classList.toggle("details-collapse-body--open", !open);
+  });
 </script>

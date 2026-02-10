@@ -247,6 +247,124 @@ figure.big-figure img {
     margin: 0.5em 0;
   }
 }
+// Theorem-like environments
+.tm-env {
+  margin: 0.5em 0;
+  padding: $padding-4 $padding-16;
+  border-left: 3px solid var(--gray-200);
+
+  .tm-env-header {
+    margin: 0 0 0.5em 0;
+  }
+
+  .tm-env-body {
+    font-style: italic;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.tm-env-plain .tm-env-body {
+    font-style: normal;
+  }
+}
+
+// Proof: lighter, no background, ends with QED
+.tm-env-proof {
+  border-left-color: var(--gray-200);
+  background: none;
+  padding: $padding-8 $padding-16;
+
+  .tm-env-body {
+    font-style: normal;
+
+    &::after {
+      content: "\25A1"; // open square (QED)
+      display: block;
+      text-align: right;
+      margin-top: 0.5em;
+    }
+  }
+}
+
+// Theorem, lemma, proposition, corollary: strong accent
+.tm-env-theorem,
+.tm-env-lemma,
+.tm-env-proposition,
+.tm-env-corollary {
+  border-left-color: var(--color-link);
+}
+
+// Definition, axiom, notation
+.tm-env-definition,
+.tm-env-axiom,
+.tm-env-notation {
+  border-left-color: var(--gray-500);
+}
+
+// Example, exercise
+.tm-env-example,
+.tm-env-exercise {
+  border-left-color: var(--gray-300);
+}
+
+// Collapsible details block
+.details-collapse {
+  position: relative;
+}
+
+.details-collapse-header {
+  position: relative;
+}
+
+.details-collapse-content {
+  // Inherits surrounding text style — no special styling
+}
+
+.details-collapse-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: $padding-4;
+  color: var(--body-font-color);
+  opacity: 0.35;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  line-height: 0;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+
+  &[aria-expanded="true"] svg {
+    transform: rotate(180deg);
+  }
+}
+
+.details-collapse-body {
+  display: none;
+  border-top: 1px solid var(--gray-200);
+  margin-top: $padding-8;
+  padding: $padding-8 $padding-16;
+  background: var(--gray-100);
+  border-radius: $border-radius;
+}
+
+.details-collapse-body--open {
+  display: block;
+}
+
 // Theme override for manual toggle.
 :root[data-theme="light"] {
   @include theme-light;
