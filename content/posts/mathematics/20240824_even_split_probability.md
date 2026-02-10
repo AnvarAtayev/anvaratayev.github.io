@@ -4,6 +4,7 @@ title: An Even Split in Probability
 math: true
 tags: ["probability"]
 categories: "mathematics"
+summary: "A generalisation of Q18 from *50 Challenging Problems in Probability*."
 ---
 
 This is a generalisation of Q18 from *50 Challenging Problems in Probability*.

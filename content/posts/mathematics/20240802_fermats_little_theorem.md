@@ -4,6 +4,7 @@ title: Fermat's Little Theorem
 math: true
 tags: ["combinatorics"]
 categories: "mathematics"
+summary: "A cute little trick to solving Fermat's Little Theorem."
 ---
 
 This is an oldie, but a cute little trick to solving Fermat's Little Theorem that I came across back when I was an undergraduate. This is a  well known proof and can be found in Wikipedia[^Wikipedia], although I found this proof in an article posted by Fermat's Library [^FermatsLibrary].
