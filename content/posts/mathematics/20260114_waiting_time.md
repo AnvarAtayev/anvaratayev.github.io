@@ -186,8 +186,7 @@ $$
 $$
 {{% /env %}}
 
-In particular, [(undefined label: 
-'eq-inspection-paradox')](#eq-inspection-paradox) tells us that under some 
+In particular, [(1)](#eq-inspection-paradox) tells us that under some 
 uncertainty of the headway, the expected waiting time is greater than or equal 
 to the $\mathbb{E} (H) / 2$, and only equal to $\mathbb{E} (H) / 2$ (the 
 intuitive result) when there is no variance on the headway.
