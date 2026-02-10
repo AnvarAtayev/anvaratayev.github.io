@@ -10,6 +10,7 @@ refs:
 title: "The Kelly Criterion"
 tags: ["mathematics", "finance"]
 categories: ["mathematics"]
+summary: "A summary of the Kelly Criterion and the optimal sizing of bets for maximal expected logarithmic returns."
 ---
 
 

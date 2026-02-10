@@ -5,6 +5,7 @@ weight: 10
 tags: ["Tools", "Utility"]
 categories: "Utility"
 draft : true
+summary: "A collection of useful links and tools for blog construction and general matters."
 ---
 
 A list of useful links/tools that I have found relating to the construction of this blog, or general matters.
