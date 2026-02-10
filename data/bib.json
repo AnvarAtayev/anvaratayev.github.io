@@ -737,5 +737,104 @@
     "title": "North magnetic pole",
     "type": "webpage",
     "URL": "https://en.wikipedia.org/wiki/North_magnetic_pole"
+  },
+  {
+    "id": "Downey2024",
+    "abstract": "The inspection paradox is a statistical illusion you’ve probably never heard of. But once you learn about it, you see it everywhere.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          9
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Downey",
+        "given": "Allen"
+      }
+    ],
+    "citation-key": "Downey2024",
+    "container-title": "TDS Archive",
+    "issued": {
+      "date-parts": [
+        [
+          "2024"
+        ]
+      ]
+    },
+    "language": "en",
+    "title": "The Inspection Paradox is Everywhere",
+    "type": "post-weblog",
+    "URL": "https://medium.com/data-science/the-inspection-paradox-is-everywhere-2ef1c2e9d709"
+  },
+  {
+    "id": "VanderPlas2018",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          9
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "VanderPlas",
+        "given": "Jake"
+      }
+    ],
+    "citation-key": "VanderPlas2018",
+    "container-title": "Pythonic Perambulations",
+    "issued": {
+      "date-parts": [
+        [
+          "2018"
+        ]
+      ]
+    },
+    "title": "The Waiting Time Paradox, or, Why Is My Bus Always Late?",
+    "type": "post-weblog",
+    "URL": "https://jakevdp.github.io/blog/2018/09/13/waiting-time-paradox/"
+  },
+  {
+    "id": "Grimmett2020",
+    "abstract": "The fourth edition of this successful text provides an introduction to probability and random processes, with many practical applications. It is aimed at mathematics undergraduates and postgraduates, and has four main aims.  \n                \n                 To provide a thorough but straightforward account of basic probability theory, giving the reader a natural feel for the subject unburdened by oppressive technicalities.  \n                 To discuss important random processes in depth with many examples. \n                 To cover a range of topics that are significant and interesting but less routine.  \n                 To impart to the beginner some flavour of advanced work. \n                \n                \n                The book begins with the basic ideas common to most undergraduate courses in mathematics, statistics, and science. It ends with material usually found at graduate level, for example, Markov processes, (including Markov chain Monte Carlo), martingales, queues, diffusions, (including stochastic calculus with Itô's formula), renewals, stationary processes (including the ergodic theorem), and option pricing in mathematical finance using the Black-Scholes formula. Further, in this new revised fourth edition, there are sections on coupling from the past, Lévy processes, self-similarity and stability, time changes, and the holding-time/jump-chain construction of continuous-time Markov chains. Finally, the number of exercises and problems has been increased by around 300 to a total of about 1300, and many of the existing exercises have been refreshed by additional parts. The solutions to these exercises and problems can be found in the companion volume, One Thousand Exercises in Probability, third edition, (OUP 2020).\n               \n               \n                \n              ,  \n               The fourth edition of this successful text provides an introduction to probability and random processes, with many practical applications. It is aimed at mathematics undergraduates and postgraduates, and has four main aims.  \n                \n                 To provide a thorough but straightforward account of basic probability theory, giving the reader a natural feel for the subject unburdened by oppressive technicalities.  \n                 To discuss important random processes in depth with many examples. \n                 To cover a range of topics that are significant and interesting but less routine.  \n                 To impart to the beginner some flavour of advanced work. \n                \n                \n                The book begins with the basic ideas common to most undergraduate courses in mathematics, statistics, and science. It ends with material usually found at graduate level, for example, Markov processes, (including Markov chain Monte Carlo), martingales, queues, diffusions, (including stochastic calculus with Itô's formula), renewals, stationary processes (including the ergodic theorem), and option pricing in mathematical finance using the Black-Scholes formula. Further, in this new revised fourth edition, there are sections on coupling from the past, Lévy processes, self-similarity and stability, time changes, and the holding-time/jump-chain construction of continuous-time Markov chains. Finally, the number of exercises and problems has been increased by around 300 to a total of about 1300, and many of the existing exercises have been refreshed by additional parts. The solutions to these exercises and problems can be found in the companion volume, One Thousand Exercises in Probability, third edition, (OUP 2020).",
+    "author": [
+      {
+        "family": "Grimmett",
+        "given": "Geoffrey"
+      },
+      {
+        "family": "Stirzaker",
+        "given": "David"
+      },
+      {
+        "family": "Grimmett",
+        "given": "Geoffrey"
+      },
+      {
+        "family": "Stirzaker",
+        "given": "David"
+      }
+    ],
+    "citation-key": "Grimmett2020",
+    "ISBN": "978-0-19-884759-5",
+    "issued": {
+      "date-parts": [
+        [
+          "2020"
+        ]
+      ]
+    },
+    "number-of-pages": "688",
+    "publisher": "Oxford University Press",
+    "publisher-place": "Oxford, New York",
+    "source": "Oxford University Press",
+    "title": "Probability and Random Processes",
+    "type": "book"
   }
 ]
