@@ -191,6 +191,19 @@ figure.image-with-source {
     }
 }
 
+// Blog post title links: use heading color
+.book-post h1 a,
+.book-post h1 a:visited,
+.book-post h3 a {
+  color: var(--body-font-color);
+  text-decoration: none;
+}
+
+// Subtle fade only on the post list page
+.book-post h3 a:visited {
+  color: var(--color-visited-link);
+}
+
 // Styling for the blog post list preview
 .post-preview {
   font-size: 0.75rem;
