@@ -17,7 +17,7 @@
 {{- $favicon := .Site.Params.BookFavicon | default "favicon.png" }}
 {{- $appleTouchIcon := .Site.Params.BookAppleTouchIcon | default $favicon }}
 <link rel="manifest" href="{{ $manifest.RelPermalink }}">
-<link rel="icon" href="{{ $favicon | relURL }}">
+<link rel="icon" href="{{ $favicon | relURL }}" type="image/svg+xml">
 <link rel="apple-touch-icon" href="{{ $appleTouchIcon | relURL }}">
 <link rel="canonical" href="{{ .Permalink }}">
 
