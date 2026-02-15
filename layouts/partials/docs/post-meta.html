@@ -1,5 +1,12 @@
 {{ with .Date }}
-<h5>{{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}</h5>
+<h5>
+  {{ partial "docs/date" (dict "Date" . "Format" $.Site.Params.BookDateFormat) }}
+  {{- with $.GitInfo }}
+    {{- if gt .AuthorDate.Unix $.Date.Unix }}
+      · Updated {{ partial "docs/date" (dict "Date" .AuthorDate "Format" $.Site.Params.BookDateFormat) }}
+    {{- end }}
+  {{- end }}
+</h5>
 {{ end }}
 
 {{/*  Uncomment below to show tags and categories underneath post names  */}}
