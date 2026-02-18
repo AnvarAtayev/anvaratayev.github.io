@@ -95,7 +95,7 @@ $$
   (T_{\operatorname{walk}}) & = & \mathbb{E} (W) +\mathbb{E}
   (T_{\operatorname{bus}}) -\mathbb{E} (T_{\operatorname{walk}}) \nonumber\\\
   & = & \mathbb{E} (W) + \lambda \mathbb{E} (T_{\operatorname{walk}})
-  \-\mathbb{E} (T_{\operatorname{walk}}) \nonumber\\\
+  -\mathbb{E} (T_{\operatorname{walk}}) \nonumber\\\
   & = & \mathbb{E} (W) - (1 - \lambda) \mathbb{E} (T_{\operatorname{walk}}) .
   \nonumber
 \end{eqnarray}
