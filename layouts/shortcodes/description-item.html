@@ -1,0 +1,2 @@
+{{- $title := .Get "title" -}}
+<p class="description-item"><strong>{{ $title }}.</strong> {{ .Inner | markdownify }}</p>

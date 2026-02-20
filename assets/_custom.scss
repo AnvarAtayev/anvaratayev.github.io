@@ -447,6 +447,14 @@ figure.image-with-source {
   }
 }
 
+// Description list (LaTeX-style)
+.description-list {
+  .description-item {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    margin: 0.25em 0;
+  }
+}
 
 .brand-row {
   display: flex;
