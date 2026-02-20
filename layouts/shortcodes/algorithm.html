@@ -1,0 +1,32 @@
+{{/* Algorithm pseudocode shortcode.
+Renders a numbered algorithm block with a collapsible body.
+
+Usage:
+
+{{% algorithm number="1" title="(Gradient Descent)" %}}
+Require: $\alpha$: Step size
+
+**while** not converged do
+
+$\theta \leftarrow \theta - \alpha \nabla f$
+
+**end while**
+{{% /algorithm %}}
+
+Parameters:
+  number: (optional) Algorithm number, e.g. "1" or "2.3"
+  title:  (optional) Algorithm title, e.g. "(Gradient Descent)"
+*/}}
+{{- $number := .Get "number" -}}
+{{- $title := .Get "title" -}}
+<div class="algorithm">
+<div class="algorithm-header">
+<p class="algorithm-title"><strong>Algorithm{{ with $number }} {{ . }}{{ end }}{{ with $title }} {{ . | markdownify }}{{ end }}</strong></p>
+<button class="algorithm-toggle" aria-expanded="false" aria-label="Toggle algorithm">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+</button>
+</div>
+<div class="algorithm-body">
+{{ .Inner }}
+</div>
+</div>

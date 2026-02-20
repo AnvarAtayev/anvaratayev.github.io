@@ -64,4 +64,14 @@
     btn.setAttribute("aria-expanded", !open);
     body.classList.toggle("details-collapse-body--open", !open);
   });
+
+  // Collapsible algorithm blocks
+  document.addEventListener("click", event => {
+    const btn = event.target.closest(".algorithm-toggle");
+    if (!btn) return;
+    const body = btn.closest(".algorithm").querySelector(".algorithm-body");
+    const open = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", !open);
+    body.classList.toggle("algorithm-body--open", !open);
+  });
 </script>

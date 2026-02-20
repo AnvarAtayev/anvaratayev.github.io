@@ -372,6 +372,82 @@ figure.image-with-source {
   opacity: 1;
 }
 
+// Algorithm pseudocode blocks
+.algorithm {
+  margin: 1em 0;
+  border-top: 1px solid var(--gray-500);
+  border-bottom: 1px solid var(--gray-500);
+
+  .algorithm-header {
+    position: relative;
+    padding: $padding-4 0;
+    border-bottom: 1px solid var(--gray-200);
+
+    .algorithm-title {
+      margin: 0;
+    }
+  }
+
+  .algorithm-toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: $padding-4;
+    color: var(--body-font-color);
+    opacity: 0.35;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    line-height: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      transition: transform 0.2s ease;
+    }
+
+    &[aria-expanded="true"] svg {
+      transform: rotate(180deg);
+    }
+  }
+
+  .algorithm-body {
+    display: none;
+    padding: $padding-4 0 $padding-8;
+    font-style: normal;
+    line-height: 1.5;
+
+    &--open {
+      display: block;
+    }
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+      text-indent: 0;
+    }
+
+    .indent {
+      padding-left: 1.5em;
+    }
+
+    mjx-container {
+      font-size: 100% !important;
+    }
+  }
+}
+
+
 .brand-row {
   display: flex;
   align-items: center;
