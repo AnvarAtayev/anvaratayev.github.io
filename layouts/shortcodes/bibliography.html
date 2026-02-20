@@ -15,12 +15,15 @@
         {{ if $entry }}
             {{ $entry = index $entry 0 }}
             <li id="ref-{{ .number }}">
-                {{ $authorCount := len $entry.author }}
-                {{ range $index, $author := $entry.author }}
+                {{ $authors := $entry.author | default $entry.editor | default $entry.director }}
+                {{ with $authors }}
+                {{ $authorCount := len . }}
+                {{ range $index, $author := . }}
                     {{ if $index }}
                         {{ if eq (add $index 1) $authorCount }} and {{ else }}, {{ end }}
                     {{ end }}
                     {{ $author.given }} {{ $author.family }}
+                {{ end }}
                 {{ end }}
                 ({{ index $entry.issued "date-parts" 0 0 }}).
                 {{ if $entry.title }} <em>{{ $entry.title }}</em>.{{ end }}
