@@ -836,5 +836,498 @@
     "source": "Oxford University Press",
     "title": "Probability and Random Processes",
     "type": "book"
+  },
+  {
+    "id": "Ruder2017",
+    "abstract": "Gradient descent optimization algorithms, while increasingly popular, are often used as black-box optimizers, as practical explanations of their strengths and weaknesses are hard to come by. This article aims to provide the reader with intuitions with regard to the behaviour of different algorithms that will allow her to put them to use. In the course of this overview, we look at different variants of gradient descent, summarize challenges, introduce the most common optimization algorithms, review architectures in a parallel and distributed setting, and investigate additional strategies for optimizing gradient descent.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          17
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Ruder",
+        "given": "Sebastian"
+      }
+    ],
+    "citation-key": "Ruder2017",
+    "DOI": "10.48550/arXiv.1609.04747",
+    "issued": {
+      "date-parts": [
+        [
+          "2017",
+          6,
+          15
+        ]
+      ]
+    },
+    "number": "arXiv:1609.04747",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "An overview of gradient descent optimization algorithms",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/1609.04747"
+  },
+  {
+    "id": "Cauchy1897",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          16
+        ]
+      ]
+    },
+    "citation-key": "Cauchy1897",
+    "collection-title": "Cambridge Library Collection - Mathematics",
+    "container-title": "Oeuvres complètes: Series 1",
+    "DOI": "10.1017/CBO9780511702396.063",
+    "editor": [
+      {
+        "family": "Cauchy",
+        "given": "Augustin-Louis"
+      }
+    ],
+    "ISBN": "978-1-108-00277-6",
+    "issued": {
+      "date-parts": [
+        [
+          "1897"
+        ]
+      ]
+    },
+    "page": "399–402",
+    "publisher": "Cambridge University Press",
+    "publisher-place": "Cambridge",
+    "source": "Cambridge University Press",
+    "title": "Méthode générale pour la résolution des systèmes d'équations simultanées",
+    "type": "chapter",
+    "URL": "https://www.cambridge.org/core/books/oeuvres-completes/analyse-mathematique-methodc-generale-pour-la-resolution-des-systemes-dequations-simultanees/74A15B57C79B65C956D558CFA8766693",
+    "volume": "10"
+  },
+  {
+    "id": "Robbins1951",
+    "abstract": "Let $M(x)$ denote the expected value at level $x$ of the response to a certain experiment. $M(x)$ is assumed to be a monotone function of $x$ but is unknown to the experimenter, and it is desired to find the solution $x = \\theta$ of the equation $M(x) = \\alpha$, where $\\alpha$ is a given constant. We give a method for making successive experiments at levels $x_1,x_2,\\cdots$ in such a way that $x_n$ will tend to $\\theta$ in probability.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          12
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Robbins",
+        "given": "Herbert"
+      },
+      {
+        "family": "Monro",
+        "given": "Sutton"
+      }
+    ],
+    "citation-key": "Robbins1951",
+    "container-title": "The Annals of Mathematical Statistics",
+    "DOI": "10.1214/aoms/1177729586",
+    "ISSN": "0003-4851, 2168-8990",
+    "issue": "3",
+    "issued": {
+      "date-parts": [
+        [
+          "1951",
+          9
+        ]
+      ]
+    },
+    "page": "400–407",
+    "publisher": "Institute of Mathematical Statistics",
+    "source": "Project Euclid",
+    "title": "A Stochastic Approximation Method",
+    "type": "article-journal",
+    "URL": "https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-22/issue-3/A-Stochastic-Approximation-Method/10.1214/aoms/1177729586.full",
+    "volume": "22"
+  },
+  {
+    "id": "Polyak1964",
+    "abstract": "For the solution of the functional equation P (x) = 0 (1) (where P is an operator, usually linear, from B into B, and B is a Banach space) iteration methods are generally used. These consist of the construction of a series x0, …, xn, …, which converges to the solution (see, for example [1]). Continuous analogues of these methods are also known, in which a trajectory x(t), 0 ⩽ t ⩽ ∞ is constructed, which satisfies the ordinary differential equation in B and is such that x(t) approaches the solution of (1) as t → ∞ (see [2]). We shall call the method a k-step method if for the construction of each successive iteration xn+1 we use k previous iterations xn, …, xn−k+1. The same term will also be used for continuous methods if x(t) satisfies a differential equation of the k-th order or k-th degree. Iteration methods which are more widely used are one-step (e.g. methods of successive approximations). They are generally simple from the calculation point of view but often converge very slowly. This is confirmed both by the evaluation of the speed of convergence and by calculation in practice (for more details see below). Therefore the question of the rate of convergence is most important. Some multistep methods, which we shall consider further, which are only slightly more complicated than the corresponding one-step methods, make it possible to speed up the convergence substantially. Note that all the methods mentioned below are applicable also to the problem of minimizing the differentiable functional (x) in Hilbert space, so long as this problem reduces to the solution of the equation grad (x) = 0.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          16
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Polyak",
+        "given": "B. T."
+      }
+    ],
+    "citation-key": "Polyak1964",
+    "container-title": "USSR Computational Mathematics and Mathematical Physics",
+    "container-title-short": "USSR Computational Mathematics and Mathematical Physics",
+    "DOI": "10.1016/0041-5553(64)90137-5",
+    "ISSN": "0041-5553",
+    "issue": "5",
+    "issued": {
+      "date-parts": [
+        [
+          "1964",
+          1,
+          1
+        ]
+      ]
+    },
+    "page": "1–17",
+    "source": "ScienceDirect",
+    "title": "Some methods of speeding up the convergence of iteration methods",
+    "type": "article-journal",
+    "URL": "https://www.sciencedirect.com/science/article/pii/0041555364901375",
+    "volume": "4"
+  },
+  {
+    "id": "Qian1999",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          13
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Qian",
+        "given": "Ning"
+      }
+    ],
+    "citation-key": "Qian1999",
+    "container-title": "Neural Networks",
+    "container-title-short": "Neural Networks",
+    "DOI": "10.1016/S0893-6080(98)00116-6",
+    "ISSN": "08936080",
+    "issue": "1",
+    "issued": {
+      "date-parts": [
+        [
+          "1999",
+          1
+        ]
+      ]
+    },
+    "language": "en",
+    "page": "145–151",
+    "source": "DOI.org (Crossref)",
+    "title": "On the momentum term in gradient descent learning algorithms",
+    "type": "article-journal",
+    "URL": "https://linkinghub.elsevier.com/retrieve/pii/S0893608098001166",
+    "volume": "12"
+  },
+  {
+    "id": "Nesterov1983",
+    "abstract": "Semantic Scholar extracted view of \"A method for solving the convex programming problem with convergence rate O(1/k^2)\" by Y. Nesterov",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          16
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Nesterov",
+        "given": "Y."
+      }
+    ],
+    "citation-key": "Nesterov1983",
+    "container-title": "Proceedings of the USSR Academy of Sciences",
+    "issued": {
+      "date-parts": [
+        [
+          "1983"
+        ]
+      ]
+    },
+    "source": "Semantic Scholar",
+    "title": "A method for solving the convex programming problem with convergence rate O(1/k^2)",
+    "type": "article-journal",
+    "URL": "https://www.semanticscholar.org/paper/A-method-for-solving-the-convex-programming-problem-Nesterov/8d3a318b62d2e970122da35b2a2e70a5d12cc16f"
+  },
+  {
+    "id": "Koolen2017",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          19
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Koolen",
+        "given": "Wouter M."
+      }
+    ],
+    "citation-key": "Koolen2017",
+    "issued": {
+      "date-parts": [
+        [
+          "2017",
+          1,
+          21
+        ]
+      ]
+    },
+    "title": "The Advantage of Full AdaGrad",
+    "type": "webpage",
+    "URL": "https://blog.wouterkoolen.info/GrokkingAdaGrad/post.html"
+  },
+  {
+    "id": "Duchi2011",
+    "abstract": "We present a new family of subgradient methods that dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning. Metaphorically, the adaptation allows us to find needles in haystacks in the form of very predictive but rarely seen features. Our paradigm stems from recent advances in stochastic optimization and online learning which employ proximal functions to control the gradient steps of the algorithm. We describe and analyze an apparatus for adaptively modifying the proximal function, which significantly simplifies setting a learning rate and results in regret guarantees that are provably as good as the best proximal function that can be chosen in hindsight. We give several efficient algorithms for empirical risk minimization problems with common and important regularization functions and domain constraints. We experimentally study our theoretical analysis and show that adaptive subgradient methods outperform state-of-the-art, yet non-adaptive, subgradient algorithms.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          16
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Duchi",
+        "given": "John"
+      },
+      {
+        "family": "Hazan",
+        "given": "Elad"
+      },
+      {
+        "family": "Singer",
+        "given": "Yoram"
+      }
+    ],
+    "citation-key": "Duchi2011",
+    "container-title": "J. Mach. Learn. Res.",
+    "ISSN": "1532-4435",
+    "issued": {
+      "date-parts": [
+        [
+          "2011",
+          7,
+          1
+        ]
+      ]
+    },
+    "page": "2121–2159",
+    "source": "ACM Digital Library",
+    "title": "Adaptive Subgradient Methods for Online Learning and Stochastic Optimization",
+    "type": "article-journal",
+    "URL": "https://dl.acm.org/doi/10.5555/1953048.2021068",
+    "volume": "12"
+  },
+  {
+    "id": "Hinton2012",
+    "abstract": "Share your videos with friends, family and the world",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          16
+        ]
+      ]
+    },
+    "citation-key": "Hinton2012",
+    "director": [
+      {
+        "family": "Hinton",
+        "given": "Geoffrey"
+      }
+    ],
+    "issued": {
+      "date-parts": [
+        [
+          "2012"
+        ]
+      ]
+    },
+    "language": "en-GB",
+    "title": "Neural Networks for Machine Learning",
+    "type": "motion_picture"
+  },
+  {
+    "id": "Zeiler2012",
+    "abstract": "We present a novel per-dimension learning rate method for gradient descent called ADADELTA. The method dynamically adapts over time using only first order information and has minimal computational overhead beyond vanilla stochastic gradient descent. The method requires no manual tuning of a learning rate and appears robust to noisy gradient information, different model architecture choices, various data modalities and selection of hyperparameters. We show promising results compared to other methods on the MNIST digit classification task using a single machine and on a large scale voice dataset in a distributed cluster environment.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          16
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Zeiler",
+        "given": "Matthew D."
+      }
+    ],
+    "citation-key": "Zeiler2012",
+    "DOI": "10.48550/ARXIV.1212.5701",
+    "issued": {
+      "date-parts": [
+        [
+          "2012"
+        ]
+      ]
+    },
+    "license": "arXiv.org perpetual, non-exclusive license",
+    "publisher": "arXiv",
+    "source": "DOI.org (Datacite)",
+    "title": "ADADELTA: An Adaptive Learning Rate Method",
+    "title-short": "ADADELTA",
+    "type": "article",
+    "URL": "https://arxiv.org/abs/1212.5701",
+    "version": "1"
+  },
+  {
+    "id": "Kingma2017",
+    "abstract": "We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss AdaMax, a variant of Adam based on the infinity norm.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          10
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Kingma",
+        "given": "Diederik P."
+      },
+      {
+        "family": "Ba",
+        "given": "Jimmy"
+      }
+    ],
+    "citation-key": "Kingma2017",
+    "DOI": "10.48550/arXiv.1412.6980",
+    "issued": {
+      "date-parts": [
+        [
+          "2017",
+          1,
+          30
+        ]
+      ]
+    },
+    "number": "arXiv:1412.6980",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "Adam: A Method for Stochastic Optimization",
+    "title-short": "Adam",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/1412.6980"
+  },
+  {
+    "id": "Reddi2018",
+    "abstract": "Several recently proposed stochastic optimization methods that have been successfully used in training deep networks such as RMSProp, Adam, Adadelta, Nadam are based on using gradient updates scaled by square roots of exponential moving averages of squared past gradients. In many applications, e.g. learning with large output spaces, it has been empirically observed that these algorithms fail to converge to an optimal solution (or a critical point in nonconvex settings). We show that one cause for such failures is the exponential moving average used in the algorithms. We provide an explicit example of a simple convex optimization setting where Adam does not converge to the optimal solution, and describe the precise problems with the previous analysis of Adam algorithm. Our analysis suggests that the convergence issues can be fixed by endowing such algorithms with `long-term memory' of past gradients, and propose new variants of the Adam algorithm which not only fix the convergence issues but often also lead to improved empirical performance.",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          13
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Reddi",
+        "given": "Sashank J."
+      },
+      {
+        "family": "Kale",
+        "given": "Satyen"
+      },
+      {
+        "family": "Kumar",
+        "given": "Surinder"
+      }
+    ],
+    "citation-key": "Reddi2018",
+    "container-title": "ArXiv",
+    "issued": {
+      "date-parts": [
+        [
+          "2018",
+          2,
+          15
+        ]
+      ]
+    },
+    "source": "Semantic Scholar",
+    "title": "On the Convergence of Adam and Beyond",
+    "type": "article-journal",
+    "URL": "https://www.semanticscholar.org/paper/On-the-Convergence-of-Adam-and-Beyond-Reddi-Kale/c983653841b6987d9959318f074a595783838576"
+  },
+  {
+    "id": "Loshchilov2019",
+    "abstract": "L$_2$ regularization and weight decay regularization are equivalent for standard stochastic gradient descent (when rescaled by the learning rate), but as we demonstrate this is \\emph{not} the case for adaptive gradient algorithms, such as Adam. While common implementations of these algorithms employ L$_2$ regularization (often calling it \"weight decay\" in what may be misleading due to the inequivalence we expose), we propose a simple modification to recover the original formulation of weight decay regularization by \\emph{decoupling} the weight decay from the optimization steps taken w.r.t. the loss function. We provide empirical evidence that our proposed modification (i) decouples the optimal choice of weight decay factor from the setting of the learning rate for both standard SGD and Adam and (ii) substantially improves Adam's generalization performance, allowing it to compete with SGD with momentum on image classification datasets (on which it was previously typically outperformed by the latter). Our proposed decoupled weight decay has already been adopted by many researchers, and the community has implemented it in TensorFlow and PyTorch; the complete source code for our experiments is available at https://github.com/loshchil/AdamW-and-SGDW",
+    "accessed": {
+      "date-parts": [
+        [
+          "2026",
+          2,
+          16
+        ]
+      ]
+    },
+    "author": [
+      {
+        "family": "Loshchilov",
+        "given": "Ilya"
+      },
+      {
+        "family": "Hutter",
+        "given": "Frank"
+      }
+    ],
+    "citation-key": "Loshchilov2019",
+    "DOI": "10.48550/arXiv.1711.05101",
+    "issued": {
+      "date-parts": [
+        [
+          "2019",
+          1,
+          4
+        ]
+      ]
+    },
+    "number": "arXiv:1711.05101",
+    "publisher": "arXiv",
+    "source": "arXiv.org",
+    "title": "Decoupled Weight Decay Regularization",
+    "type": "article",
+    "URL": "http://arxiv.org/abs/1711.05101"
   }
 ]
