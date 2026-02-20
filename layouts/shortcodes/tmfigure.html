@@ -1,5 +1,10 @@
 {{/* layouts/shortcodes/tmfigure.html */}}
-<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+{{- $figureStyleParts := slice "padding-top: 0.5em;" -}}
+{{- with .Get "style" -}}
+    {{- $figureStyleParts = $figureStyleParts | append . -}}
+{{- end -}}
+{{- $figureStyleAttr := printf ` style="%s"` (delimit $figureStyleParts " ") -}}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}{{ $figureStyleAttr | safeHTMLAttr }}>
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
@@ -10,12 +15,32 @@
         {{- else }}
             {{/* Fallback for external or static images */}}
         {{- end }}
+        {{- $width := $.Get "width" -}}
+        {{- $height := $.Get "height" -}}
+        {{- $widthIsNumber := and $width (findRE "^[0-9]+$" $width) -}}
+        {{- $heightIsNumber := and $height (findRE "^[0-9]+$" $height) -}}
+        {{- $styleParts := slice -}}
+        {{- if and $width (not $widthIsNumber) -}}
+            {{- $styleParts = $styleParts | append (printf "width: %s;" $width) -}}
+        {{- end -}}
+        {{- if and $height (not $heightIsNumber) -}}
+            {{- $styleParts = $styleParts | append (printf "height: %s;" $height) -}}
+        {{- end -}}
+        {{- if and $width (not $height) -}}
+            {{- $styleParts = $styleParts | append "height: auto;" -}}
+        {{- end -}}
+        {{- $styleParts = $styleParts | append "display: block;" "margin-left: auto;" "margin-right: auto;" -}}
+        {{- $styleAttr := "" -}}
+        {{- if gt (len $styleParts) 0 -}}
+            {{- $styleAttr = printf ` style="%s"` (delimit $styleParts " ") -}}
+        {{- end -}}
         <img src="{{$src | safeURL}}"
              {{- if or ($.Get "alt") ($.Get "caption") }}
                  alt="{{ with $.Get "alt" }}{{ . }}{{ else }}{{ $.Get "caption" | markdownify | plainify }}{{ end }}"
              {{- end -}}
-             {{- with $.Get "width" }} width="{{ . }}"{{ end -}}
-             {{- with $.Get "height" }} height="{{ . }}"{{ end -}}
+             {{- if $widthIsNumber }} width="{{ $width }}"{{ end -}}
+             {{- if $heightIsNumber }} height="{{ $height }}"{{ end -}}
+             {{- $styleAttr | safeHTMLAttr -}}
         />
     {{- end }}
     
