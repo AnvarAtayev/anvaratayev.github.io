@@ -462,3 +462,22 @@ figure.image-with-source {
   justify-content: space-between;
   margin-bottom: $padding-16;
 }
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: $padding-4;
+}
+
+a.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $padding-4;
+  color: var(--body-font-color);
+  opacity: 0.65;
+
+  &:hover {
+    opacity: 1;
+  }
+}
