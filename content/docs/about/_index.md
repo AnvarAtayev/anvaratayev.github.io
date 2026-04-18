@@ -19,20 +19,26 @@ title: "About"
 {{< align-text left="**Research Assistant** _University of Bath_" right="2016 - 2017" >}}
 
 
+## Awards
+{{< align-text left="**EPSRC Doctoral Studentship** _University of Warwick_" right="2018" >}}
+{{< align-text left="**Best Master's Thesis** _University of Bath_" right="2018" >}}
+{{< align-text left="**[IMA Small Grant Scheme](https://ima.org.uk/support/grants/small-grant-scheme/)** _IMA (competitive national selection)_" right="2017" >}}
+{{< align-text left="**Bath IMI Undergraduate Research Award** _University of Bath_" right="2016, 2017" >}}
+{{< align-text left="**[LMS Undergraduate Research Award](https://www.lms.ac.uk/grants/URBList)** _LMS (competitive national selection)_" right="2016" >}}
+{{< align-text left="**[LMS Undergraduate Summer School](https://www.lms.ac.uk/events/lms-summer-schools/2016)** _LMS (competitive national selection)_" right="2016" >}}
+{{< align-text left="**Doreen McDonald Prize for Mathematics** _SHSG (sixth form prize)_" right="2015" >}}
+{{< align-text left="**Engineering Educational Scheme Gold Award** _[EDT](https://www.etrust.org.uk)_" right="2013" >}}
+{{< align-text left="**[Duke of Edinburgh Silver Award](https://dukeofed.com.au)**" right="2011" >}}
+
+
 ## Technical Skills
-<div style="display: flex; flex-direction: column;">
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="width: 200px; font-weight: bold;">Computer Languages</div>
-    <div style="text-align: left; flex-grow: 1;">Python, MATLAB, Bash/Shell, SQL, C++, R, HTML</div>
-  </div>
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="width: 200px; font-weight: bold;">Systems, Software & Tools</div>
-    <div style="text-align: left; flex-grow: 1;">Linux, {{< katex >}}\LaTeX{{< /katex >}}, Git, TeXMacs, Office, Mathematica, Maple</div>
-  </div>
-  <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-    <div style="width: 200px; font-weight: bold;">Languages</div>
-    <div style="text-align: left; flex-grow: 1;">English (Native), Russian (B1), Uzbek (A1)</div>
-  </div>
+<div style="display: grid; grid-template-columns: max-content 1fr; column-gap: 2em; row-gap: 0.4em; align-items: baseline;">
+  <div style="font-weight: bold;">Computer Languages</div>
+  <div>Python, MATLAB, Bash/Shell, SQL, C++, R, HTML</div>
+  <div style="font-weight: bold;">Systems, Software & Tools</div>
+  <div>Linux, {{< katex >}}\LaTeX{{< /katex >}}, Git, Docker, Airflow, Spark, ArcticDB, Bloomberg, <a href="https://www.texmacs.org/tmweb/home/welcome.en.html">TeXMacs</a>, Office, Mathematica, Maple</div>
+  <div style="font-weight: bold;">Languages</div>
+  <div>English (Native), Russian (B1), Uzbek (A1)</div>
 </div>
 
 ## Workshops, Conferences, & Summer Schools
