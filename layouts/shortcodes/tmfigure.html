@@ -10,11 +10,13 @@
     {{- end }}
     
     {{- with $src := .Get "src" }}
-        {{- with $.Page.Resources.GetMatch $src }}
+        {{- $resource := $.Page.Resources.GetMatch $src -}}
+        {{- with $resource }}
             {{- $src = .RelPermalink }}
         {{- else }}
             {{/* Fallback for external or static images */}}
         {{- end }}
+        {{- $inline := eq ($.Get "inline") "true" -}}
         {{- $width := $.Get "width" -}}
         {{- $height := $.Get "height" -}}
         {{- $widthIsNumber := and $width (findRE "^[0-9]+$" $width) -}}
@@ -34,14 +36,18 @@
         {{- if gt (len $styleParts) 0 -}}
             {{- $styleAttr = printf ` style="%s"` (delimit $styleParts " ") -}}
         {{- end -}}
-        <img src="{{$src | safeURL}}"
-             {{- if or ($.Get "alt") ($.Get "caption") }}
-                 alt="{{ with $.Get "alt" }}{{ . }}{{ else }}{{ $.Get "caption" | markdownify | plainify }}{{ end }}"
-             {{- end -}}
-             {{- if $widthIsNumber }} width="{{ $width }}"{{ end -}}
-             {{- if $heightIsNumber }} height="{{ $height }}"{{ end -}}
-             {{- $styleAttr | safeHTMLAttr -}}
-        />
+        {{- if and $inline $resource -}}
+            <div{{ $styleAttr | safeHTMLAttr }}>{{ $resource.Content | safeHTML }}</div>
+        {{- else -}}
+            <img src="{{$src | safeURL}}"
+                 {{- if or ($.Get "alt") ($.Get "caption") }}
+                     alt="{{ with $.Get "alt" }}{{ . }}{{ else }}{{ $.Get "caption" | markdownify | plainify }}{{ end }}"
+                 {{- end -}}
+                 {{- if $widthIsNumber }} width="{{ $width }}"{{ end -}}
+                 {{- if $heightIsNumber }} height="{{ $height }}"{{ end -}}
+                 {{- $styleAttr | safeHTMLAttr -}}
+            />
+        {{- end -}}
     {{- end }}
     
     {{- if .Get "link" }}</a>{{ end -}}

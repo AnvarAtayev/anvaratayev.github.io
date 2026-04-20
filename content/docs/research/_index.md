@@ -14,7 +14,7 @@ My research interests span a number of fields, although historically my work has
 
 ## Academic
 
-{{< tmfigure src="polycrystal.svg" width="100%" style="max-width: 560px; margin: 1.6em auto 1.2em;" caption="A polycrystalline microstructure showcasing a tessellation of grains, each with its own orientation, separated by grain boundaries - the mechanics behind the formation of which was the primary focus of my PhD." >}}{{< /tmfigure >}}
+{{< tmfigure src="polycrystal.svg" inline="true" width="100%" style="max-width: 560px; margin: 1.6em auto 1.2em;" caption="A polycrystalline microstructure showcasing a tessellation of grains, each with its own orientation, separated by grain boundaries - the mechanics behind the formation of which was the primary focus of my PhD." >}}{{< /tmfigure >}}
 
 
 {{< align-text left="**PhD** [_The Read-Shockley Law: A Discrete Dislocation Approach_](https://wrap.warwick.ac.uk/id/eprint/190432/)" >}}
