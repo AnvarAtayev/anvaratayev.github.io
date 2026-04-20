@@ -53,7 +53,13 @@ jobs:
       
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
-      
+
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Render bibliography
+        run: ./bin/build-bib
+
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache

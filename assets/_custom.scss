@@ -456,6 +456,38 @@ figure.image-with-source {
   }
 }
 
+// Publications list rendered from references.bib via pandoc + IEEE CSL.
+.publications-list {
+  margin: 1em 0;
+  font-size: 0.95em;
+  line-height: 1.5;
+
+  .csl-entry {
+    display: flex;
+    margin: 0.6em 0;
+  }
+
+  .csl-left-margin {
+    flex: 0 0 2.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    color: var(--gray-500);
+  }
+
+  .csl-right-inline {
+    flex: 1;
+  }
+
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 .brand-row {
   display: flex;
   align-items: center;
@@ -479,5 +511,28 @@ a.social-link {
 
   &:hover {
     opacity: 1;
+  }
+}
+
+.profile-icons {
+  float: right;
+  display: flex;
+  gap: 0.6em;
+  align-items: center;
+  margin: 0.2em 0 0.4em 1em;
+
+  a {
+    color: var(--body-font-color);
+    opacity: 0.65;
+    display: inline-flex;
+    transition: opacity 0.15s ease;
+
+    &:hover { opacity: 1; }
+
+    svg {
+      width: 22px;
+      height: 22px;
+      display: block;
+    }
   }
 }

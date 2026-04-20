@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# Render references.bib to generated/bibliography.html in IEEE style.
+# Requires: pandoc (https://pandoc.org).
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+mkdir -p generated
+
+# Pandoc requires a stub document containing a `nocite: '@*'` metadata
+# directive plus a `# References` div placeholder so all entries are emitted.
+stub=$(mktemp -t build-bib.XXXXXX.md)
+trap 'rm -f "$stub"' EXIT
+
+cat > "$stub" <<'EOF'
+---
+nocite: '@*'
+---
+
+::: {#refs}
+:::
+EOF
+
+pandoc \
+  --citeproc \
+  --csl=assets/csl/ieee.csl \
+  --bibliography=references.bib \
+  --metadata link-citations=true \
+  --from markdown \
+  --to html \
+  --output generated/bibliography.html \
+  "$stub"
+
+echo "Wrote generated/bibliography.html"

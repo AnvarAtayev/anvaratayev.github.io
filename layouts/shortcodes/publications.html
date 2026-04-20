@@ -1,0 +1,8 @@
+{{- $path := "generated/bibliography.html" -}}
+{{- if fileExists $path -}}
+<div class="publications-list">
+{{ readFile $path | safeHTML }}
+</div>
+{{- else -}}
+<p><em>Publications list not yet generated. Run <code>./bin/build-bib</code> locally, or push to trigger CI.</em></p>
+{{- end -}}
