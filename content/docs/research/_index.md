@@ -54,6 +54,6 @@ Report for DSTL and PA Consulting as part of the Mathematical Challenges in the 
 {{< align-text left="**Measuring the Effect of Position Uncertainty in Swarms of Drones**" >}}
 Report for DSTL as part of the 162nd European Study Group with Industry.
 
-## Publications, Reports, and White Papers
+## Publications, Reports, & White Papers
 
 {{< publications >}}
