@@ -172,24 +172,6 @@ figure.big-figure img {
     display: block;
 }
 
-/* Image with source caption */
-figure.image-with-source {
-    text-align: center;
-    margin: $padding-16 0;
-
-    img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    figcaption {
-        font-size: $font-size-12;
-        font-style: italic;
-        color: var(--gray-500);
-        margin-top: 0.4rem;
-    }
-}
 
 // Blog post title links: use heading color
 .book-post h1 a,

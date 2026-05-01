@@ -5,7 +5,7 @@ weight: 1
 bookToc: false
 ---
 
-{{< image_with_source src="/images/orbital_rays.jpg" alt="First rays of an orbital sunrise" link="https://www.nasa.gov/image-detail/first-rays-of-an-orbital-sunrise/" source="NASA" >}}
+{{< tmfigure src="/images/orbital_rays.jpg" alt="First rays of an orbital sunrise" caption="Source: [NASA](https://www.nasa.gov/image-detail/first-rays-of-an-orbital-sunrise/)" rounded="true" centered="true" >}}{{< /tmfigure >}}
 
 ## Hello 👋
 

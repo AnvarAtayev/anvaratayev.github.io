@@ -102,6 +102,17 @@
     }
   }
 
+  // {{< tmfigure float="left/right" >}}
+  figure[style*="float"] {
+    max-width: 45%;
+  }
+
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
   // {{< globe >}}
   .globe-embed {
     width: 100%;

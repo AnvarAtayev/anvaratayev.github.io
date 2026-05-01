@@ -1,14 +1,31 @@
 {{/* layouts/shortcodes/tmfigure.html */}}
-{{- $figureStyleParts := slice "padding-top: 0.5em;" -}}
+{{- $figureStyleParts := slice -}}
+{{- if not (eq (.Get "centered") "true") -}}
+    {{- $figureStyleParts = $figureStyleParts | append "padding-top: 0.5em;" -}}
+{{- end -}}
 {{- with .Get "style" -}}
     {{- $figureStyleParts = $figureStyleParts | append . -}}
+{{- end -}}
+{{- if eq (.Get "centered") "true" -}}
+    {{- $figureStyleParts = $figureStyleParts | append "text-align: center;" -}}
+{{- end -}}
+{{- with .Get "float" -}}
+    {{- $figureStyleParts = $figureStyleParts | append (printf "float: %s;" .) -}}
+    {{- if eq . "left" -}}
+        {{- $figureStyleParts = $figureStyleParts | append "margin: 0 1.5rem 1rem 0;" -}}
+    {{- else if eq . "right" -}}
+        {{- $figureStyleParts = $figureStyleParts | append "margin: 0 0 1rem 1.5rem;" -}}
+    {{- end -}}
+    {{- with $.Get "width" -}}
+        {{- $figureStyleParts = $figureStyleParts | append (printf "width: %s;" .) -}}
+    {{- end -}}
 {{- end -}}
 {{- $figureStyleAttr := printf ` style="%s"` (delimit $figureStyleParts " ") -}}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}{{ $figureStyleAttr | safeHTMLAttr }}>
     {{- if .Get "link" -}}
         <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
     {{- end }}
-    
+
     {{- with $src := .Get "src" }}
         {{- $resource := $.Page.Resources.GetMatch $src -}}
         {{- with $resource }}
@@ -23,7 +40,11 @@
         {{- $heightIsNumber := and $height (findRE "^[0-9]+$" $height) -}}
         {{- $styleParts := slice -}}
         {{- if and $width (not $widthIsNumber) -}}
-            {{- $styleParts = $styleParts | append (printf "width: %s;" $width) -}}
+            {{- if $.Get "float" -}}
+                {{- $styleParts = $styleParts | append "width: 100%;" -}}
+            {{- else -}}
+                {{- $styleParts = $styleParts | append (printf "width: %s;" $width) -}}
+            {{- end -}}
         {{- end -}}
         {{- if and $height (not $heightIsNumber) -}}
             {{- $styleParts = $styleParts | append (printf "height: %s;" $height) -}}
@@ -31,7 +52,13 @@
         {{- if and $width (not $height) -}}
             {{- $styleParts = $styleParts | append "height: auto;" -}}
         {{- end -}}
-        {{- $styleParts = $styleParts | append "display: block;" "margin-left: auto;" "margin-right: auto;" -}}
+        {{- $styleParts = $styleParts | append "display: block;" -}}
+        {{- if not ($.Get "float") -}}
+            {{- $styleParts = $styleParts | append "margin-left: auto;" "margin-right: auto;" -}}
+        {{- end -}}
+        {{- if eq ($.Get "rounded") "true" -}}
+            {{- $styleParts = $styleParts | append "border-radius: 10px;" -}}
+        {{- end -}}
         {{- $styleAttr := "" -}}
         {{- if gt (len $styleParts) 0 -}}
             {{- $styleAttr = printf ` style="%s"` (delimit $styleParts " ") -}}
@@ -49,15 +76,20 @@
             />
         {{- end -}}
     {{- end }}
-    
+
     {{- if .Get "link" }}</a>{{ end -}}
-    
+
     {{- if or (.Get "title") (.Get "caption") (.Get "attr") .Inner -}}
-        <figcaption style="font-size: 90%; padding: 0.5em 1.5em; line-height: 1.4;">
+        {{- $captionStyle := "font-size: 80%; padding: 0.5em 1.5em; line-height: 1.4;" -}}
+        {{- if eq ($.Get "centered") "true" -}}
+            {{- $captionStyle = printf "%s %s" $captionStyle "font-style: italic; color: var(--gray-500); margin-top: 0.4rem;" -}}
+        {{- end -}}
+        {{- $captionStyleAttr := printf ` style="%s"` $captionStyle -}}
+        <figcaption{{ $captionStyleAttr | safeHTMLAttr }}>
             {{ with (.Get "title") -}}
                 <h4 style="margin-bottom: 0.5em;">{{ . }}</h4>
             {{- end -}}
-            
+
             {{ $caption := or (.Get "caption") .Inner }}
             {{ with $caption }}
                 {{/* (?s) enables "dot matches newline" mode to catch multi-line P tags */}}
