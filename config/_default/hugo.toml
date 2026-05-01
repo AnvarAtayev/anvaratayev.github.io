@@ -26,8 +26,11 @@ publishDir = "public" # make compatible with github pages
       [markup.goldmark.extensions.passthrough]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
-          block = [['\\[', '\\]'], ['$$', '$$'], ['\\begin{', '\\end{']]
+          block = [['\[', '\]'], ['$$', '$$'], ['\\begin{', '\\end{']]
           inline = [['\\(', '\\)'], ['$', '$']]
 
     [markup.tableOfContents]
         startLevel = 1
+
+  [markup.highlight]
+    style = "gruvbox"

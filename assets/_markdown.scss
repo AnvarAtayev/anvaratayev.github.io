@@ -84,10 +84,51 @@
     background: var(--gray-100);
     border-radius: $border-radius;
     overflow-x: auto;
+    position: relative;
 
     code {
       padding: 0;
       background: none;
+    }
+
+    .code-controls {
+      position: absolute;
+      top: $padding-8;
+      right: $padding-8;
+      display: flex;
+      align-items: center;
+      gap: $padding-4;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    &:hover .code-controls {
+      opacity: 1;
+    }
+
+    .code-lang {
+      font-family: monospace;
+      font-size: 0.7em;
+      color: var(--gray-500);
+      padding: 1px 6px;
+      border-radius: $border-radius;
+      background: var(--gray-200);
+      line-height: 1.6;
+    }
+
+    .code-copy-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--gray-500);
+      padding: 2px;
+      line-height: 0;
+      border-radius: $border-radius;
+
+      &:hover {
+        color: var(--body-font-color);
+        background: var(--gray-200);
+      }
     }
   }
 
