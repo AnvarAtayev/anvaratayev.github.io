@@ -72,6 +72,7 @@
                  {{- end -}}
                  {{- if $widthIsNumber }} width="{{ $width }}"{{ end -}}
                  {{- if $heightIsNumber }} height="{{ $height }}"{{ end -}}
+                 {{- if eq ($.Get "dark-invert") "true" }} class="tm-dark-invert"{{ end -}}
                  {{- $styleAttr | safeHTMLAttr -}}
             />
         {{- end -}}

@@ -1,0 +1,299 @@
+<TMU|<tuple|1.1.0|2026.2.3-rc1>>
+
+<style|<tuple|generic|number-europe|preview-ref|british|python|padded-paragraphs|comment>>
+
+<\body>
+  <doc-data|<doc-title|Distance to the Moon>>
+
+  <abstract-data|<abstract|In light of the recent historic Artemis II launch to return to the Moon for the first time in 50 years, I describe a simple computation of the distance to the Moon from <with|font-shape|italic|almost> first principles.>>
+
+  \;
+
+  In light of the recent historic <hlink|Artemis II|https://www.nasa.gov/mission/artemis-ii/> launch to return to the Moon for the first time in 50 years, I describe a simple computation of the distance to the Moon from <with|font-shape|italic|almost> first principles. This is a different derivation to the one performed by the Greeks and that is well known throughout literature, i.e. that performed by <hlink|Aristarchus of Samos|https://en.wikipedia.org/wiki/Aristarchus_of_Samos> in 270BC, and instead uses some relatively simple physics that many of us would have encountered in school.
+
+  In particular, with the use of a pendulum, a protractor, and some light physics, we get an approximation to the distance to the moon within 1% accuracy of the true (average) value.
+
+  <section|Physics>
+
+  We begin with an outline of the physics that will be necessary for this investigation.
+
+  <subsection|Newton's Law of Universal Gravitation>
+
+  For two bodies of masses <math|m<rsub|1>,m<rsub|2>> that are a distance <math|r> apart (distance between their centre's of masses), the gravitational force exerted by one body onto the other is given by the following inverse-square law
+
+  <\equation*>
+    F=<frac|G m<rsub|1> m<rsub|2>|r<rsup|2>>,
+  </equation*>
+
+  where <math|G> is the gravitational constant - which we need not know.
+
+  <subsection|Newton's Second Law>
+
+  Newton's second law states that the acceleration of a body, <math|a>, is directly proportional to the force experienced by it, <math|F>, and also inversely proportion to its the mass, <math|m>; more commonly written as
+
+  <\equation*>
+    F=m a.
+  </equation*>
+
+  <subsection|Centripetal Force>
+
+  From the kinematics of curved motion, it is known that for an object moving at tangential speed <math|v> along a path with radius of curvature <math|r>, accelerates towards the centre of curvature at a rate
+
+  <\equation*>
+    a=<frac|v<rsup|2>|r>.
+  </equation*>
+
+  We can also write this in terns of angular velocity <math|\<omega\>=<frac|2\<pi\>|T>> for an orbital period of <math|T>. Since <math|v=\<omega\> r>, we get
+
+  <\equation*>
+    a=<frac|4\<pi\><rsup|2>r|T<rsup|2>>.
+  </equation*>
+
+  <subsection|Pendulum Period>
+
+  The period of the swing of a simple pendulum, <math|T>, depends on the length of the pendulum string, <math|\<ell\>>, and the strength of local gravity <math|g> via
+
+  <\equation*>
+    T=2\<pi\><sqrt|<frac|\<ell\>|g>>.
+  </equation*>
+
+  <section|Formulation>
+
+  Armed with the elementary physics described above, we can now construct a simple equation for the distance to the moon, by only requiring the knowledge of very few parameters, that can be relatively easily measured!
+
+  Recall that on the surface of the Earth, we experience a gravitational acceleration <math|g> (assume not yet known, but to be measured). Furthermore, by Newton's second law, the gravitational force experienced by a body on the surface of the Earth, with mass <math|M<rsub|B>>, is given by <math|F=M<rsub|B> g>.
+
+  Equivalently, via the inverse square law, this force may also be written as
+
+  <\equation*>
+    F=<frac|G M<rsub|E> M<rsub|B>|R<rsub|E><rsup|2>>
+  </equation*>
+
+  where <math|G> denotes the universal gravitational constant (need not know), <math|M<rsub|E>> the mass of the earth (need not know), and <math|R<rsub|E>> the radius of the Earth (assume not yet known, but to be measured). Equating these together and cancelling out <math|M<rsub|B>> yields the equation
+
+  <\equation>
+    <label|eq:gE>g=<frac|G M<rsub|E>|R<rsub|E><rsup|2>>.
+  </equation>
+
+  Now, instead of a body on the surface of the Earth, consider the Moon of mass, <math|M<rsub|E>>, and the gravitational force exerted on the Moon by the Earth, <math|F<rsub|M>>, which by Newton's second law would give <math|F<rsub|M>=M<rsub|M> a<rsub|M>>, where <math|a<rsub|M>> denotes the acceleration towards the Earth experienced at the distance of the Moon. Similarly to the above, the inverse square law gives
+
+  <\equation*>
+    F<rsub|M>=<frac|G M<rsub|E> M<rsub|M>|D<rsup|2>>
+  </equation*>
+
+  where <math|D> denotes the distance between the centres of mass of the Earth and Moon. Equating these as before, and cancelling <math|M<rsub|M>>, then gives
+
+  <\equation>
+    <label|eq:gM>a<rsub|M>=<frac|G M<rsub|E>|D<rsup|2>>.
+  </equation>
+
+  In particular, equating across <math|G M<rsub|E>> with Equations <eqref|eq:gE> and <eqref|eq:gM>, we get
+
+  <\equation>
+    <label|eq:gMgE>a<rsub|M> D<rsup|2>=g R<rsub|E><rsup|2>,
+  </equation>
+
+  which already brings us much closer to the distance to the Moon.
+
+  Finally, observing that the Moon orbits roughly in a circular manner around the Earth, by the centripetal force equation, the centripetal acceleration (also the gravitation acceleration) experienced by the Moon can be written as
+
+  <\equation>
+    <label|eq:aM>a<rsub|M>=<frac|4\<pi\><rsup|2>D|T<rsub|M><rsup|2>>
+  </equation>
+
+  where <math|T<rsub|M>> denotes the orbital period of the Moon, which common knowledge suggests to be roughly once a month (say 28 days).<strong|> Substituting now the expression of <math|a<rsub|M>> from Equation <eqref|eq:aM> into Equation <eqref|eq:gMgE> yields
+
+  <\equation*>
+    <around*|(|<frac|4\<pi\><rsup|2>D|T<rsub|M><rsup|2>>|)>D<rsup|2>=g R<rsub|E><rsup|2>
+  </equation*>
+
+  and after solving for <math|D>, we get
+
+  <\equation>
+    <label|eq:moon>D=<around*|(|<frac|g T<rsub|M><rsup|2>R<rsub|E><rsup|2>|4\<pi\><rsup|2>>|)><rsup|<frac|1|3>>.
+  </equation>
+
+  A simple formula for the distance between the centres of mass of the Earth and the Moon. To get the precise distance to the Moon, i.e. from surface to surface, a little extra measurement is required to determine the radius of the Moon (this can be done by observing eclipses), but it does not change the answer by much.
+
+  <section|Measurement>
+
+  Having now obtained a simple formulaic expression of the distance to the moon in Equation <eqref|eq:moon>, we notice that we rely on knowing only a few constants, that I will show are easily measured.
+
+  <\description>
+    <item*|<math|\<pi\>>>Known for millennia as roughly <math|3.14>, and can be confirmed and measured at home by hand, see the excellent video's by Matt Parker. I will assume that this is known.
+
+    <item*|<math|T<rsub|M>>>The orbital period of the Moon; unless a hermit, known and observed to be roughly 28 days. I will assume that this is known.
+
+    <item*|<math|g>>The gravitational acceleration experienced on the surface of the Earth. An understanding of the value for <math|g> has been known in literature since 1651 by an account of Giovanni Battista Riccioli, although not in the common form of <math|9.81m s<rsup|-2>> as we know it today, since this pre-dates the invention of the <with|font-shape|italic|metre>. Since this does not feel elementary, I will <with|font-series|bold|not> assume that this is known, and we shall measure it directly using a <with|font-shape|italic|pendulum>, although falling objects and the theory of kinematics can also be used.
+
+    <item*|<with|font-series|bold|<math|R<rsub|E>>>>The radius of the Earth has been accurately known since 240BC (more than 2000 years ago!), first recorded in literature is the method of <with|font-shape|italic|<hlink|Eratosthenes|https://en.wikipedia.org/wiki/Eratosthenes>>, which calculates the diameter of the Earth using the angle difference of shadows cast by the sun on a vertical rod at two different locations, and is determined to be roughly 6371m. This also does not feel elementary, and therefore I will <with|font-series|bold|not> assume this is known, and we shall measure it directly.
+  </description>
+
+  So we are left to measure only <math|g> and <math|R<rsub|E>>.
+
+  <subsection|Gravitational Acceleration>
+
+  The measurement of <math|g> can be made in a number of ways, but one of the simplest is via the use of a pendulum. The period of a (small) swing, <math|T>, of a simple pendulum of length <math|\<ell\>> is known to depend on the strength of local gravity <math|g> via
+
+  <\equation*>
+    T=2\<pi\><sqrt|<frac|\<ell\>|g>>.
+  </equation*>
+
+  Solving for <math|g>, we get
+
+  <\equation*>
+    g=<frac|4\<pi\><rsup|2>\<ell\>|T<rsup|2>>
+  </equation*>
+
+  Therefore, it remains to measure <math|g> by measuring the length of a simple pendulum and the period of its swings.
+
+  For this, I perform the experiment at home under the parameters <math|\<ell\>=0.6m>, and I measure <math|T> multiple times, <math|T<rsub|1>,\<ldots\>,T<rsub|n>>, and compute corresponding <math|g<rsub|1>,\<ldots\>,g<rsub|n> > values. To reduce the noise in my computation, I then select <math|g=<frac|1|n><big|sum><rsub|i=1><rsup|n>g<rsub|i>>, i.e. the average of my observations. Doing so, I get the following measurements
+
+  <\equation*>
+    <tabular|<tformat|<cwith|1|1|1|-1|cell-tborder|0ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|2|2|1|-1|cell-tborder|1ln>|<cwith|1|1|4|4|cell-rborder|0ln>|<cwith|1|1|1|1|cell-tborder|0ln>|<cwith|4|4|1|1|cell-bborder|0ln>|<cwith|1|-1|1|1|cell-lborder|0ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|-1|2|2|cell-lborder|1ln>|<table|<row|<cell|n>|<cell|\<ell\> <around*|[|m|]>>|<cell|T<around*|[|s|]>>|<cell|g<around*|[|m s<rsup|-2>|]>>>|<row|<cell|1>|<cell|0.6>|<cell|1.55>|<cell|9.86>>|<row|<cell|2>|<cell|0.6>|<cell|1.57>|<cell|9.60>>|<row|<cell|3>|<cell|0.6>|<cell|1.52>|<cell|10.12>>>>>
+  </equation*>
+
+  yielding an average value <math|g=9.86 m s<rsup|-2>>, which is close enough to the generally accepted value of <math|9.81m s<rsup|-2>>, although this does vary slightly depending on where you are on the planet.
+
+  <subsection|Radius of the Earth>\ 
+
+  Regarding the radius of the earth <math|R<rsub|E>>, we may also compute this with a pendulum, although it becomes more physically challenging. Instead, we resort to more traditional methods by using the horizon.
+
+  In particular, assume you stand on a tall object of height <math|h>, and measure the angle that the horizon makes versus when looking directly straight and perpendicular to where you are standing, calling this <math|\<theta\>>. Drawing this out in a diagram, we notice that the point from which we make the horizon measurement, the point of the horizon that we can see and the centre of the Earth makes a right angled triangle, with hypotenuse <math|R<rsub|E>+h>, the long side <math|R<rsub|E>>, and angle between the hypotenuse and the long side being <math|\<theta\>>.
+
+  Therefore, by simple trigonometry (i.e. SOH<with|font-series|bold|CAH>TOA), we get that
+
+  <\eqnarray>
+    <tformat|<table|<row|<cell|cos<around*|(|\<theta\>|)>>|<cell|=>|<cell|<frac|R<rsub|E>|R<rsub|E>+h>.>>>>
+  </eqnarray>
+
+  Solving for <math|R<rsub|E>> then gives us
+
+  <\eqnarray>
+    <tformat|<table|<row|<cell|R<rsub|E>>|<cell|=>|<cell|<frac|h cos<around*|(|\<theta\>|)>|1-cos<around*|(|\<theta\>|)>>.>>>>
+  </eqnarray>
+
+  Currently being in Sydney, I decided to make this measurement from the <with|font-shape|italic|Sydney Tower Eye>, which has a viewing platform roughly <math|h=250m> from sea-level (which we can also measure independently through a similar technique). Taking my trusty protractor, here I used my phone for brevity and for precision, although any accurate protractor will do, I was able to measure the following
+
+  <\equation*>
+    <tabular|<tformat|<cwith|1|1|1|-1|cell-tborder|0ln>|<cwith|1|1|1|-1|cell-bborder|1ln>|<cwith|2|2|1|-1|cell-tborder|1ln>|<cwith|1|1|4|4|cell-rborder|0ln>|<cwith|1|1|1|1|cell-tborder|0ln>|<cwith|4|4|1|1|cell-bborder|0ln>|<cwith|1|-1|1|1|cell-lborder|0ln>|<cwith|1|-1|1|1|cell-rborder|1ln>|<cwith|1|-1|2|2|cell-lborder|1ln>|<table|<row|<cell|n>|<cell|h<around*|[|m|]>>|<cell|\<theta\><around*|[|deg|]>>|<cell|R<rsub|E><around*|[|m|]>>>|<row|<cell|1>|<cell|250>|<cell|0.50>|<cell|6,565,404>>|<row|<cell|2>|<cell|250>|<cell|0.45>|<cell|5,425,918>>|<row|<cell|3>|<cell|250>|<cell|0.48>|<cell|7,123,937>>>>>
+  </equation*>
+
+  which yields an average value of <math|6,371,753m\<approx\>6,372km>, roughly in line with the true value of <math|6350km>.
+
+  <section|Computation>
+
+  Having now obtained values for <math|g,R<rsub|E>> and also knowing the value of <math|\<pi\>> and <math|T<rsub|M>>
+
+  <\eqnarray>
+    <tformat|<table|<row|<cell|\<pi\>>|<cell|=>|<cell|3.14>>|<row|<cell|T<rsub|M>>|<cell|=>|<cell|28 days=2,419,200s>>|<row|<cell|g>|<cell|=>|<cell|9.86ms<rsup|-2>>>|<row|<cell|R<rsub|E>>|<cell|=>|<cell|6372km>>>>
+  </eqnarray>
+
+  we get the following estimate for the distance between the Earth and the Moon
+
+  <\session|python|default>
+    <\output>
+      Python 3.9.6 [/Library/Developer/CommandLineTools/usr/bin/python3]
+
+      Python plugin for Mogan STEM.
+
+      Please see the documentation in Help -\<gtr\> Plugins -\<gtr\> Python
+    </output>
+
+    <\input>
+      \<gtr\>\<gtr\>\<gtr\>\ 
+    <|input>
+      g=9.86
+    </input>
+
+    <\input>
+      \<gtr\>\<gtr\>\<gtr\>\ 
+    <|input>
+      TM=28*24*60*60
+    </input>
+
+    <\input>
+      \<gtr\>\<gtr\>\<gtr\>\ 
+    <|input>
+      RE=6372*1000
+    </input>
+
+    <\input>
+      \<gtr\>\<gtr\>\<gtr\>\ 
+    <|input>
+      pi=3.14
+    </input>
+
+    <\input>
+      \<gtr\>\<gtr\>\<gtr\>\ 
+    <|input>
+      D = (g*(TM**2)*(RE)**2/(4*(pi)**2))**(1/3)
+    </input>
+
+    <\unfolded-io>
+      \<gtr\>\<gtr\>\<gtr\>\ 
+    <|unfolded-io>
+      print(f'{int(D/1000)}km')
+    <|unfolded-io>
+      390197km
+    </unfolded-io>
+  </session>
+
+  Using this simple method, we <math|<with|font-series|bold|D\<approx\>390,197>><with|font-series|bold|km>, vs the true value of <math|\<approx\>385,000km>, roughly 1% error of the true value - a truly remarkable result!
+</body>
+
+<\initial>
+  <\collection>
+    <associate|page-medium|paper>
+    <associate|page-screen-margin|false>
+  </collection>
+</initial>
+
+<\references>
+  <\collection>
+    <associate|auto-1|<tuple|?|1>>
+    <associate|auto-10|<tuple|3.2|4>>
+    <associate|auto-11|<tuple|4|4>>
+    <associate|auto-2|<tuple|1|1>>
+    <associate|auto-3|<tuple|1.1|1>>
+    <associate|auto-4|<tuple|1.2|1>>
+    <associate|auto-5|<tuple|1.3|1>>
+    <associate|auto-6|<tuple|1.4|2>>
+    <associate|auto-7|<tuple|2|2>>
+    <associate|auto-8|<tuple|3|3>>
+    <associate|auto-9|<tuple|3.1|3>>
+    <associate|eq:aM|<tuple|4|2>>
+    <associate|eq:gE|<tuple|1|2>>
+    <associate|eq:gM|<tuple|2|2>>
+    <associate|eq:gMgE|<tuple|3|2>>
+    <associate|eq:moon|<tuple|5|3>>
+  </collection>
+</references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|toc>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Abstract><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-1><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Physics><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-2><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Newton's Law of Universal Gravitation<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-3>>
+
+      <with|par-left|<quote|1tab>|1.2<space|2spc>Newton's Second Law<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-4>>
+
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Centripetal Force<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-5>>
+
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Pendulum Period<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-6>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Formulation><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-7><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Measurement><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-8><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|3.1<space|2spc>Gravitational Acceleration<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Radius of the Earth<datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-10>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Computation><datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.05fn>.<space|0.05fn>>>>>|<htab|5mm>><no-break><pageref|auto-11><vspace|0.5fn>
+    </associate>
+  </collection>
+</auxiliary>

@@ -1,37 +1,32 @@
-{{ $bibEntries := .Site.Data.bib }}
-{{ $page := .Page }}
-{{ $citationList := $page.Store.Get "citationList" | default dict }}
-
-{{ if $bibEntries }}
-  {{ $items := slice }}
-  {{ range $i, $id := .Params }}
-    {{ $entry := where $bibEntries "id" "eq" $id | first 1 }}
-    {{ if $entry }}
-      {{ if not (index $citationList $id) }}
-        {{ $newNumber := add (len $citationList) 1 }}
-        {{ $citationList = merge $citationList (dict $id $newNumber) }}
-        {{ $page.Store.Set "citationList" $citationList }}
-      {{ end }}
-
-      {{ $num := index $citationList $id }}
-      {{ $entry = index $entry 0 }}
-
+{{- $bibEntries := .Site.Data.bib -}}
+{{- $page := .Page -}}
+{{- $citationList := $page.Store.Get "citationList" | default dict -}}
+{{- if $bibEntries -}}
+  {{- $items := slice -}}
+  {{- range $i, $id := .Params -}}
+    {{- $entry := where $bibEntries "id" "eq" $id | first 1 -}}
+    {{- if $entry -}}
+      {{- if not (index $citationList $id) -}}
+        {{- $newNumber := add (len $citationList) 1 -}}
+        {{- $citationList = merge $citationList (dict $id $newNumber) -}}
+        {{- $page.Store.Set "citationList" $citationList -}}
+      {{- end -}}
+      {{- $num := index $citationList $id -}}
+      {{- $entry = index $entry 0 -}}
       {{/* Build tooltip content (first author + year + optional title) */}}
-      {{ $author := index $entry.author 0 }}
-      {{ $year := index $entry.issued "date-parts" 0 0 }}
-      {{ $authorName := cond (and $author.given (ne $author.given "")) (printf "%s %s" $author.given $author.family) $author.family }}
-      {{ $tooltip := printf "%s (%s)" $authorName $year }}
-      {{ with $entry.title }}{{ $tooltip = printf "%s: %s" $tooltip . }}{{ end }}
-      {{ $tooltip = $tooltip | htmlEscape }}
-
-      {{ $items = $items | append (printf "<span class=\"citation\" data-tooltip=\"%s\"><a href=\"#ref-%d\">%d</a></span>" $tooltip $num $num) }}
-    {{ else }}
-      {{ $items = $items | append "<span class=\"citation-error\">?</span>" }}
-    {{ end }}
-  {{ end }}
-
-  {{ $list := delimit $items "," }}
-  {{ printf "<span class=\"citation-group\">[%s]</span>" $list | safeHTML }}
-{{ else }}
+      {{- $author := index $entry.author 0 -}}
+      {{- $year := index $entry.issued "date-parts" 0 0 -}}
+      {{- $authorName := cond (and $author.given (ne $author.given "")) (printf "%s %s" $author.given $author.family) $author.family -}}
+      {{- $tooltip := printf "%s (%s)" $authorName $year -}}
+      {{- with $entry.title -}}{{- $tooltip = printf "%s: %s" $tooltip . -}}{{- end -}}
+      {{- $tooltip = $tooltip | htmlEscape -}}
+      {{- $items = $items | append (printf "<span class=\"citation\" data-tooltip=\"%s\"><a href=\"#ref-%d\">%d</a></span>" $tooltip $num $num) -}}
+    {{- else -}}
+      {{- $items = $items | append "<span class=\"citation-error\">?</span>" -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $list := delimit $items "," -}}
+  {{- printf "<span class=\"citation-group\">[%s]</span>" $list | safeHTML -}}
+{{- else -}}
   <span class="citation-error">[!]</span>
-{{ end }}
+{{- end -}}

@@ -13,11 +13,7 @@
     "ISSN": "1538-7305",
     "issue": "4",
     "issued": {
-      "date-parts": [
-        [
-          "1956"
-        ]
-      ]
+      "date-parts": [["1956"]]
     },
     "language": "en",
     "license": "© 1956 The Bell System Technical Journal",
@@ -40,11 +36,7 @@
     "collection-title": "UCLA",
     "container-title": "Game Theory for Statisticians",
     "issued": {
-      "date-parts": [
-        [
-          "2009"
-        ]
-      ]
+      "date-parts": [["2009"]]
     },
     "language": "en",
     "source": "Zotero",
@@ -65,11 +57,7 @@
     "DOI": "10.1016/S1872-0978(06)01009-X",
     "ISBN": "978-0-444-50875-1",
     "issued": {
-      "date-parts": [
-        [
-          "2006"
-        ]
-      ]
+      "date-parts": [["2006"]]
     },
     "language": "en",
     "page": "385–428",
@@ -98,11 +86,7 @@
     "event-place": "Princeton, NJ",
     "ISBN": "978-0-691-13061-3 978-1-4008-2946-0",
     "issued": {
-      "date-parts": [
-        [
-          "2007"
-        ]
-      ]
+      "date-parts": [["2007"]]
     },
     "language": "eng",
     "number-of-pages": "739",
@@ -137,11 +121,7 @@
       }
     ],
     "issued": {
-      "date-parts": [
-        [
-          "2010"
-        ]
-      ]
+      "date-parts": [["2010"]]
     },
     "citation-key": "MacLean2010",
     "language": "en",
@@ -158,11 +138,7 @@
     ],
     "title": "Conway's Game of Life - Wikipedia, The Free Encyclopedia",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "URL": "https://en.wikipedia.org/w/index.php?title=Conway%27s_Game_of_Life&oldid=1323115836"
   },
@@ -170,13 +146,7 @@
     "id": "Gappy2025",
     "abstract": "We were born to suffer",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          24
-        ]
-      ]
+      "date-parts": [["2025", 11, 24]]
     },
     "author": [
       {
@@ -188,13 +158,7 @@
     "container-title": "At night we walk in circles and are consumed by fire",
     "genre": "Substack newsletter",
     "issued": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          20
-        ]
-      ]
+      "date-parts": [["2025", 11, 20]]
     },
     "title": "Reading, Writing and Drawdown Arithmetic",
     "type": "post-weblog",
@@ -203,13 +167,7 @@
   {
     "id": "Zhang2012",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          24
-        ]
-      ]
+      "date-parts": [["2025", 11, 24]]
     },
     "author": [
       {
@@ -228,12 +186,7 @@
     "ISSN": "1387-5841, 1573-7713",
     "issue": "3",
     "issued": {
-      "date-parts": [
-        [
-          "2012",
-          9
-        ]
-      ]
+      "date-parts": [["2012", 9]]
     },
     "language": "en",
     "license": "http://www.springer.com/tdm",
@@ -248,13 +201,7 @@
     "id": "Salminen2025",
     "abstract": "In this paper, using the excursion theory, we provide new proofs of, firstly, Lehoczky’s formula (in an extended form allowing a lower bound for the underlying diffusion) for the joint distribution of the first drawdown time and the maximum before this time, and, secondly, of Malyutin’s formula for the joint distribution of the first hitting time and the maximum drawdown before this time. It is remarkable – but there is a clean explanation – that the excursion theoretical approach which we developed first for Lehoczky’s formula also provides a proof for Malyutin’s formula. Moreover, we discuss some generalizations and analyze the pure jump process describing the maximum before the first drawdown time when the size of the drawdown is varying.",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          22
-        ]
-      ]
+      "date-parts": [["2025", 11, 22]]
     },
     "author": [
       {
@@ -272,11 +219,7 @@
     "DOI": "10.1051/ps/2025010",
     "ISSN": "1262-3318",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "license": "https://creativecommons.org/licenses/by/4.0",
     "page": "357–380",
@@ -289,13 +232,7 @@
   {
     "id": "Taylor1975",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          23
-        ]
-      ]
+      "date-parts": [["2025", 11, 23]]
     },
     "author": [
       {
@@ -310,13 +247,7 @@
     "ISSN": "0091-1798",
     "issue": "2",
     "issued": {
-      "date-parts": [
-        [
-          "1975",
-          4,
-          1
-        ]
-      ]
+      "date-parts": [["1975", 4, 1]]
     },
     "source": "DOI.org (Crossref)",
     "title": "A Stopped Brownian Motion Formula",
@@ -327,13 +258,7 @@
   {
     "id": "Borodin2002",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          24
-        ]
-      ]
+      "date-parts": [["2025", 11, 24]]
     },
     "author": [
       {
@@ -351,11 +276,7 @@
     "event-place": "Basel",
     "ISBN": "978-3-7643-6705-3 978-3-0348-8163-0",
     "issued": {
-      "date-parts": [
-        [
-          "2002"
-        ]
-      ]
+      "date-parts": [["2002"]]
     },
     "license": "http://www.springer.com/tdm",
     "publisher": "Birkhäuser",
@@ -379,11 +300,7 @@
     "event-place": "New York, NY",
     "ISBN": "978-0-387-40101-0",
     "issued": {
-      "date-parts": [
-        [
-          "2008"
-        ]
-      ]
+      "date-parts": [["2008"]]
     },
     "language": "eng",
     "number-of-pages": "550",
@@ -398,13 +315,7 @@
     "id": "WikiExp2025",
     "abstract": "In probability theory and statistics, the exponential distribution or negative exponential distribution is the probability distribution of the distance between events in a Poisson point process, i.e., a process in which events occur continuously and independently at a constant average rate; the distance parameter could be any meaningful mono-dimensional measure of the process, such as time between production errors, or length along a roll of fabric in the weaving manufacturing process. It is a particular case of the gamma distribution. It is the continuous analogue of the geometric distribution, and it has the key property of being memoryless. In addition to being used for the analysis of Poisson point processes it is found in various other contexts.\nThe exponential distribution is not the same as the class of exponential families of distributions. This is a large class of probability distributions that includes the exponential distribution as one of its members, but also includes many other distributions, like the normal, binomial, gamma, and Poisson distributions.",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          24
-        ]
-      ]
+      "date-parts": [["2025", 11, 24]]
     },
     "author": [
       {
@@ -415,13 +326,7 @@
     "citation-key": "WikiExp2025",
     "container-title": "Wikipedia",
     "issued": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          6
-        ]
-      ]
+      "date-parts": [["2025", 11, 6]]
     },
     "language": "en",
     "license": "Creative Commons Attribution-ShareAlike License",
@@ -435,13 +340,7 @@
     "id": "WikiIG2025",
     "abstract": "In probability theory, the inverse Gaussian distribution (also known as the Wald distribution) is a two-parameter family of continuous probability distributions with support on (0,∞).\nIts probability density function is given by\n\n  \n    \n      \n        f\n        (\n        x\n        ;\n        μ\n        ,\n        λ\n        )\n        =\n        \n          \n            \n              λ\n              \n                2\n                π\n                \n                  x\n                  \n                    3\n                  \n                \n              \n            \n          \n        \n        exp\n        ⁡\n        \n          \n            (\n          \n        \n        −\n        \n          \n            \n              λ\n              (\n              x\n              −\n              μ\n              \n                )\n                \n                  2\n                \n              \n            \n            \n              2\n              \n                μ\n                \n                  2\n                \n              \n              x\n            \n          \n        \n        \n          \n            )\n          \n        \n      \n    \n    {\\displaystyle f(x;\\mu ,\\lambda )={\\sqrt {\\frac {\\lambda }{2\\pi x^{3}}}}\\exp {\\biggl (}-{\\frac {\\lambda (x-\\mu )^{2}}{2\\mu ^{2}x}}{\\biggr )}}\n  \n\nfor x > 0, where \n  \n    \n      \n        μ\n        >\n        0\n      \n    \n    {\\displaystyle \\mu >0}\n  \n is the mean and \n  \n    \n      \n        λ\n        >\n        0\n      \n    \n    {\\displaystyle \\lambda >0}\n  \n is the shape parameter.\nThe inverse Gaussian distribution has several properties analogous to a Gaussian distribution.  The name can be misleading:  it is an inverse only in that, while the Gaussian describes a Brownian motion's level at a fixed time, the inverse Gaussian describes the distribution of the time a Brownian motion with positive drift takes to reach a fixed positive level.\nIts cumulant generating function (logarithm of the characteristic function) is the inverse of the cumulant generating function of a Gaussian random variable.\nTo indicate that a random variable X is inverse Gaussian-distributed with mean μ and shape parameter λ we write \n  \n    \n      \n        X\n        ∼\n        IG\n        ⁡\n        (\n        μ\n        ,\n        λ\n        )\n        \n        \n      \n    \n    {\\displaystyle X\\sim \\operatorname {IG} (\\mu ,\\lambda )\\,\\!}\n  \n.",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          24
-        ]
-      ]
+      "date-parts": [["2025", 11, 24]]
     },
     "author": [
       {
@@ -452,13 +351,7 @@
     "citation-key": "WikiIG2025",
     "container-title": "Wikipedia",
     "issued": {
-      "date-parts": [
-        [
-          "2025",
-          5,
-          25
-        ]
-      ]
+      "date-parts": [["2025", 5, 25]]
     },
     "language": "en",
     "license": "Creative Commons Attribution-ShareAlike License",
@@ -471,13 +364,7 @@
   {
     "id": "Ruggles1947",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          27
-        ]
-      ]
+      "date-parts": [["2025", 11, 27]]
     },
     "author": [
       {
@@ -496,12 +383,7 @@
     "ISSN": "0162-1459, 1537-274X",
     "issue": "237",
     "issued": {
-      "date-parts": [
-        [
-          "1947",
-          3
-        ]
-      ]
+      "date-parts": [["1947", 3]]
     },
     "language": "en",
     "page": "72–91",
@@ -515,13 +397,7 @@
     "id": "Goodman1952",
     "abstract": "The problem discussed is that of sampling without replacement from a discrete, finite, uniform population. One source of this problem is the analysis of serial numbers on manufactured items in order to estimate the total number of items manufactured. Minimum variance unbiased estimators of the parameters are obtained and compared with other estimators which have been suggested. Tests of hypothesis and confidence intervals are also discussed.",
     "accessed": {
-      "date-parts": [
-        [
-          "2025",
-          11,
-          27
-        ]
-      ]
+      "date-parts": [["2025", 11, 27]]
     },
     "author": [
       {
@@ -535,13 +411,7 @@
     "ISSN": "0162-1459",
     "issue": "260",
     "issued": {
-      "date-parts": [
-        [
-          "1952",
-          12,
-          1
-        ]
-      ]
+      "date-parts": [["1952", 12, 1]]
     },
     "page": "622–634",
     "publisher": "ASA Website",
@@ -568,11 +438,7 @@
     "event-place": "Pacific Grove, Calif",
     "ISBN": "978-0-534-24312-8",
     "issued": {
-      "date-parts": [
-        [
-          "2002"
-        ]
-      ]
+      "date-parts": [["2002"]]
     },
     "language": "eng",
     "number-of-pages": "660",
@@ -593,11 +459,7 @@
     "citation-key": "BBCInfiniteMonkey2025",
     "container-title": "BBC",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "language": "en",
     "source": "BBC",
@@ -616,11 +478,7 @@
     "citation-key": "NOAAWanderingPoles",
     "container-title": "NOAA National Centers for Environmental Information",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "language": "en",
     "source": "NOAA NCEI",
@@ -638,11 +496,7 @@
     "citation-key": "WikiOymyakon",
     "container-title": "Wikipedia",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "language": "en",
     "source": "Wikipedia",
@@ -660,11 +514,7 @@
     "citation-key": "WikiInaccessibility",
     "container-title": "Wikipedia",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "language": "en",
     "source": "Wikipedia",
@@ -682,11 +532,7 @@
     "citation-key": "WikiCelestialPole",
     "container-title": "Wikipedia",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "language": "en",
     "source": "Wikipedia",
@@ -704,11 +550,7 @@
     "citation-key": "WikiGeomagneticPole",
     "container-title": "Wikipedia",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "language": "en",
     "source": "Wikipedia",
@@ -726,11 +568,7 @@
     "citation-key": "WikiMagneticPole",
     "container-title": "Wikipedia",
     "issued": {
-      "date-parts": [
-        [
-          "2025"
-        ]
-      ]
+      "date-parts": [["2025"]]
     },
     "language": "en",
     "source": "Wikipedia",
@@ -742,13 +580,7 @@
     "id": "Downey2024",
     "abstract": "The inspection paradox is a statistical illusion you’ve probably never heard of. But once you learn about it, you see it everywhere.",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          9
-        ]
-      ]
+      "date-parts": [["2026", 2, 9]]
     },
     "author": [
       {
@@ -759,11 +591,7 @@
     "citation-key": "Downey2024",
     "container-title": "TDS Archive",
     "issued": {
-      "date-parts": [
-        [
-          "2024"
-        ]
-      ]
+      "date-parts": [["2024"]]
     },
     "language": "en",
     "title": "The Inspection Paradox is Everywhere",
@@ -773,13 +601,7 @@
   {
     "id": "VanderPlas2018",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          9
-        ]
-      ]
+      "date-parts": [["2026", 2, 9]]
     },
     "author": [
       {
@@ -790,11 +612,7 @@
     "citation-key": "VanderPlas2018",
     "container-title": "Pythonic Perambulations",
     "issued": {
-      "date-parts": [
-        [
-          "2018"
-        ]
-      ]
+      "date-parts": [["2018"]]
     },
     "title": "The Waiting Time Paradox, or, Why Is My Bus Always Late?",
     "type": "post-weblog",
@@ -824,11 +642,7 @@
     "citation-key": "Grimmett2020",
     "ISBN": "978-0-19-884759-5",
     "issued": {
-      "date-parts": [
-        [
-          "2020"
-        ]
-      ]
+      "date-parts": [["2020"]]
     },
     "number-of-pages": "688",
     "publisher": "Oxford University Press",
@@ -841,13 +655,7 @@
     "id": "Ruder2017",
     "abstract": "Gradient descent optimization algorithms, while increasingly popular, are often used as black-box optimizers, as practical explanations of their strengths and weaknesses are hard to come by. This article aims to provide the reader with intuitions with regard to the behaviour of different algorithms that will allow her to put them to use. In the course of this overview, we look at different variants of gradient descent, summarize challenges, introduce the most common optimization algorithms, review architectures in a parallel and distributed setting, and investigate additional strategies for optimizing gradient descent.",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          17
-        ]
-      ]
+      "date-parts": [["2026", 2, 17]]
     },
     "author": [
       {
@@ -858,13 +666,7 @@
     "citation-key": "Ruder2017",
     "DOI": "10.48550/arXiv.1609.04747",
     "issued": {
-      "date-parts": [
-        [
-          "2017",
-          6,
-          15
-        ]
-      ]
+      "date-parts": [["2017", 6, 15]]
     },
     "number": "arXiv:1609.04747",
     "publisher": "arXiv",
@@ -876,13 +678,7 @@
   {
     "id": "Cauchy1897",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          16
-        ]
-      ]
+      "date-parts": [["2026", 2, 16]]
     },
     "citation-key": "Cauchy1897",
     "collection-title": "Cambridge Library Collection - Mathematics",
@@ -896,11 +692,7 @@
     ],
     "ISBN": "978-1-108-00277-6",
     "issued": {
-      "date-parts": [
-        [
-          "1897"
-        ]
-      ]
+      "date-parts": [["1897"]]
     },
     "page": "399–402",
     "publisher": "Cambridge University Press",
@@ -915,13 +707,7 @@
     "id": "Robbins1951",
     "abstract": "Let $M(x)$ denote the expected value at level $x$ of the response to a certain experiment. $M(x)$ is assumed to be a monotone function of $x$ but is unknown to the experimenter, and it is desired to find the solution $x = \\theta$ of the equation $M(x) = \\alpha$, where $\\alpha$ is a given constant. We give a method for making successive experiments at levels $x_1,x_2,\\cdots$ in such a way that $x_n$ will tend to $\\theta$ in probability.",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          12
-        ]
-      ]
+      "date-parts": [["2026", 2, 12]]
     },
     "author": [
       {
@@ -939,12 +725,7 @@
     "ISSN": "0003-4851, 2168-8990",
     "issue": "3",
     "issued": {
-      "date-parts": [
-        [
-          "1951",
-          9
-        ]
-      ]
+      "date-parts": [["1951", 9]]
     },
     "page": "400–407",
     "publisher": "Institute of Mathematical Statistics",
@@ -958,13 +739,7 @@
     "id": "Polyak1964",
     "abstract": "For the solution of the functional equation P (x) = 0 (1) (where P is an operator, usually linear, from B into B, and B is a Banach space) iteration methods are generally used. These consist of the construction of a series x0, …, xn, …, which converges to the solution (see, for example [1]). Continuous analogues of these methods are also known, in which a trajectory x(t), 0 ⩽ t ⩽ ∞ is constructed, which satisfies the ordinary differential equation in B and is such that x(t) approaches the solution of (1) as t → ∞ (see [2]). We shall call the method a k-step method if for the construction of each successive iteration xn+1 we use k previous iterations xn, …, xn−k+1. The same term will also be used for continuous methods if x(t) satisfies a differential equation of the k-th order or k-th degree. Iteration methods which are more widely used are one-step (e.g. methods of successive approximations). They are generally simple from the calculation point of view but often converge very slowly. This is confirmed both by the evaluation of the speed of convergence and by calculation in practice (for more details see below). Therefore the question of the rate of convergence is most important. Some multistep methods, which we shall consider further, which are only slightly more complicated than the corresponding one-step methods, make it possible to speed up the convergence substantially. Note that all the methods mentioned below are applicable also to the problem of minimizing the differentiable functional (x) in Hilbert space, so long as this problem reduces to the solution of the equation grad (x) = 0.",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          16
-        ]
-      ]
+      "date-parts": [["2026", 2, 16]]
     },
     "author": [
       {
@@ -979,13 +754,7 @@
     "ISSN": "0041-5553",
     "issue": "5",
     "issued": {
-      "date-parts": [
-        [
-          "1964",
-          1,
-          1
-        ]
-      ]
+      "date-parts": [["1964", 1, 1]]
     },
     "page": "1–17",
     "source": "ScienceDirect",
@@ -997,13 +766,7 @@
   {
     "id": "Qian1999",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          13
-        ]
-      ]
+      "date-parts": [["2026", 2, 13]]
     },
     "author": [
       {
@@ -1018,12 +781,7 @@
     "ISSN": "08936080",
     "issue": "1",
     "issued": {
-      "date-parts": [
-        [
-          "1999",
-          1
-        ]
-      ]
+      "date-parts": [["1999", 1]]
     },
     "language": "en",
     "page": "145–151",
@@ -1037,13 +795,7 @@
     "id": "Nesterov1983",
     "abstract": "Semantic Scholar extracted view of \"A method for solving the convex programming problem with convergence rate O(1/k^2)\" by Y. Nesterov",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          16
-        ]
-      ]
+      "date-parts": [["2026", 2, 16]]
     },
     "author": [
       {
@@ -1054,11 +806,7 @@
     "citation-key": "Nesterov1983",
     "container-title": "Proceedings of the USSR Academy of Sciences",
     "issued": {
-      "date-parts": [
-        [
-          "1983"
-        ]
-      ]
+      "date-parts": [["1983"]]
     },
     "source": "Semantic Scholar",
     "title": "A method for solving the convex programming problem with convergence rate O(1/k^2)",
@@ -1068,13 +816,7 @@
   {
     "id": "Koolen2017",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          19
-        ]
-      ]
+      "date-parts": [["2026", 2, 19]]
     },
     "author": [
       {
@@ -1084,13 +826,7 @@
     ],
     "citation-key": "Koolen2017",
     "issued": {
-      "date-parts": [
-        [
-          "2017",
-          1,
-          21
-        ]
-      ]
+      "date-parts": [["2017", 1, 21]]
     },
     "title": "The Advantage of Full AdaGrad",
     "type": "webpage",
@@ -1100,13 +836,7 @@
     "id": "Duchi2011",
     "abstract": "We present a new family of subgradient methods that dynamically incorporate knowledge of the geometry of the data observed in earlier iterations to perform more informative gradient-based learning. Metaphorically, the adaptation allows us to find needles in haystacks in the form of very predictive but rarely seen features. Our paradigm stems from recent advances in stochastic optimization and online learning which employ proximal functions to control the gradient steps of the algorithm. We describe and analyze an apparatus for adaptively modifying the proximal function, which significantly simplifies setting a learning rate and results in regret guarantees that are provably as good as the best proximal function that can be chosen in hindsight. We give several efficient algorithms for empirical risk minimization problems with common and important regularization functions and domain constraints. We experimentally study our theoretical analysis and show that adaptive subgradient methods outperform state-of-the-art, yet non-adaptive, subgradient algorithms.",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          16
-        ]
-      ]
+      "date-parts": [["2026", 2, 16]]
     },
     "author": [
       {
@@ -1126,13 +856,7 @@
     "container-title": "J. Mach. Learn. Res.",
     "ISSN": "1532-4435",
     "issued": {
-      "date-parts": [
-        [
-          "2011",
-          7,
-          1
-        ]
-      ]
+      "date-parts": [["2011", 7, 1]]
     },
     "page": "2121–2159",
     "source": "ACM Digital Library",
@@ -1145,13 +869,7 @@
     "id": "Hinton2012",
     "abstract": "Share your videos with friends, family and the world",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          16
-        ]
-      ]
+      "date-parts": [["2026", 2, 16]]
     },
     "citation-key": "Hinton2012",
     "director": [
@@ -1161,11 +879,7 @@
       }
     ],
     "issued": {
-      "date-parts": [
-        [
-          "2012"
-        ]
-      ]
+      "date-parts": [["2012"]]
     },
     "language": "en-GB",
     "title": "Neural Networks for Machine Learning",
@@ -1175,13 +889,7 @@
     "id": "Zeiler2012",
     "abstract": "We present a novel per-dimension learning rate method for gradient descent called ADADELTA. The method dynamically adapts over time using only first order information and has minimal computational overhead beyond vanilla stochastic gradient descent. The method requires no manual tuning of a learning rate and appears robust to noisy gradient information, different model architecture choices, various data modalities and selection of hyperparameters. We show promising results compared to other methods on the MNIST digit classification task using a single machine and on a large scale voice dataset in a distributed cluster environment.",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          16
-        ]
-      ]
+      "date-parts": [["2026", 2, 16]]
     },
     "author": [
       {
@@ -1192,11 +900,7 @@
     "citation-key": "Zeiler2012",
     "DOI": "10.48550/ARXIV.1212.5701",
     "issued": {
-      "date-parts": [
-        [
-          "2012"
-        ]
-      ]
+      "date-parts": [["2012"]]
     },
     "license": "arXiv.org perpetual, non-exclusive license",
     "publisher": "arXiv",
@@ -1211,13 +915,7 @@
     "id": "Kingma2017",
     "abstract": "We introduce Adam, an algorithm for first-order gradient-based optimization of stochastic objective functions, based on adaptive estimates of lower-order moments. The method is straightforward to implement, is computationally efficient, has little memory requirements, is invariant to diagonal rescaling of the gradients, and is well suited for problems that are large in terms of data and/or parameters. The method is also appropriate for non-stationary objectives and problems with very noisy and/or sparse gradients. The hyper-parameters have intuitive interpretations and typically require little tuning. Some connections to related algorithms, on which Adam was inspired, are discussed. We also analyze the theoretical convergence properties of the algorithm and provide a regret bound on the convergence rate that is comparable to the best known results under the online convex optimization framework. Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. Finally, we discuss AdaMax, a variant of Adam based on the infinity norm.",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          10
-        ]
-      ]
+      "date-parts": [["2026", 2, 10]]
     },
     "author": [
       {
@@ -1232,13 +930,7 @@
     "citation-key": "Kingma2017",
     "DOI": "10.48550/arXiv.1412.6980",
     "issued": {
-      "date-parts": [
-        [
-          "2017",
-          1,
-          30
-        ]
-      ]
+      "date-parts": [["2017", 1, 30]]
     },
     "number": "arXiv:1412.6980",
     "publisher": "arXiv",
@@ -1252,13 +944,7 @@
     "id": "Reddi2018",
     "abstract": "Several recently proposed stochastic optimization methods that have been successfully used in training deep networks such as RMSProp, Adam, Adadelta, Nadam are based on using gradient updates scaled by square roots of exponential moving averages of squared past gradients. In many applications, e.g. learning with large output spaces, it has been empirically observed that these algorithms fail to converge to an optimal solution (or a critical point in nonconvex settings). We show that one cause for such failures is the exponential moving average used in the algorithms. We provide an explicit example of a simple convex optimization setting where Adam does not converge to the optimal solution, and describe the precise problems with the previous analysis of Adam algorithm. Our analysis suggests that the convergence issues can be fixed by endowing such algorithms with `long-term memory' of past gradients, and propose new variants of the Adam algorithm which not only fix the convergence issues but often also lead to improved empirical performance.",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          13
-        ]
-      ]
+      "date-parts": [["2026", 2, 13]]
     },
     "author": [
       {
@@ -1277,13 +963,7 @@
     "citation-key": "Reddi2018",
     "container-title": "ArXiv",
     "issued": {
-      "date-parts": [
-        [
-          "2018",
-          2,
-          15
-        ]
-      ]
+      "date-parts": [["2018", 2, 15]]
     },
     "source": "Semantic Scholar",
     "title": "On the Convergence of Adam and Beyond",
@@ -1294,13 +974,7 @@
     "id": "Loshchilov2019",
     "abstract": "L$_2$ regularization and weight decay regularization are equivalent for standard stochastic gradient descent (when rescaled by the learning rate), but as we demonstrate this is \\emph{not} the case for adaptive gradient algorithms, such as Adam. While common implementations of these algorithms employ L$_2$ regularization (often calling it \"weight decay\" in what may be misleading due to the inequivalence we expose), we propose a simple modification to recover the original formulation of weight decay regularization by \\emph{decoupling} the weight decay from the optimization steps taken w.r.t. the loss function. We provide empirical evidence that our proposed modification (i) decouples the optimal choice of weight decay factor from the setting of the learning rate for both standard SGD and Adam and (ii) substantially improves Adam's generalization performance, allowing it to compete with SGD with momentum on image classification datasets (on which it was previously typically outperformed by the latter). Our proposed decoupled weight decay has already been adopted by many researchers, and the community has implemented it in TensorFlow and PyTorch; the complete source code for our experiments is available at https://github.com/loshchil/AdamW-and-SGDW",
     "accessed": {
-      "date-parts": [
-        [
-          "2026",
-          2,
-          16
-        ]
-      ]
+      "date-parts": [["2026", 2, 16]]
     },
     "author": [
       {
@@ -1315,13 +989,7 @@
     "citation-key": "Loshchilov2019",
     "DOI": "10.48550/arXiv.1711.05101",
     "issued": {
-      "date-parts": [
-        [
-          "2019",
-          1,
-          4
-        ]
-      ]
+      "date-parts": [["2019", 1, 4]]
     },
     "number": "arXiv:1711.05101",
     "publisher": "arXiv",
@@ -1329,5 +997,93 @@
     "title": "Decoupled Weight Decay Regularization",
     "type": "article",
     "URL": "http://arxiv.org/abs/1711.05101"
+  },
+  {
+    "id": "ArtemisII2025",
+    "author": [
+      {
+        "family": "NASA"
+      }
+    ],
+    "citation-key": "ArtemisII2025",
+    "container-title": "NASA",
+    "issued": {
+      "date-parts": [["2025"]]
+    },
+    "language": "en",
+    "title": "Artemis II",
+    "type": "webpage",
+    "URL": "https://www.nasa.gov/mission/artemis-ii/"
+  },
+  {
+    "id": "WikiAristarchus",
+    "author": [
+      {
+        "family": "Wikipedia contributors"
+      }
+    ],
+    "citation-key": "WikiAristarchus",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [["2025"]]
+    },
+    "language": "en",
+    "source": "Wikipedia",
+    "title": "Aristarchus of Samos",
+    "type": "webpage",
+    "URL": "https://en.wikipedia.org/wiki/Aristarchus_of_Samos"
+  },
+  {
+    "id": "WikiEratosthenes",
+    "author": [
+      {
+        "family": "Wikipedia contributors"
+      }
+    ],
+    "citation-key": "WikiEratosthenes",
+    "container-title": "Wikipedia",
+    "issued": {
+      "date-parts": [["2025"]]
+    },
+    "language": "en",
+    "source": "Wikipedia",
+    "title": "Eratosthenes",
+    "type": "webpage",
+    "URL": "https://en.wikipedia.org/wiki/Eratosthenes"
+  },
+  {
+    "id": "ParkerPi2026",
+    "author": [
+      {
+        "family": "Parker",
+        "given": "Matt"
+      }
+    ],
+    "citation-key": "ParkerPi2026",
+    "container-title": "Stand-up Maths",
+    "issued": {
+      "date-parts": [["2026", 3, 14]]
+    },
+    "language": "en",
+    "title": "Calculating pi from coin flips (without randomness)",
+    "type": "motion_picture",
+    "URL": "https://www.youtube.com/watch?v=kahGSss6SsU"
+  },
+  {
+    "id": "AtayevAstro",
+    "author": [
+      {
+        "family": "Atayev",
+        "given": "A."
+      }
+    ],
+    "citation-key": "AtayevAstro",
+    "issued": {
+      "date-parts": [["2025"]]
+    },
+    "language": "en",
+    "title": "astro: A Typst Package for Astronomical Diagrams",
+    "type": "webpage",
+    "URL": "https://astro.anvaratayev.com"
   }
 ]

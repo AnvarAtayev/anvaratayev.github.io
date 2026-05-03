@@ -107,6 +107,11 @@
     max-width: 45%;
   }
 
+  // {{< tmfigure dark-invert="true" >}}
+  img.tm-dark-invert {
+    filter: var(--figure-invert-filter);
+  }
+
   .clearfix::after {
     content: "";
     display: table;
