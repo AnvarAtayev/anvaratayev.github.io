@@ -256,7 +256,7 @@ although any accurate protractor will do, I was able to measure (again, not unde
 n & h [\text{m}] & \theta [\deg] & R_E [\text{m}]\\\\
 \hline
 1 & 250 & 0.50 & 6, 565, 404\\\\
-2 & 250 & 0.45 & 5, 425, 918\\\\
+2 & 250 & 0.55 & 5, 425, 918\\\\
 3 & 250 & 0.48 & 7, 123, 937
 \end{array} \\]
 
