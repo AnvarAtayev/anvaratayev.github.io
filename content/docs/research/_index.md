@@ -40,6 +40,11 @@ Researched, developed and maintained optimisation software for the design of aer
 {{< align-text left="**Mathematics Consultant** _DSTL & Nucleolus Software_" >}}
 Developed a trajectory-optimisation framework for routing UAV fleets to targets while minimising detection by adversarial electromagnetic sensors, maximising their localisation error, and accommodating coordinated jamming. This work led to the publication of [_Trajectory Optimisation of UAVs in the Electromagnetic Environment_](https://doi.org/10.1007/s11081-024-09893-5) in _Optimization and Engineering_ (2024).
 
+### Patents
+
+{{< align-text left="**[Design of an Aerodynamic Component Using Surrogate Modeling](https://patents.google.com/patent/WO2024094979A1/en)** _WO2024094979A1 · SmallSpark Space Systems Ltd (2024)_" >}}
+A computer-implemented method for aerodynamic design using surrogate modelling. A CFD solver evaluates designs parameterised by variable inputs; a surrogate is fitted to the resulting data and optimised to identify Pareto-optimal candidates. Iterative CFD refinement updates the surrogate until convergence, minimising expensive simulations while handling multiple conflicting objectives and constraints.
+
 ### Reports
 
 {{< align-text left="**[Determining the Conductance of Networks Created by Randomly Dispersed Cylinders](https://doi.org/10.33774/miir-2021-3pqt1-v2)**" >}}
