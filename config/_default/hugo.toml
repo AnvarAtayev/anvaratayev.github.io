@@ -15,6 +15,10 @@ enableGitInfo = true
 enableEmoji = true  # enable emojis
 publishDir = "public" # make compatible with github pages
 
+[outputs]
+  home    = ["HTML"]
+  section = ["HTML"]
+
 # Needed for mermaid/katex shortcodes
 # visit https://gohugo.io/getting-started/configuration-markup/#goldmark for more information
 [markup]
