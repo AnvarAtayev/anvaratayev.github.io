@@ -15,6 +15,7 @@ title: "About"
 {{< align-text left="**Junior Quantitative Researcher** _Man AHL_" right="2023 - 2025" >}}
 {{< align-text left="**Optimisation Engineer** _Smallspark Space Systems & University of Southampton_" right="2021 - 2022" >}}
 {{< align-text left="**Mathematics Consultant** _Self Employed_" right="2020 - 2022" >}}
+{{< align-text left="**Vice-President of the [SIAM-IMA Student Chapter](https://warwick.ac.uk/fac/sci/maths/currentstudents/currentpostgraduates/siamstudentchapter/)** _University of Warwick_" right="2020 - 2021" >}}
 {{< align-text left="**Teaching Assistant** _University of Warwick & University of Bath_" right="2016 - 2021" >}}
 {{< align-text left="**Research Assistant** _University of Bath_" right="2016 - 2017" >}}
 
