@@ -7,6 +7,7 @@ title: "Research"
 My research interests span a number of fields, although historically my work has been across
 - optimisation
 - calculus of variations
+- machine learning
 - mathematical physics
 - material science 
 - operations research
