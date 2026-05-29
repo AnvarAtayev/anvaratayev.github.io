@@ -37,7 +37,7 @@ title: "About"
   <div style="font-weight: bold;">Computer Languages</div>
   <div>Python, MATLAB, Bash/Shell, SQL, C++, R, HTML</div>
   <div style="font-weight: bold;">Systems, Software & Tools</div>
-  <div>Linux, {{< katex >}}\LaTeX{{< /katex >}}, Git, Docker, Airflow, Spark, ArcticDB, Bloomberg, <a href="https://www.texmacs.org/tmweb/home/welcome.en.html">TeXMacs</a>, Office, Mathematica, Maple</div>
+  <div>Linux, {{< katex class="text-math" >}}\LaTeX{{< /katex >}}, Git, Docker, Airflow, Spark, ArcticDB, Bloomberg, <a href="https://www.texmacs.org/tmweb/home/welcome.en.html">TeXMacs</a>, Office, Mathematica, Maple</div>
   <div style="font-weight: bold;">Languages</div>
   <div>English (Native), Russian (B1), Uzbek (A1)</div>
 </div>

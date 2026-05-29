@@ -496,6 +496,12 @@ a.social-link {
   }
 }
 
+// KaTeX inline math at text size (default is 1.2em)
+.text-math,
+.text-math .katex {
+  font-size: 1em !important;
+}
+
 .profile-icons {
   float: right;
   display: flex;
