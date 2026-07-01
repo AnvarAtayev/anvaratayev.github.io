@@ -20,7 +20,9 @@ title: "About"
 {{< align-text left="**Research Assistant** _University of Bath_" right="2016 - 2017" >}}
 
 
-## Awards
+## Awards & Accomplishments
+{{< align-text left="**[YC Startup School](https://events.ycombinator.com/yc-paris-sus)** _Station F, Paris, France (competitive international selection)_" right="2026" >}}
+{{< align-text left="**[UK Graduate Modelling Camp](https://gateway.newton.ac.uk/event/tgmw91/)** _Newton Gateway, University of Cambridge (competitive selection)_" right="2021" >}}
 {{< align-text left="**EPSRC Doctoral Studentship** _University of Warwick_" right="2018" >}}
 {{< align-text left="**Best Master's Thesis** _University of Bath_" right="2018" >}}
 {{< align-text left="**[IMA Small Grant Scheme](https://ima.org.uk/support/grants/small-grant-scheme/)** _IMA (competitive national selection)_" right="2017" >}}
