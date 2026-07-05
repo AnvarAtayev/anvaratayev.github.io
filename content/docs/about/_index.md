@@ -47,7 +47,7 @@ title: "About"
 ## Workshops, Conferences, & Summer Schools
 {{< align-text left="**Operating in the Future Electromagnetic Environment Symposium** _IET, Savoy Place, London, UK_" right="Nov 2022" >}}
 {{< align-text left="**Anisotropic Isoperimetric Problems & Related Topics** _INDAM, Rome, Italy_" right="Sep 2022" >}}
-{{< align-text left="**Beyond Elasticity: Advances and Research Challenges** _CIRM, Marseille, France_" right="May 2022">}}
+{{< align-text left="**Beyond Elasticity: Advances and Research Challenges** _CIRM, Luminy, France_" right="May 2022">}}
 {{< align-text left="**165th European Study Group with Industry** _University of Durham, Durham, UK_" right="Apr 2021">}}
 {{< align-text left="**Graduate Modelling Camp** _University of Cambridge, Cambridge, UK_" right="Mar 2021">}}
 {{< align-text left="**Winterschool on Analysis and Applied Mathematics** _University of Münster, Münster, Germany_" right="Feb 2021">}}
@@ -62,6 +62,7 @@ title: "About"
 
 
 ## Talks & Poster Presentations
+{{< align-text left="**[Discrete Dislocations and the Read-Shockley Law](/files/read_shockley_law_luminy_2022.pdf)** _[Beyond Elasticity: Advances and Research Challenges](https://conferences.cirm-math.fr/2535.html), CIRM, Luminy, France_" right="May 2022">}}
 {{< align-text left="**Dislocations and Grain Boundaries** _SPAAM Seminar Series, University of Warwick, Coventry, UK_" right="Oct 2020">}}
 {{< align-text left="**LDP for Purely Laplacian Models** _MASDOC Retreat, Borth, Wales_" right="May 2019">}}
 {{< align-text left="**[Pattern Formation in Non-Newtonian Fluids](/files/pattern_formation_in_fluids_uob_2017.pdf)** _Mathematics Seminar Series, University of Bath, Bath, UK_" right="Nov 2017">}}
