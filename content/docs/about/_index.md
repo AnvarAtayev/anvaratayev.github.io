@@ -65,5 +65,6 @@ title: "About"
 {{< align-text left="**Dislocations and Grain Boundaries** _SPAAM Seminar Series, University of Warwick, Coventry, UK_" right="Oct 2020">}}
 {{< align-text left="**LDP for Purely Laplacian Models** _MASDOC Retreat, Borth, Wales_" right="May 2019">}}
 {{< align-text left="**Pattern Formation in Fluids** _University of Bath, Bath, UK_" right="Nov 2017">}}
+{{< align-text left="**[Pattern Formation in Non-Newtonian Fluids](/files/pattern_formation_in_fluids_uob_2017.pdf)** _Mathematics Seminar Series, University of Bath, Bath, UK_" right="Nov 2017">}}
 {{< align-text left="**Pattern Formation in Non-Newtonian Fluids** _SciCADE, University of Bath, Bath, UK_" right="Sep 2017">}}
 {{< align-text left="**Endorsement of IMI Undergraduate Research Internship** _University of Bath, Bath, UK_" right="Sep 2017">}}
