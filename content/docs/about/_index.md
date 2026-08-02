@@ -46,7 +46,7 @@ title: "About"
 
 ## Workshops, Conferences, & Summer Schools
 {{< align-text left="**[195th European Study Group with Industry](https://mathematics.exeter.ac.uk/esgi/)** _University of Exeter, Exeter, UK_" right="Jul 2026" >}}
-{{< align-text left="**[YC Startup School](https://events.ycombinator.com/yc-paris-sus)** Station F, Paris, France_" right="Jul 2026" >}}
+{{< align-text left="**[YC Startup School](https://events.ycombinator.com/yc-paris-sus)** _Station F, Paris, France_" right="Jul 2026" >}}
 {{< align-text left="**Operating in the Future Electromagnetic Environment Symposium** _IET, Savoy Place, London, UK_" right="Nov 2022" >}}
 {{< align-text left="**Anisotropic Isoperimetric Problems & Related Topics** _INDAM, Rome, Italy_" right="Sep 2022" >}}
 {{< align-text left="**Beyond Elasticity: Advances and Research Challenges** _CIRM, Luminy, France_" right="May 2022">}}
