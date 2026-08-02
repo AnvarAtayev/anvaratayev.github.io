@@ -45,6 +45,8 @@ title: "About"
 </div>
 
 ## Workshops, Conferences, & Summer Schools
+{{< align-text left="**[195th European Study Group with Industry](https://mathematics.exeter.ac.uk/esgi/)** _University of Exeter, Exeter, UK_" right="Jul 2026" >}}
+{{< align-text left="**[YC Startup School](https://events.ycombinator.com/yc-paris-sus)** Station F, Paris, France_" right="Jul 2026" >}}
 {{< align-text left="**Operating in the Future Electromagnetic Environment Symposium** _IET, Savoy Place, London, UK_" right="Nov 2022" >}}
 {{< align-text left="**Anisotropic Isoperimetric Problems & Related Topics** _INDAM, Rome, Italy_" right="Sep 2022" >}}
 {{< align-text left="**Beyond Elasticity: Advances and Research Challenges** _CIRM, Luminy, France_" right="May 2022">}}
@@ -52,7 +54,7 @@ title: "About"
 {{< align-text left="**Graduate Modelling Camp** _University of Cambridge, Cambridge, UK_" right="Mar 2021">}}
 {{< align-text left="**Winterschool on Analysis and Applied Mathematics** _University of Münster, Münster, Germany_" right="Feb 2021">}}
 {{< align-text left="**3rd Mathematical Study Group for Electromagnetic Challenges** _University of Cambridge, Cambridge, UK_" right="Jan 2021">}}
-{{< align-text left="**162nd European Study Group in Industry** _University of Leeds, Leeds, UK_" right="Jul 2020">}}
+{{< align-text left="**162nd European Study Group with Industry** _University of Leeds, Leeds, UK_" right="Jul 2020">}}
 {{< align-text left="**6th Applied Mathematics Symposium** _University of Münster, Münster, Germany_" right="Sep 2019">}}
 {{< align-text left="**MASDOC Annual Retreat** _Borth, Wales_" right="May 2019">}}
 {{< align-text left="**SAMBa Conference** _University of Bath, Bath, UK_" right="Jun 2018">}}
