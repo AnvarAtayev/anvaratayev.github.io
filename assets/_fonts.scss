@@ -4,6 +4,10 @@ body {
 
 code {
   font-family: 'Roboto Mono', monospace;
+  // Crimson Pro's x-height (~0.43em) is well below Roboto Mono's (~0.53em),
+  // so monospace at full size renders taller than the surrounding prose;
+  // 0.8em makes the two visually match wherever code appears.
+  font-size: 0.8em;
 }
 
 h1 { font-size: 1.6rem; font-weight: bold !important}

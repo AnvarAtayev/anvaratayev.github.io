@@ -4,3 +4,7 @@ resources/
 .hugo_build.lock
 generated/
 _vendor/
+
+# Python files
+*.pyc
+__pycache__/**

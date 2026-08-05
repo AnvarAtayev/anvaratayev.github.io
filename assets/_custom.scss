@@ -524,3 +524,26 @@ a.social-link {
     }
   }
 }
+
+// Benchmark sections: code block beside its results table.
+// flex-wrap plus a flex-basis on the code makes the pair stack whenever the
+// column is too narrow to hold both -- phones, but equally a laptop with the
+// menu and ToC open -- so no viewport media query is needed.
+.bench-pair {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: $padding-16;
+  margin: $padding-16 0;
+
+  > .highlight {
+    flex: 1 1 24rem;
+    min-width: 0; // let the code shrink; long lines scroll inside the pre
+    margin: 0;
+  }
+
+  > table {
+    flex: 0 1 auto;
+    margin: 0;
+  }
+}

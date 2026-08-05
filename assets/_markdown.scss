@@ -74,7 +74,6 @@
     padding: 0 $padding-4;
     background: var(--gray-200);
     border-radius: $border-radius;
-    font-size: 0.875em;
   }
 
   pre {
@@ -151,6 +150,7 @@
     }
   }
 
+  // Booktabs style: horizontal rules only, no grid, no striping.
   table {
     overflow: auto;
     display: block;
@@ -159,13 +159,33 @@
     margin-top: $padding-16;
     margin-bottom: $padding-16;
 
-    tr th,
-    tr td {
-      padding: $padding-8 $padding-16;
-      border: $padding-1 solid var(--gray-200);
+    th,
+    td {
+      padding: $padding-8 $padding-16 $padding-8 0;
+      border: none;
+      text-align: left;
+      vertical-align: baseline;
+
+      &:last-child {
+        padding-right: 0;
+      }
     }
 
-    tr:nth-child(2n) {
+    th {
+      font-weight: 600;
+      white-space: nowrap;
+      border-bottom: $padding-1 solid var(--gray-500);
+    }
+
+    td {
+      border-bottom: $padding-1 solid var(--gray-200);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
       background: var(--gray-100);
     }
   }
