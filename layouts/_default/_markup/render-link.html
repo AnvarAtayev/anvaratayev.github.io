@@ -7,8 +7,10 @@
 {{- define "portable-link" -}}
   {{- $destination := .Destination }}
   {{- $isRemote := or (in .Destination ":") (strings.HasPrefix .Destination "//") }}
-  {{- if not $isRemote }}
-    {{- $url := urls.Parse .Destination }}
+  {{- $url := urls.Parse .Destination }}
+  {{- /* A bare "#fragment" has no path; GetPage "" would resolve it to the
+         home page, turning same-page anchors into "/#fragment". */ -}}
+  {{- if and (not $isRemote) $url.Path }}
     {{- $path := strings.TrimSuffix "/_index.md" $url.Path }}
     {{- $path = strings.TrimSuffix "/_index" $path }}
     {{- $path = strings.TrimSuffix ".md" $path }}
