@@ -547,3 +547,202 @@ a.social-link {
     margin: 0;
   }
 }
+
+// Gap between cards in a deck row; shared by the strips and the game.
+$deckstrip-gap: 3px;
+
+// Controls for the playable `deckgame`; its cards are styled above.
+.deckgame {
+  .deckgame-status { margin: 0 0 $padding-4 0; font-size: 0.88rem; }
+
+  // Dealer on the left, the depleting deck on the right. The 1fr + 13fr split
+  // makes the dealer's card exactly one deck-cell wide, so every card on the
+  // page is the same size as well as the same style.
+  .deckgame-table {
+    display: grid;
+    grid-template-columns: 1fr 13fr;
+    gap: $padding-4 $padding-16;
+    align-items: start;
+    margin-bottom: $padding-16;
+  }
+
+  .deckgame-head {
+    margin: 0;
+    font-size: 0.72rem;
+    opacity: 0.75;
+  }
+
+  // A 13-cell row spends 12 gaps of width that the lone dealer cell does not,
+  // so trim its share to leave both cells exactly the same size.
+  .deckgame-card {
+    width: calc(100% - #{$deckstrip-gap} * 12 / 13);
+  }
+
+  // Bankroll trace: opening bankroll, one tile per round, closing bankroll.
+  .deckgame-history {
+    display: flex;
+    gap: $padding-4;
+    margin-top: $padding-16;
+    font-size: 0.68rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  // Wide enough for a six-figure bankroll, so the box does not resize as the
+  // running total gains and loses a digit. Widths are border-box, hence the
+  // padding and border added back on.
+  .deckgame-hist-start,
+  .deckgame-hist-end {
+    display: grid;
+    place-items: center;
+    min-width: calc(6ch + #{$padding-8} + 2px);
+    padding: 0 $padding-4;
+    border: 1px solid var(--gray-300);
+    white-space: nowrap;
+  }
+
+  // Twelve equal columns rather than a scrolling flex row. A scrolling track
+  // cannot hold its height -- the scrollbar claims some as soon as the tiles
+  // overflow -- which resized the bankroll boxes beside it mid-game.
+  .deckgame-hist-steps {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    flex: 1;
+    gap: 1px;
+  }
+
+  // Two lines only: the swing, then the side backed and its probability.
+  .deckgame-step {
+    display: grid;
+    min-width: 0;
+    overflow: hidden;
+    padding: 2px $padding-4;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    background: var(--gray-100);
+
+    span + span { opacity: 0.55; font-size: 0.9em; }
+    &.win  span:first-child { color: var(--deck-win); }
+    &.loss span:first-child { color: var(--deck-loss); }
+  }
+
+  // Memory mode: everything that encodes the running count is withheld.
+  // `visibility` rather than `display`, so the page does not jump on toggling.
+  &.deckgame-blind {
+    .deckgame-deckonly,
+    .deckgame-history { visibility: hidden; }
+  }
+
+  .deckgame-stakebox {
+    display: flex;
+    align-items: center;
+    gap: $padding-4;
+
+    output {
+      min-width: 4ch;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+
+  .deckgame-stake {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 9rem;
+    height: 1rem;
+    background: transparent;
+    cursor: pointer;
+
+    &::-webkit-slider-runnable-track {
+      height: 4px;
+      border-radius: 2px;
+      background: var(--gray-300);
+    }
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      margin-top: -5px; // centre the thumb on a 4px track
+      border-radius: 50%;
+      background: var(--body-font-color);
+    }
+    &::-moz-range-track {
+      height: 4px;
+      border-radius: 2px;
+      background: var(--gray-300);
+    }
+    &::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--body-font-color);
+    }
+    &:focus-visible {
+      outline: 2px solid var(--color-link);
+      outline-offset: 2px;
+    }
+  }
+
+  .deckgame-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: $padding-8;
+    margin: 0 0 $padding-8 0;
+
+    button { cursor: pointer; }
+    button:disabled { opacity: 0.4; cursor: default; }
+  }
+}
+
+// Deck strips for the higher/lower game, rendered by the `deckstrip` shortcode
+// and reused by the playable `deckgame`.
+.deckstrip, .deckgame {
+  margin: $padding-16 0 $padding-8;
+
+  .deckstrip-head {
+    margin: 0 0 $padding-4 0;
+    font-size: 0.88rem;
+  }
+
+  .deckstrip-row {
+    display: grid;
+    grid-template-columns: repeat(13, minmax(0, 1fr));
+    gap: $deckstrip-gap;
+  }
+
+  .deckstrip-c {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 3 / 4;
+    border: 1px solid var(--gray-300);
+    font-size: 0.78rem;
+    line-height: 1;
+
+    &.hi  { background: var(--gray-300); }
+    &.lo  { background: var(--gray-100); }
+    &.now {
+      background: var(--body-font-color);
+      color: var(--body-background);
+      border-color: var(--body-font-color);
+    }
+    &.out {
+      opacity: 0.3;
+      text-decoration: line-through;
+      border-style: dashed;
+    }
+  }
+
+  .deckstrip-brace {
+    margin-top: 3px;
+
+    span {
+      font-size: 0.72rem;
+      text-align: center;
+      padding-top: 3px;
+      border-top: 1px solid var(--gray-500);
+    }
+  }
+}
+

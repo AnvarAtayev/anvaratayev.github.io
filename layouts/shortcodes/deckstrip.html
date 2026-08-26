@@ -1,0 +1,50 @@
+{{- /*
+  deckstrip — one round of the higher/lower game, drawn as a strip of the deck.
+  Commentary is just the paragraph that follows it in the markdown.
+
+      {{< deckstrip sequence="2,10,5,3" round=2 >}}
+
+      The $2$ has already gone, so only eight cards lie below the $10$.
+
+    sequence  cards dealt in order. In round n the nth card is showing and the
+              (n+1)th is drawn; everything else is derived from that.
+    round     which round to draw, 1-based (default 1).
+*/ -}}
+
+{{- $deck := 13 -}}
+{{- $round := int (.Get "round" | default 1) -}}
+{{- $seq := apply (split (replace (.Get "sequence") " " "") ",") "int" "." -}}
+
+{{- if or (lt $round 1) (gt $round (sub (len $seq) 1)) -}}
+  {{- errorf "deckstrip: round %d outside 1..%d for sequence %q" $round (sub (len $seq) 1) (.Get "sequence") -}}
+{{- end -}}
+
+{{- $showing := index $seq (sub $round 1) -}}
+{{- $gone := first $round $seq -}}
+
+{{- $higher := 0 -}}
+{{- range $c := seq 1 $deck -}}
+  {{- if and (not (in $gone $c)) (gt $c $showing) -}}{{- $higher = add $higher 1 -}}{{- end -}}
+{{- end -}}
+{{- $lower := sub (sub $deck $round) $higher -}}
+
+<div class="deckstrip">
+  <p class="deckstrip-head">Round {{ $round }}</p>
+  <div class="deckstrip-row" role="img"
+       aria-label="Deck with {{ $showing }} showing: {{ $lower }} cards lower, {{ $higher }} higher">
+    {{- range $c := seq 1 $deck -}}
+      {{- $class := cond (gt $c $showing) "hi" "lo" -}}
+      {{- if eq $c $showing -}}{{- $class = "now" -}}
+      {{- else if in $gone $c -}}{{- $class = "out" -}}{{- end -}}
+      <div class="deckstrip-c {{ $class }}">{{ $c }}</div>
+    {{- end -}}
+  </div>
+  <div class="deckstrip-row deckstrip-brace">
+    {{- if gt $showing 1 }}
+    <span style="grid-column:1/span {{ sub $showing 1 }};">{{ $lower }} lower</span>
+    {{- end }}
+    {{- if lt $showing $deck }}
+    <span style="grid-column:{{ add $showing 1 }}/span {{ sub $deck $showing }};">{{ $higher }} higher</span>
+    {{- end }}
+  </div>
+</div>

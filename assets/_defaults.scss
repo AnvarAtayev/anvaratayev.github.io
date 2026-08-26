@@ -48,6 +48,9 @@ $hint-colors: (
   --hint-color-warning: #c49a3d;
   --hint-color-danger: #be5454;
 
+  --deck-win: #2f7a4f;
+  --deck-loss: #b3403f;
+
   --tooltip-bg: var(--body-font-color);
   --tooltip-color: var(--body-background);
   --tooltip-border: rgba(255,255,255,0.08);
@@ -72,6 +75,9 @@ $hint-colors: (
   --hint-color-info: #5a8d9e;
   --hint-color-warning: #c49a3d;
   --hint-color-danger: #be5454;
+
+  --deck-win: #6fbf8f;
+  --deck-loss: #e08585;
 
   --tooltip-bg: var(--body-font-color);
   --tooltip-color: var(--body-background);

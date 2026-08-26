@@ -1,0 +1,144 @@
+{{- /*
+  deckgame — a playable game of higher/lower. Draws its cards with the same
+  markup and classes as `deckstrip`, so every card on the page matches.
+
+  One button hides the deck, the counts and the bankroll trace together: each of
+  them gives away the running count, so memory practice needs all of them gone.
+  They start hidden, memory practice being the point of the exercise.
+*/ -}}
+<div class="deckgame">
+  <div class="deckgame-controls">
+    <label class="deckgame-stakebox">
+      Stake
+      <input type="range" class="deckgame-stake" min="0" step="100" value="0">
+      <output class="deckgame-stakeval">0</output>
+    </label>
+    <button type="button" class="deckgame-bet" data-side="lower">Lower</button>
+    <button type="button" class="deckgame-bet" data-side="higher">Higher</button>
+    <button type="button" class="deckgame-new">New game</button>
+    <button type="button" class="deckgame-reveal"></button>
+  </div>
+
+  <p class="deckgame-status"></p>
+
+  <div class="deckgame-table">
+    <p class="deckgame-head">Dealer</p>
+    <p class="deckgame-head deckgame-deckonly">Deck</p>
+    <div class="deckstrip-c now deckgame-card"></div>
+    <div class="deckgame-deckonly">
+      <div class="deckstrip-row deckgame-cards"></div>
+      <div class="deckstrip-row deckstrip-brace deckgame-brace"></div>
+    </div>
+  </div>
+
+  <div class="deckgame-history">
+    <div class="deckgame-hist-start"></div>
+    <div class="deckgame-hist-steps"></div>
+    <div class="deckgame-hist-end"></div>
+  </div>
+
+</div>
+
+<script>
+document.querySelectorAll('.deckgame').forEach(function (root) {
+  var DECK = 13, START = 1000, LOT = 100;
+  var $ = function (s) { return root.querySelector(s); };
+  var deck, pos, bank, over, hist, shown;
+
+  // Cards still in the deck, split either side of the one showing.
+  function state() {
+    var showing = deck[pos], gone = deck.slice(0, pos + 1), hi = 0, lo = 0;
+    for (var c = 1; c <= DECK; c++) {
+      if (gone.indexOf(c) < 0) { c > showing ? hi++ : lo++; }
+    }
+    return { showing: showing, gone: gone, hi: hi, lo: lo, n: hi + lo };
+  }
+
+  // The slider can never offer more than the bankroll holds.
+  function sizeStake() {
+    var el = $('.deckgame-stake');
+    el.max = bank;
+    if (+el.value > bank) { el.value = bank; }
+    $('.deckgame-stakeval').textContent = el.value;
+  }
+
+  function render() {
+    var s = state(), cards = '', steps = '', i;
+    root.classList.toggle('deckgame-blind', !shown);
+    $('.deckgame-reveal').textContent = shown ? 'Hide deck' : 'Show deck';
+    $('.deckgame-card').textContent = s.showing;
+    sizeStake();
+
+    for (i = 1; i <= DECK; i++) {
+      var k = i === s.showing ? 'now' : s.gone.indexOf(i) >= 0 ? 'out' : i > s.showing ? 'hi' : 'lo';
+      cards += '<div class="deckstrip-c ' + k + '">' + i + '</div>';
+    }
+    $('.deckgame-cards').innerHTML = cards;
+    $('.deckgame-brace').innerHTML =
+      (s.showing > 1 ? '<span style="grid-column:1/span ' + (s.showing - 1) + '">' + s.lo + ' lower</span>' : '') +
+      (s.showing < DECK ? '<span style="grid-column:' + (s.showing + 1) + '/span ' + (DECK - s.showing) + '">' + s.hi + ' higher</span>' : '');
+
+    $('.deckgame-status').textContent = over
+      ? 'Game over'
+      : 'Round ' + (pos + 1) + ' of ' + (DECK - 1);
+    $('.deckgame-hist-start').textContent = START;
+    $('.deckgame-hist-end').textContent = bank;
+    // The whole twelve-round track is laid out from the start, rounds not yet
+    // played as blank tiles of the same height, so neither the trace nor the
+    // bankroll boxes beside it resize once play begins.
+    for (i = 0; i < DECK - 1; i++) {
+      var h = hist[i];
+      if (!h) {
+        steps += '<div class="deckgame-step" aria-hidden="true"><span>&nbsp;</span><span>&nbsp;</span></div>';
+        continue;
+      }
+      steps += '<div class="deckgame-step ' + (h.d > 0 ? 'win' : h.d < 0 ? 'loss' : '') + '">' +
+        '<span>' + (h.d < 0 ? '−' : '+') + Math.abs(h.d) + '</span>' +
+        '<span>' + (h.side === 'higher' ? '↑' : '↓') + h.pn + '/' + h.pd + '</span>' +
+        '</div>';
+    }
+    $('.deckgame-hist-steps').innerHTML = steps;
+
+    root.querySelectorAll('.deckgame-bet').forEach(function (b) { b.disabled = over; });
+  }
+
+  function bet(side) {
+    if (over) { return; }
+    var s = state();
+    var stake = Math.min(bank, Math.max(0, Math.floor(($('.deckgame-stake').value || 0) / LOT) * LOT));
+    var next = deck[pos + 1];
+    var won = (next > s.showing) === (side === 'higher');
+    var backed = side === 'higher' ? s.hi : s.lo;
+
+    hist.push({ d: won ? stake : -stake, side: side, pn: backed, pd: s.n });
+    bank += won ? stake : -stake;
+    pos++;
+    over = pos >= DECK - 1 || bank <= 0;
+
+    $('.deckgame-stake').value = 0;
+    render();
+  }
+
+  function reset() {
+    deck = [];
+    for (var i = 1; i <= DECK; i++) { deck.push(i); }
+    for (var j = deck.length - 1; j > 0; j--) {
+      var r = Math.floor(Math.random() * (j + 1)), t = deck[j];
+      deck[j] = deck[r]; deck[r] = t;
+    }
+    pos = 0; bank = START; over = false; hist = [];
+    $('.deckgame-stake').value = 0;
+    render();
+  }
+
+  root.querySelectorAll('.deckgame-bet').forEach(function (b) {
+    b.addEventListener('click', function () { bet(b.dataset.side); });
+  });
+  $('.deckgame-stake').addEventListener('input', sizeStake);
+  $('.deckgame-new').addEventListener('click', reset);
+  $('.deckgame-reveal').addEventListener('click', function () { shown = !shown; render(); });
+
+  shown = false;
+  reset();
+});
+</script>
