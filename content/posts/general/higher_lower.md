@@ -1,5 +1,5 @@
 ---
-title: "Higher or lower"
+title: "Higher or Lower"
 date: 2026-08-26
 math: true
 tags: 'general'
