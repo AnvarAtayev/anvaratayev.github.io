@@ -18,9 +18,8 @@ refs:
 summary: >
     We discuss gradient descent based optimisation algorithms, starting from 
     simple gradient descent and slowly making our way to the famous Adam 
-    optimiser, motivating adaptations that lead to the optimisers along the 
-    way.
-title: "A Review of Descent Based Optimisation Algorithms"
+    optimiser, motivating each adaptation along the way.
+title: "A Review of Descent-Based Optimisation Algorithms"
 ---
 
 
@@ -32,14 +31,15 @@ Let $f : \mathbb{R}^n \rightarrow \mathbb{R}$ denote a smooth function, then
 the aim of a general optimisation (minimisation) problem is to find $\min 
 _{\theta} f (\theta)$ and the corresponding point(s) at which this minimum is 
 attained $\theta^{\ast} := \operatorname{argmin}_{\theta} f (\theta)$. If the 
-function is simple enough, we simply solve $\nabla f = 0$. Although, if $f$ is 
-complex, and the derivative is not easy to solve, one widely used option is to 
-take an iterative approach, i.e. find a sequence of points $(\theta _{k})_{k 
-\in \mathbb{N}}$ such that as $\theta _{k} \rightarrow \theta^{\ast}$, we get 
-$f (\theta _{k}) \rightarrow f (\theta^{\ast})$ as $k \rightarrow \infty$.
+function is simple enough, we solve $\nabla f = 0$ directly. However, if this 
+is hard to solve, one widely used option is to take an iterative approach, 
+i.e. find a sequence of points $(\theta _{k})_{k \in \mathbb{N}}$ such that 
+$\theta _{k} \rightarrow \theta^{\ast}$ (and hence $f (\theta _{k}) 
+\rightarrow f (\theta^{\ast})$) as $k \rightarrow \infty$.
 
 A general iterative approach can be classified as follows: find a sequence 
-$(\theta _{k})_{k}, (\alpha _{k})_{k}, (\boldsymbol{g}_{k})_{k}$ such that
+$(\theta _{k})_{k}, (\boldsymbol{\alpha}_{k})_{k}, (\boldsymbol{d}_{k})_{k}$ 
+such that
 
 $$
 \begin{eqnarray}
@@ -53,13 +53,13 @@ needs to take to get to the next point, and $\boldsymbol{\alpha}_{k} \in
 \mathbb{R}^{n \times n}$ represents the scale (also known as learning-rate), 
 i.e. the size of the step one needs to take in the direction 
 $\boldsymbol{d}_{k}$ to reach the next point, where the next point $\theta 
-_{k + 1}$ is slightly closer to the optimal solution $\theta^{\ast}$.
+_{k + 1}$ is (ideally) closer to the optimal solution $\theta^{\ast}$.
 
 Given this classification, we are left with two free parameters, scale and 
 direction. The question we ask ourselves now is, how should we choose these? 
 The history of descent-based optimisation can be understood as a series of 
 increasingly refined answers to this question. In this article, we outline the 
-history of descent based algorithms, and outline their approaches, see 
+history of descent-based algorithms and their approaches, see 
 {{< cite "Ruder2017" >}} for an additional summary.
 
 # 2 Gradient Descent
@@ -137,8 +137,8 @@ $t \leftarrow 0$ (Initialise time-step)
 {{% indent %}}
 $t \leftarrow t + 1$
 
-$g_{t} \leftarrow \nabla _{\theta} f_{t} (\theta _{t - 1})$ (Get gradients 
-with respect to objective at time $t$)
+$g_{t} \leftarrow \nabla _{\theta} f (\theta _{t - 1})$ (Get gradients 
+with respect to objective)
 
 $\theta _{t} \leftarrow \theta _{t - 1} - \alpha \cdot g_{t}$ (Update 
 parameters)
@@ -183,11 +183,11 @@ under stochastic gradient descent and mini-batch gradient descent.
 
 {{% description %}}
 {{% description-item title="Sensitive to Learning Rate" %}}
-The learning rate needs to be chosen carefully as to make sure convergence occurs, even for a convex function. If chosen too large, convergence does not occur, and if too small, convergence is slow.
+The learning rate needs to be chosen carefully so as to ensure convergence, even for a convex function. If chosen too large, convergence does not occur, and if too small, convergence is slow.
 {{% /description-item %}}
 
 {{% description-item title="Locally Optimal" %}}
-Solutions can often get stuck in local optima if the function is not convex, and therefore the approach is not necessarily the best to choose when seeking for globally optimal solutions. A simple way to address this is to employ noisy learning rates, i.e. set $\alpha = \eta + \varepsilon$ for some random noise $\varepsilon$.
+Iterates can get stuck in local optima if the function is not convex, and therefore the approach is not necessarily the best to choose when seeking globally optimal solutions. A simple way to address this is to employ noisy learning rates, i.e. set $\theta _{k + 1} = \theta _{k} - \alpha \nabla f (\theta _{k}) + \varepsilon _{k}$ for some random noise $\varepsilon _{k}$.
 {{% /description-item %}}
 
 {{% description-item title="Inefficient" %}}
@@ -203,12 +203,12 @@ function $f$ may be an expectation over a large (or infinite) population, or
 it may be a sum over a dataset so large that evaluating every term at each 
 iteration is impractical. A natural question arises: what happens if we 
 replace the true gradient with a noisy estimate $g = \nabla f + \varepsilon$, 
-where $\varepsilon$ is some noise can the algorithm still converge?
+where $\varepsilon$ is some zero-mean noise: can the algorithm still converge?
 
 ## 3.1 Robbins-Monro Conditions
 
-Fortunately, for the many methods that rely on this core principle, the answer 
-is yes, provided the learning rate is dynamic and is chosen appropriately. The 
+Fortunately, the answer is yes, provided the learning rate decays 
+appropriately. The 
 seminal work of Robbins and Monro, {{< cite "Robbins1951" >}}, 
 establishes that the iteration
 
@@ -220,12 +220,12 @@ $$
 
 where $g$ is an unbiased estimator of $\nabla f$, i.e. $\mathbb{E} [g 
 (\theta)] = \nabla f (\theta)$, converges to $\theta^{\ast}$ in probability 
-provided the step sizes, $\alpha _{k} > 0$, satisfy the following three 
+provided the step sizes, $\alpha _{k} > 0$, satisfy the following two 
 conditions:
 
 1. $\sum_{k = 1}^{\infty} \alpha _{k} = \infty$. The total distance the 
    algorithm can travel must be unbounded.
-1. $\sum_{k = 1}^{\infty} \alpha _{k}^2 < \infty$. The steps must 
+2. $\sum_{k = 1}^{\infty} \alpha _{k}^2 < \infty$. The steps must 
    eventually shrink fast enough to damp out the noise.
 
 These are referred to as the Robbins-Monro conditions. Together, the 
@@ -257,7 +257,7 @@ equation
 $$
 \begin{eqnarray}
   \theta _{k + 1} & = & \theta _{k} - \alpha _{k} \nabla \ell (h_{\theta _{k}}
-  (x_{\sigma (k)}, y_{\sigma (k)})) . \nonumber
+  (x_{\sigma (k)}), y_{\sigma (k)}) . \nonumber
 \end{eqnarray}
 $$
 
@@ -265,13 +265,13 @@ Indeed, we have that $g$ is an unbiased estimator of $\nabla f$, as
 
 $$
  \mathbb{E} [g (\theta) | ((x_{i}, y_{i}))_{i = 1}^N] = \frac{1}{N} \sum_{j
-   = 1}^N \nabla \ell (h_{\theta _{k}} (x_{j}), y_{j}) = \nabla f (\theta) .
+   = 1}^N \nabla \ell (h_{\theta} (x_{j}), y_{j}) = \nabla f (\theta) .
 $$
 
-Now, instead of requiring one to compute the gradient at $N$ different points, 
-one is only required to compute the gradient at one single point. This adds 
-noise to the descent process towards the minimum, visually seen as a jitter in 
-the optimal path, but with this increase in noise, we get a much more 
+Now, instead of requiring one to compute the gradient for $N$ samples, one is 
+only required to compute the gradient for a single sample. This adds noise to 
+the descent process towards the minimum, visually seen as a jitter in the 
+optimisation path, but with this increase in noise, we get a much more 
 computationally efficient algorithm.
 
 {{% algorithm number="2" title="(Stochastic Gradient Descent)" %}}
@@ -316,12 +316,11 @@ only one, mini-batch gradient descent computes the gradient over a random
 subset of size $b$. The resulting estimator $g_{t} = \frac{1}{b} \sum_{i \in 
 \mathcal{B}_{t}} \nabla f_{i} (\theta)$ is still unbiased, but its variance is 
 reduced by a factor of $b$ relative to single-sample SGD, since 
-$\operatorname{Var} (g_{t}) = \frac{1}{b} \operatorname{Var} (\nabla f_{i})$. 
-This smoothens the convergence to the (local) optimum while keeping the 
-per-step cost at $\mathcal{O} (b)$ rather than $\mathcal{O} (N)$. This 
-approach is typically used when compute parallelisation is available, and in 
-practice, $b$ is typically chosen as a power of 2 to exploit hardware 
-parallelism on GPUs.
+$\operatorname{Var} (g_{t}) \approx \frac{1}{b} \operatorname{Var} (\nabla 
+f_{i})$ (approximately, for $b \ll N$). This smooths the convergence to the 
+(local) optimum while keeping the per-step cost at $\mathcal{O} (b)$ rather 
+than $\mathcal{O} (N)$. In practice, $b$ is often chosen as a power of 2 to 
+exploit GPU parallelism.
 
 {{% algorithm number="3" title="(Mini-Batch Gradient Descent)" %}}
 **Require:** $\alpha _{0}$: Initial step size
@@ -341,7 +340,7 @@ $t \leftarrow t + 1$
 $\alpha _{t} \leftarrow \varphi (\alpha _{t - 1}, \ldots, \alpha _{0})$ (Decay 
 step size)
 
-$\mathcal{B}_{t} \sim$Sample $b$ indices from $\lbrace 1, \ldots, N \rbrace$ 
+$\mathcal{B}_{t} \leftarrow$ sample $b$ indices from $\lbrace 1, \ldots, N \rbrace$ 
 without replacement
 
 $g_{t} \leftarrow \frac{1}{b} \sum_{i \in \mathcal{B}_{t}} \nabla _{\theta} 
@@ -360,18 +359,18 @@ return $\theta _{t}$ (Resulting parameters)
 
 {{% description %}}
 {{% description-item title="Oscillation" %}}
-Suppose that our objective $f$ has narrow valleys with the optimum lying within that valley. Then, the gradient points mostly across the valley (towards the steep walls) and only weakly along it (towards the minimum). In particular, SGD will oscillate back and forth across the valley while making slow progress along it.
+Suppose that our objective $f$ has a narrow valley containing the optimum. Then, the gradient points mostly across the valley (towards the steep walls) and only weakly along it (towards the minimum). As a result, SGD will oscillate back and forth across the valley while making slow progress along it.
 {{% /description-item %}}
 
 {{% description-item title="Gradient Noise" %}}
-In the stochastic setting $g_{k}$ fluctuates around $\nabla f (x_{k})$. These fluctuations cause the trajectory to jitter, particularly near the optimum.
+In the stochastic setting $g_{k}$ fluctuates around $\nabla f (\theta _{k})$. These fluctuations cause the trajectory to jitter, particularly near the optimum.
 {{% /description-item %}}
 {{% /description %}}
 
-Both pathologies share a common structure, the harmful components of the 
+Both pathologies share a common structure: the harmful components of the 
 gradient (oscillations, noise) tend to change sign frequently, while the 
 useful components (the persistent descent direction) are consistent across 
-iterations. This suggests a natural fix, average the gradients over time. 
+iterations. This suggests a natural fix: average the gradients over time. 
 Components that are consistent will reinforce; components that oscillate or 
 fluctuate will cancel.
 
@@ -397,9 +396,7 @@ The method of momentum, introduced by Polyak in {{< cite
 designed to accelerate learning in the face of the two pathologies described 
 above: high-curvature oscillations and stochastic noise. The core idea is to 
 replace the raw gradient $g_{k}$ with a running average of past gradients, 
-which we call the velocity $m_{k}$. Because harmful components (oscillations, 
-noise) change sign frequently, averaging cancels them out; because the useful 
-descent direction is consistent, averaging reinforces it.
+which we call the velocity $m_{k}$.
 
 ### 4.1.1 Exponential Moving Average
 
@@ -438,7 +435,7 @@ $$
 \end{eqnarray}
 $$
 
-Expanding the second line reveals the structure
+Substituting the first line into the second reveals the structure
 
 $$
 \begin{eqnarray}
@@ -449,9 +446,9 @@ $$
 $$
 
 {{< tmfigure class="big-figure" marginal-caption="true" src="/images/posts/mathematics/20260210_descent_based_optimisation/fig-1.svg" width="50%">}}Figure 1.Polyak's heavy ball method. The update $\theta _{k + 1} = \theta 
-_{k} - \alpha m_{k}$ decomposes as a parallelogram. The gradient step $- 
-\alpha g_{k}$ (red) is evaluated at the current position $\theta _{k}$ plus 
-the momentum correction $\alpha \beta m_{k - 1}$ (orange).{{</tmfigure>}}
+_{k} - \alpha m_{k}$ decomposes as a parallelogram: the sum of the gradient 
+step $- \alpha g_{k}$ (red), evaluated at $\theta _{k}$, and the momentum 
+correction $- \alpha \beta m_{k - 1}$ (orange).{{</tmfigure>}}
 
 Under this convention, the velocity expands as $m_{k} = \sum_{j = 1}^k 
 \beta^{k - j} g_{j}$, which differs from the normalised EMA only by the factor 
@@ -506,14 +503,14 @@ return $\theta _{t}$ (Resulting parameters)
 Nesterov proposed a subtle but important variant, see {{< cite 
 "Nesterov1983" >}}. Standard momentum computes the gradient at the current 
 position $\theta _{k}$ and then adds the momentum correction. Nesterov 
-reverses the order, first apply the momentum to get a lookahead point, then 
+reverses the order: first apply the momentum to get a lookahead point, then 
 compute the gradient there
 
 $$
 \begin{eqnarray}
   \tilde{\theta}_{k} & = & \theta _{k} - \alpha \beta m_{k - 1} \nonumber\\\
   m_{k} & = & \beta m_{k - 1} + \nabla f (\tilde{\theta}_{k}) \nonumber\\\
-  \theta _{k + 1} & = & \theta _{k} - \alpha m_{k} . \nonumber\\\
+  \theta _{k + 1} & = & \theta _{k} - \alpha m_{k} \nonumber\\\
   & = & \theta _{k} - \alpha \nabla f (\tilde{\theta}_{k}) - \alpha \beta
   m_{k - 1} \nonumber
 \end{eqnarray}
@@ -523,7 +520,8 @@ The intuition is corrective: since momentum will carry us to approximately
 $\tilde{\theta}_{k}$ anyway, we should evaluate the gradient where we are 
 about to be, not where we currently are. If the momentum is overshooting (e.g. 
 past a minimum), the gradient at the lookahead point already points back, 
-providing an earlier course correction. For convex quadratics, this achieves 
+providing an earlier course correction. For smooth convex functions (with an 
+appropriate momentum schedule), this achieves 
 the optimal convergence rate among first-order methods: $\mathcal{O} (1 / 
 k^2)$ versus $\mathcal{O} (1 / k)$ for standard gradient descent.
 
@@ -550,8 +548,8 @@ and inverting the $n \times n$ Hessian costs $\mathcal{O} (n^3)$, which is
 prohibitive in modern applications. The adaptive methods below take a 
 different, cheaper approach: they use only first-order information to give 
 each coordinate its own step size. The form of this scaling is not chosen by 
-analogy with Newton, but emerges from a principled analysis of regret which 
-appears in online optimisation.
+analogy with Newton, but emerges from a regret analysis in online 
+optimisation.
 
 ### Regret and Per-Coordinate Step Sizes
 
@@ -569,10 +567,10 @@ $$
    f_{t} (\theta) .
 $$
 
-Regret is always non-negative, and an algorithm is considered good if $R_{T}$ 
-grows sub-linearly in $T$, meaning the average per-step penalty $R_{T} / T 
-\rightarrow 0$. Standard online gradient descent, with a scalar step size 
-$\alpha _{t} = \alpha / \sqrt{t}$, achieves $R_{T} =\mathcal{O} \left( 
+An algorithm is considered good if $R_{T}$ grows sub-linearly in $T$, meaning 
+the average per-step penalty $R_{T} / T \rightarrow 0$. Standard online 
+gradient descent, with a scalar step size $\alpha _{t} = \alpha / \sqrt{t}$, 
+achieves (for convex $f_{t}$ with bounded gradients and domain) $R_{T} =\mathcal{O} \left( 
 \sqrt{T} \right)$, but it treats every coordinate identically.
 
 To allow per-coordinate step sizes, we generalise the update to $\theta _{t + 
@@ -589,7 +587,7 @@ $$
 $$
 
 where $D_{i} = \max _{t} | \theta _{t, i} - \theta _{i}^{\ast} |$ is the 
-maximum distance coordinate $i$ travels from the optimum and $G_{T, i} = 
+maximum distance of coordinate $i$ from the optimum and $G_{T, i} = 
 \sum_{t = 1}^T g_{t, i}^2$ is the accumulated squared gradient.
 <!-- split -->
 {{% env type="proof" %}}
@@ -693,7 +691,7 @@ $$
 So the second term is bounded by $c_{i} \sqrt{G_{T, i}}$. Combining,
 
 $$
- \mathcal{R}_{T, i} \leqslant \sqrt{G_{T, i}} \left( \frac{D_{i}^2}{2 c_{i}}
+ R_{T, i} \leqslant \sqrt{G_{T, i}} \left( \frac{D_{i}^2}{2 c_{i}}
    \+ c_{i} \right) .
 $$
 
@@ -715,14 +713,16 @@ AdaGrad (Adaptive Gradient), see {{< cite "Duchi2011" >}}, implements
 exactly the step size derived above, absorbing the coordinate-specific 
 constant into a global learning rate $\alpha$. It maintains the running sum 
 $v_{t, i} = \sum_{\tau = 1}^t g_{\tau, i}^2$ and divides the learning rate for 
-each coordinate by $\sqrt{v_{t, i}}$, plus a regularising constant 
-$\varepsilon$, typically $10^{- 8}$ to avoid division by zero. Parameters that 
+each coordinate by $\sqrt{v_{t, i}}$, plus a small constant $\varepsilon$ 
+(typically $10^{- 8}$) to avoid division by zero. Parameters that 
 receive many large gradients accumulate a large denominator and take smaller 
 steps, while parameters associated with rare features keep a small denominator 
 and take larger steps.
 
 {{% algorithm number="5" title="(AdaGrad)" %}}
 **Require:** $\alpha$: Step size
+
+**Require:** $\varepsilon$: Small constant for numerical stability (typically $10^{- 8}$)
 
 **Require:** $f (\theta) = \frac{1}{N} \sum_{i = 1}^N f_{i} (\theta)$: Stochastic 
 objective function with parameters $\theta$
@@ -759,10 +759,10 @@ gradient entries are zero for a given coordinate, that coordinate's $v_{t, i}$
 stays small, so it retains a large effective step size and makes rapid 
 progress on the rare occasions it does receive a gradient. However, the 
 accumulator can only grow, so the effective learning rate $\alpha / 
-\sqrt{v_{t}}$ monotonically decreases. For convex problems this is desirable, 
+\sqrt{v_{t}}$ is non-increasing. For convex problems this is desirable, 
 but in deep learning, the learning rate often shrinks to the point that 
 training effectively stalls long before a good minimum is found, which is 
-where the next variant, RMSProp comes in.
+where the next variant, RMSProp, comes in.
 
 ### 4.2.2 RMSProp
 
@@ -782,6 +782,8 @@ forgotten and the effective learning rate can recover.
 
 {{% algorithm number="6" title="(RMSProp)" %}}
 **Require:** $\alpha$: Step size
+
+**Require:** $\varepsilon$: Small constant for numerical stability (typically $10^{- 8}$)
 
 **Require:** $\beta \in [0, 1)$: Exponential decay rate for the second moment 
 estimate
@@ -826,7 +828,7 @@ $[\theta]$ and the loss $f$ has units $[f]$, then the gradient $g = \partial f
 / \partial \theta$ has units $[f] / [\theta]$. A parameter update $\Delta 
 \theta := \theta _{t + 1} - \theta _{t}$ must have units $[\theta]$, so any 
 valid step-size multiplying $g$ must carry units $[\theta]^2 / [f]$. In 
-RMSProp, the update is $- \alpha g / \sqrt{v} + \varepsilon$, and since 
+RMSProp, the update is $- \alpha g / (\sqrt{v} + \varepsilon)$, and since 
 $\sqrt{v}$ has units $[f] / [\theta]$ (it is an RMS gradient), $g / \sqrt{v}$ 
 is dimensionless. That means $\alpha$ must carry all of $[\theta]$, but 
 $\alpha$ is just a scalar we tune by hand, with no knowledge of these units.
@@ -870,9 +872,9 @@ appear in the numerator. At step $t$ the current update $\theta _{t + 1} -
 running average. Second, the dimensional argument does not uniquely determine 
 the numerator: any quantity with units $[\theta]$ would restore the balance 
 (e.g. a fixed scale $D$, or $\| \theta _{t} - \theta _{0} \|$). Zeiler's 
-choice of the RMS of recent parameter changes a local and adaptive option that 
-aims to automatically reflect the current step scale without introducing a new 
-hyper-parameter.
+choice, the RMS of recent parameter changes, is a local and adaptive option 
+that aims to automatically reflect the current step scale without introducing 
+a new hyper-parameter.
 
 The role of $\varepsilon$ in the numerator is also worth noting. In the 
 denominator, $\varepsilon$ prevents division by zero, as in RMSProp, although 
@@ -898,22 +900,24 @@ they can be combined.
 
 Adam (Adaptive Moment Estimation), see {{< cite "Kingma2017" >}}, 
 answers this question by maintaining two EMAs simultaneously: one over the 
-gradient itself (the first moment $m_{t}$, as in Polyak momentum) and one over 
+gradient itself (the first moment $m_{t}$, the normalised EMA of Section 4.1.1) and one over 
 the squared gradient (the second moment $v_{t}$, as in RMSProp). The first 
 moment sets the direction, and the second provides the per-coordinate 
 normalisation that sets adaptive step sizes.
 
 There is one subtlety. Both EMAs are initialised at zero, so in the first few 
-iterations they are biased towards zero, underestimating the true moments. The 
-bias is exactly the factor $(1 - \beta^t)$ that appears in the EMA expansion. 
-At step $t$, the sum of the EMA weights is $(1 - \beta) \sum_{j = 0}^{t - 1} 
-\beta^j = 1 - \beta^t$, which is less than 1 when $t$ is small. Dividing by 
-this factor recovers an unbiased estimate. The correction is significant early 
+iterations they are biased towards zero, underestimating the true moments. At 
+step $t$, the EMA weights sum to $(1 - \beta) \sum_{j = 0}^{t - 1} \beta^j = 
+1 - \beta^t$, which is always less than 1, and noticeably so when $t$ is small. 
+Dividing by this factor recovers an unbiased estimate (assuming the gradient 
+distribution is stationary). The correction is significant early 
 on (for $\beta _{2} = 0.999$, the raw $v_{1}$ underestimates $\mathbb{E} 
 [g^2]$ by a factor of 1000) and vanishes as $t \rightarrow \infty$.
 
 {{% algorithm number="7" title="(Adam)" %}}
 **Require:** $\alpha$: Step size
+
+**Require:** $\varepsilon$: Small constant for numerical stability (typically $10^{- 8}$)
 
 **Require:** $\beta _{1}, \beta _{2} \in [0, 1)$: Exponential decay rates for the 
 moment estimates
@@ -1009,8 +1013,9 @@ $$
 
 The factor $(1 - \alpha \lambda)$ shrinks the parameters towards zero at each 
 step, which is why $L^2$ regularisation is often called *weight decay*. For 
-SGD, the two formulations are equivalent (up to a rescaling of $\lambda$ by 
-$\alpha$), and practitioners routinely treat them as interchangeable.
+SGD, $L^2$ regularisation and weight decay applied directly to the parameters, 
+$\theta _{t + 1} = (1 - \lambda') \theta _{t} - \alpha g_{t}$, are equivalent 
+with $\lambda' = \alpha \lambda$, and practitioners routinely treat them as interchangeable.
 
 However, for adaptive methods this equivalence breaks down. To see why, 
 consider what happens when we apply Adam to the regularised objective 
@@ -1058,14 +1063,14 @@ $$
 The magnitude of the penalty gradient has been normalised away – the update is 
 approximately $\pm \alpha$, regardless of how large $\lambda \theta _{i}$ is. 
 The intended decay, which should pull $\theta _{i}$ towards zero in proportion 
-to its magnitude, has been reduced to a constant-sized nudge. Conversely, a 
+to its magnitude, has been reduced to a constant-sized nudge. Meanwhile, a 
 parameter with large task gradients has a large $v_{t, i}$ that dilutes the 
 regularisation term even further.
 {{% /env %}}
 {{% /details %}}
 
 Loshchilov and Hutter, {{< cite "Loshchilov2019" >}}, showed that 
-this coupling is why Adam with $L^2$ regularisation often generalises worse 
+this coupling is a major reason why Adam with $L^2$ regularisation often generalises worse 
 than SGD with momentum on tasks such as image classification.
 
 AdamW fixes this by decoupling the weight decay from the adaptive gradient 
@@ -1078,19 +1083,22 @@ $$
 $$
 
 The first term is the standard Adam step, computed from the unregularised 
-gradient $g_{t} = \nabla f (\theta _{t})$ (not $\tilde{g}_{t}$). The second 
+gradient $g_{t} = \nabla f (\theta _{t - 1})$ (not $\tilde{g}_{t}$). The second 
 term applies the decay $\alpha \lambda \theta _{t - 1}$ uniformly to every 
 parameter, independent of $v_{t}$. A parameter with a large value is always 
 pulled back proportionally, regardless of its gradient history.
 
 This has two practical benefits. First, the regularisation strength is no 
 longer entangled with the second-moment statistics, so the decay acts as 
-intended. Second, the optimal weight decay factor $\lambda$ becomes largely 
-independent of the learning rate $\alpha$, simplifying hyper-parameter tuning. 
-In Adam with $L^2$ regularisation, changing $\alpha$ implicitly changes the 
-effective regularisation (since both interact through $v_{t}$), forcing a 
-joint search. In AdamW, the two can be tuned separately. AdamW has since 
-become the default optimiser in most modern deep learning frameworks.
+intended. Second, hyper-parameter tuning becomes simpler. In Adam with $L^2$ 
+regularisation, changing $\alpha$ implicitly changes the effective 
+regularisation (since both interact through $v_{t}$), forcing a joint search. 
+In the form above, $\alpha$ and $\lambda$ still interact through their product 
+$\alpha \lambda$, but no longer through $v_{t}$; Loshchilov and Hutter go 
+further, writing the decay as $\eta _{t} \lambda \theta _{t - 1}$ with a 
+separate schedule multiplier $\eta _{t}$, so that the optimal $\lambda$ becomes 
+largely independent of $\alpha$. AdamW has since become the default choice for 
+training large models.
 
 {{< references >}}
 
