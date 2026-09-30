@@ -4,16 +4,16 @@ baseURL = 'https://anvaratayev.com/'
 languageCode = 'en-gb'
 title = 'Anvar A.'
 
-# Theme settings
-[module]
-    [[module.imports]]
-        path = 'github.com/alex-shpak/hugo-book'
-
-# Core Hugo settings
+# Core Hugo settings (must precede any [table] header, otherwise TOML scopes them to that table)
 disablePathToLower = true # book configuration
 enableGitInfo = true
 enableEmoji = true  # enable emojis
 publishDir = "public" # make compatible with github pages
+
+# Theme settings
+[module]
+    [[module.imports]]
+        path = 'github.com/alex-shpak/hugo-book'
 
 [outputs]
   home    = ["HTML"]
