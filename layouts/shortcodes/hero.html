@@ -1,0 +1,12 @@
+{{- /* Thick banner image with an optional title over its top-left corner */ -}}
+<figure class="hero">
+  <div class="hero-frame">
+    <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}">
+    {{- with .Get "title" }}
+    <h2 class="hero-title">{{ . | emojify }}</h2>
+    {{- end }}
+  </div>
+  {{- with .Get "caption" }}
+  <figcaption>{{ . | markdownify }}</figcaption>
+  {{- end }}
+</figure>
