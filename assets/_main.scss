@@ -68,11 +68,30 @@ aside nav ul {
 ul.pagination {
   display: flex;
   justify-content: center;
+  gap: $padding-4;
   list-style-type: none;
   padding-inline-start: 0px;
 
-  .page-item a {
-    padding: $padding-16;
+  // Numbers only: hide Hugo's first/previous/next/last links
+  li:has(> [aria-label="First"]),
+  li:has(> [aria-label="Previous"]),
+  li:has(> [aria-label="Next"]),
+  li:has(> [aria-label="Last"]) {
+    display: none;
+  }
+
+  .page-link {
+    display: block;
+    padding: $padding-4 $padding-8;
+  }
+
+  a.page-link[href]:hover {
+    color: var(--body-font-color);
+  }
+
+  .active .page-link {
+    color: var(--body-font-color);
+    font-weight: bold;
   }
 }
 
