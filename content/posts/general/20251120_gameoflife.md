@@ -475,4 +475,4 @@ Tada!
 })();
 </script>
 
-{{< references >}}
+{{< bibliography >}}

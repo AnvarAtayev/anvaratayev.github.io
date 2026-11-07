@@ -290,4 +290,4 @@ properties of the Kelly betting system, {{< cite "MacLean2010" >}},
 and the application of the Kelly criterion for sports betting and Wall Street, 
 see {{< cite "Thorp2006" >}} and references therein.
 
-{{< references >}}
+{{< bibliography >}}

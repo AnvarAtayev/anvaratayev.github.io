@@ -29,9 +29,9 @@
     };
 
     const darkQuery = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");
-
     const applyFromOS = () => applyTheme(darkQuery && darkQuery.matches ? "dark" : "light");
 
+    // Sync toggle icons with the theme already applied in <head>.
     const stored = getStored();
     if (stored === "light" || stored === "dark") {
       applyTheme(stored);
@@ -53,6 +53,13 @@
       setStored(next);
       applyTheme(next);
     });
+
+    // Drop any previously registered Book theme service worker.
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+        regs.forEach(reg => reg.unregister());
+      });
+    }
   })();
 
   // Collapsible details blocks

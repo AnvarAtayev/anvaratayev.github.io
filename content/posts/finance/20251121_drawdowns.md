@@ -449,4 +449,4 @@ $$
 
 which is 520bd (2y) for a $\xi = 0.5$ strategy (quite a considerable time).
 
-{{< references >}}
+{{< bibliography >}}
