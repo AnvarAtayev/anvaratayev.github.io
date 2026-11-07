@@ -1100,6 +1100,6 @@ separate schedule multiplier $\eta _{t}$, so that the optimal $\lambda$ becomes
 largely independent of $\alpha$. AdamW has since become the default choice for 
 training large models.
 
-{{< references >}}
+{{< bibliography >}}
 
 

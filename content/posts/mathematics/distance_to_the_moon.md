@@ -294,4 +294,4 @@ true value - a truly remarkable result!
 ## Notes
 - The diagrams in this post were made in Typst using the package **astro** {{< cite "AtayevAstro" >}} - a package I created motivated by the TikZ-planets package for $\LaTeX$.
 
-{{< references >}}
+{{< bibliography >}}

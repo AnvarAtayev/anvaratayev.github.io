@@ -1,12 +1,42 @@
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/crimson-pro-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/crimson-pro-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/crimson-pro-latin-400-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/crimson-pro-latin-700-italic.woff2') format('woff2');
+}
+
 body {
-  font-family: 'Crimson Pro', serif;
+  font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif;
 }
 
 code {
-  font-family: 'Roboto Mono', monospace;
-  // Crimson Pro's x-height (~0.43em) is well below Roboto Mono's (~0.53em),
-  // so monospace at full size renders taller than the surrounding prose;
-  // 0.8em makes the two visually match wherever code appears.
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  // Crimson Pro's x-height is below typical monospace; scale code to match prose.
   font-size: 0.8em;
 }
 

@@ -483,6 +483,6 @@ $$
 precisely as required.
 {{% /env %}}
 
-{{< references >}}
+{{< bibliography >}}
 
 

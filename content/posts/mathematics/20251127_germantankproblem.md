@@ -675,4 +675,4 @@ i.e. $M$ is also a complete statistic. In particular, that
 $\hat{N}_{\operatorname{RB}} := \phi (\hat{N}_{\max}) = M \left( \frac{k + 
 1}{k} \right) - 1$ is the UMVUE.
 
-{{< references >}}
+{{< bibliography >}}
