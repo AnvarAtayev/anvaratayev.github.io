@@ -14,12 +14,29 @@ publishDir = "public" # make compatible with github pages
 [module]
     [[module.imports]]
         path = 'github.com/alex-shpak/hugo-book'
+        # Remount theme packages without theme static (mermaid, katex, asciinema,
+        # fuse are unused; search is off and math uses MathJax).
+        [[module.imports.mounts]]
+            source = 'layouts'
+            target = 'layouts'
+        [[module.imports.mounts]]
+            source = 'assets'
+            target = 'assets'
+        [[module.imports.mounts]]
+            source = 'i18n'
+            target = 'i18n'
+        [[module.imports.mounts]]
+            source = 'archetypes'
+            target = 'archetypes'
+        [[module.imports.mounts]]
+            source = 'data'
+            target = 'data'
 
 [outputs]
   home    = ["HTML"]
   section = ["HTML"]
 
-# Needed for mermaid/katex shortcodes
+# Goldmark passthrough keeps $$ / \( \) for MathJax
 # visit https://gohugo.io/getting-started/configuration-markup/#goldmark for more information
 [markup]
   [markup.goldmark]
