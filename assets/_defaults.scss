@@ -22,12 +22,6 @@ $toc-width: 16rem !default;
 
 $mobile-breakpoint: $menu-width + $body-min-width * 1.2 + $toc-width !default;
 
-$hint-colors: (
-  info: #5a8d9e,
-  warning: #c49a3d,
-  danger: #be5454,
-) !default;
-
 // Themes
 @mixin theme-light {
   --gray-100: #f6f5f4;
