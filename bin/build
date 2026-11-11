@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Single entrypoint: bibliography → Hugo → build-time KaTeX.
+set -euo pipefail
+root="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$root"
+
+if [[ -x "$root/bin/build-bib" ]]; then
+  "$root/bin/build-bib"
+fi
+
+if [[ ! -d "$root/node_modules/katex" ]]; then
+  npm ci
+fi
+
+hugo --minify "$@"
+node "$root/scripts/render-math.mjs"

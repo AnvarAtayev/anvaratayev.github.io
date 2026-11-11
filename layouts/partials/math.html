@@ -1,22 +1,2 @@
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
-      tags: 'ams',
-      packages: {'[+]': ['base', 'ams', 'color']}
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-      ignoreHtmlClass: '.*|',
-      processHtmlClass: '.*|'
-    },
-    loader: {
-      load: ['[tex]/ams', '[tex]/color']
-    },
-    startup: {
-      typeset: true
-    }
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+{{/* Math is rendered at build time by scripts/render-math.mjs (KaTeX).
+     This partial only marks the page; CSS is injected by the render script. */}}
