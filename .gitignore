@@ -11,3 +11,6 @@ __pycache__/
 
 # Node (KaTeX build-time renderer)
 node_modules/
+
+# Playwright CLI local snapshots
+.playwright-cli/
