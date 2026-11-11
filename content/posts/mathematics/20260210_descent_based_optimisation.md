@@ -692,7 +692,7 @@ So the second term is bounded by $c_{i} \sqrt{G_{T, i}}$. Combining,
 
 $$
  R_{T, i} \leqslant \sqrt{G_{T, i}} \left( \frac{D_{i}^2}{2 c_{i}}
-   \+ c_{i} \right) .
+   + c_{i} \right) .
 $$
 
 Minimising over $c_{i} > 0$ gives $c_{i} = D_{i} / \sqrt{2}$, and the 

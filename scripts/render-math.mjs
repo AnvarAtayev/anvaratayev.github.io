@@ -97,12 +97,24 @@ function normalizeTex(tex) {
   t = t.replace(/\\end\{align\}/g, '\\end{aligned}');
   if (wasEqnarray) {
     t = t.replace(/&\s*=\s*&/g, '&=');
-    t = t.replace(/\\nonumber\b/g, '');
-    // Source often writes `\nonumber\\\` — after stripping nonumber, collapse
-    // leftover `\\\` before a newline into a single LaTeX row break.
-    t = t.replace(/\\\\\\[ \t]*\n/g, '\\\\\n');
   }
+  // Drop amsmath-only / unsupported macros. Equation numbers stay via \tag;
+  // cross-refs already use HTML anchors (e.g. <span id="eq-gE">).
+  t = t.replace(/\\nonumber\b/g, '');
+  t = t.replace(/\\label\s*\{[^}]*\}/g, '');
+  t = t.replace(/\\eqref\s*\{[^}]*\}/g, '');
+  t = t.replace(/\\ref\s*\{[^}]*\}/g, '');
+  // Source often writes `\nonumber\\\` — after stripping nonumber, collapse
+  // leftover `\\\` before a newline into a single LaTeX row break.
+  t = t.replace(/\\\\\\[ \t]*\n/g, '\\\\\n');
+  // Accidental TeX `\+` (line-break + plus) → plain +.
+  t = t.replace(/\\\+/g, '+');
   return t;
+}
+
+function katexRenderFailed(html) {
+  // throwOnError:false emits .katex-error and/or red unknown-command mtext.
+  return html.includes('katex-error') || html.includes('mathcolor="#cc0000"');
 }
 
 function renderTex(tex, displayMode, stats) {
@@ -110,11 +122,15 @@ function renderTex(tex, displayMode, stats) {
   const normalized = normalizeTex(tex);
   try {
     const html = katex.renderToString(normalized, { ...KATEX_OPTS_BASE, displayMode });
-    // throwOnError:false still emits .katex-error nodes for some failures
-    if (html.includes('katex-error')) {
+    if (katexRenderFailed(html)) {
       stats.failed++;
-      const m = html.match(/title="([^"]*)"/);
-      stats.errors.push({ tex: normalized.slice(0, 120), message: m ? m[1] : 'katex-error' });
+      const m =
+        html.match(/class="katex-error"[^>]*title="([^"]*)"/) ||
+        html.match(/mathcolor="#cc0000"><mtext>([^<]*)<\/mtext>/);
+      stats.errors.push({
+        tex: normalized.slice(0, 120),
+        message: m ? m[1] : 'katex-error',
+      });
     } else {
       stats.ok++;
     }
