@@ -225,7 +225,7 @@ $$
    X_{0} e^{G (p) k}
 $$
 
-where $G (p) :=$$p \log (1 + \pi) + (1 - p) \log (1 - \pi)$ denotes 
+where $G (p) := p \log (1 + \pi) + (1 - p) \log (1 - \pi)$ denotes 
 the *growth rate*.
 
 Indeed, which $\pi (p)$ attains maximal growth is known as the Kelly 

@@ -1,0 +1,18 @@
+{
+  "name": "anvaratayev.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Personal site — Hugo build with KaTeX at build time",
+  "scripts": {
+    "build": "./bin/build",
+    "render-math": "node scripts/render-math.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnvarAtayev/anvaratayev.github.io.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "katex": "^0.16.21"
+  }
+}

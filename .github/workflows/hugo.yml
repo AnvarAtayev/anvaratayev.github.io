@@ -54,17 +54,12 @@ jobs:
       - name: Install Pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
-      - name: Render bibliography
-        run: ./bin/build-bib
-
-      - name: Build with Hugo
+      - name: Build (bibliography → Hugo → KaTeX)
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+          ./bin/build --baseURL "${{ steps.pages.outputs.base_url }}/"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
