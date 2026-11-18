@@ -81,3 +81,11 @@ BookTranslatedOnly = false
 [social]
   github = 'https://github.com/AnvarAtayev'
   linkedin = 'https://www.linkedin.com/in/anvarbek-atayev/'
+
+# Posts get comments by default. Use comments: false to opt out, or commentsId
+# to keep a discussion linked when a post's URL changes.
+[giscus]
+  repo = 'AnvarAtayev/anvaratayev.github.io'
+  repoId = 'MDEwOlJlcG9zaXRvcnkzNzI3OTk3MDU='
+  category = 'Announcements'
+  categoryId = 'DIC_kwDOFjh42c4DLdHu'
