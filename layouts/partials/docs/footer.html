@@ -1,17 +1,5 @@
+{{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
 <div class="flex flex-wrap justify-between">
-
-  {{ if and .GitInfo .Site.Params.BookRepo }}
-  <div>
-    {{- $date := partial "docs/date" (dict "Date" .GitInfo.AuthorDate.Local "Format" .Site.Params.BookDateFormat) -}}
-    {{- $commitPath := default "commit" .Site.Params.BookCommitPath -}}
-    <a class="flex align-center" href="{{ .Site.Params.BookRepo }}/{{ $commitPath }}/{{ .GitInfo.Hash }}"
-      title='{{ i18n "Last modified by" }} {{ .GitInfo.AuthorName }} | {{ $date }}' target="_blank" rel="noopener">
-      <span><small>Updated {{ $date }}</small></span>
-    </a>
-  </div>
-  {{ end }}
-
-  {{ if and .File .Site.Params.BookRepo .Site.Params.BookEditPath }}
   <div>
     <a class="flex align-center"
       href="{{ .Site.Params.BookRepo }}/{{ .Site.Params.BookEditPath }}/{{ .Site.Params.contentDir | default " content"
@@ -20,9 +8,8 @@
       <span>{{ i18n "Edit this page" }}</span>
     </a>
   </div>
-  {{ end }}
-
 </div>
+{{ end }}
 
 {{ $script := resources.Get "clipboard.js" | resources.Minify }}
 {{ with $script.Content }}

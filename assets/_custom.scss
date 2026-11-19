@@ -192,6 +192,18 @@ figure.big-figure img {
   color: var(--color-visited-link);
 }
 
+.post-dates {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: .75em;
+}
+
+.post-updated {
+  font-style: italic;
+  font-weight: 400;
+}
+
 // Styling for the blog post list preview
 .post-preview {
   font-size: 0.75rem;
