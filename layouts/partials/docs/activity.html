@@ -2,21 +2,17 @@
 {{- if $posts -}}
   {{- $earliest := (index ($posts.ByDate) 0).Date -}}
   {{- /* Rolling window: the last three years, never earlier than the first post. */ -}}
-  {{- $span := 36 -}}
   {{- $end := time (printf "%s-01" (now.Format "2006-01")) -}}
   {{- $first := time (printf "%s-01" ($earliest.Format "2006-01")) -}}
-  {{- $window := $end.AddDate 0 (sub 0 (sub $span 1)) 0 -}}
+  {{- $window := $end.AddDate -3 1 0 -}}
   {{- $start := $window -}}
   {{- if $first.After $window }}{{ $start = $first }}{{ end -}}
-  {{- $ey := int ($start.Format "2006") -}}
-  {{- $em := int ($start.Format "1") -}}
-  {{- $ty := int ($end.Format "2006") -}}
-  {{- $tm := int ($end.Format "1") -}}
-  {{- $count := add (add (mul (sub $ty $ey) 12) (sub $tm $em)) 1 -}}
+  {{- $cursor := $start -}}
   <section class="activity" aria-label="Writing activity">
     <div class="activity-row">
-      {{- range $i := seq 0 (sub $count 1) -}}
-        {{- $date := $start.AddDate 0 $i 0 -}}
+      {{- range seq 36 -}}
+        {{- if not ($cursor.After $end) -}}
+        {{- $date := $cursor -}}
         {{- $stamp := $date.Format "2006-01" -}}
         {{- $.Scratch.Set "published" (slice) -}}
         {{- $.Scratch.Set "updated" (slice) -}}
@@ -67,6 +63,8 @@
             <span class="{{ $class }}"></span>
           {{- end -}}
         </div>
+        {{- end -}}
+        {{- $cursor = $cursor.AddDate 0 1 0 -}}
       {{- end -}}
     </div>
     <div class="activity-tip" hidden></div>
