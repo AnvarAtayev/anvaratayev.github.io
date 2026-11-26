@@ -1,0 +1,122 @@
+{{- $posts := where site.RegularPages "Section" "posts" -}}
+{{- if $posts -}}
+  {{- $earliest := (index ($posts.ByDate) 0).Date -}}
+  {{- /* Rolling window: the last three years, never earlier than the first post. */ -}}
+  {{- $span := 36 -}}
+  {{- $end := time (printf "%s-01" (now.Format "2006-01")) -}}
+  {{- $first := time (printf "%s-01" ($earliest.Format "2006-01")) -}}
+  {{- $window := $end.AddDate 0 (sub 0 (sub $span 1)) 0 -}}
+  {{- $start := $window -}}
+  {{- if $first.After $window }}{{ $start = $first }}{{ end -}}
+  {{- $ey := int ($start.Format "2006") -}}
+  {{- $em := int ($start.Format "1") -}}
+  {{- $ty := int ($end.Format "2006") -}}
+  {{- $tm := int ($end.Format "1") -}}
+  {{- $count := add (add (mul (sub $ty $ey) 12) (sub $tm $em)) 1 -}}
+  <section class="activity" aria-label="Writing activity">
+    <div class="activity-row">
+      {{- range $i := seq 0 (sub $count 1) -}}
+        {{- $date := $start.AddDate 0 $i 0 -}}
+        {{- $stamp := $date.Format "2006-01" -}}
+        {{- $.Scratch.Set "published" (slice) -}}
+        {{- $.Scratch.Set "updated" (slice) -}}
+        {{- range $post := $posts -}}
+          {{- if eq ($post.Date.Format "2006-01") $stamp -}}
+            {{- $.Scratch.Add "published" $post -}}
+          {{- else -}}
+            {{- with $post.GitInfo -}}
+              {{- $posted := $post.Date.Format "2006-01" -}}
+              {{- if and (gt .AuthorDate.Unix $post.Date.Unix) (ne (.AuthorDate.Format "2006-01") $posted) (eq (.AuthorDate.Format "2006-01") $stamp) -}}
+                {{- $.Scratch.Add "updated" $post -}}
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $published := $.Scratch.Get "published" -}}
+        {{- $updated := $.Scratch.Get "updated" -}}
+        {{- $class := "activity-cell" -}}
+        {{- if gt (len $published) 0 -}}
+          {{- $class = "activity-cell is-post" -}}
+        {{- else if gt (len $updated) 0 -}}
+          {{- $class = "activity-cell is-update" -}}
+        {{- end -}}
+        {{- $bits := slice -}}
+        {{- if gt (len $published) 0 -}}
+          {{- range $published }}{{ $bits = $bits | append .Title }}{{ end -}}
+        {{- else if gt (len $updated) 0 -}}
+          {{- $bits = $bits | append "Updated" -}}
+        {{- end -}}
+        {{- $label := "" -}}
+        {{- $when := "" -}}
+        {{- if $bits -}}
+          {{- $when = $date.Format "Jan 2006" -}}
+          {{- $label = delimit $bits ", " -}}
+        {{- end -}}
+        {{- $href := "" -}}
+        {{- if and (eq (len $published) 1) (eq (len $updated) 0) -}}
+          {{- $href = (index $published 0).RelPermalink -}}
+        {{- else if and (eq (len $updated) 1) (eq (len $published) 0) -}}
+          {{- $href = (index $updated 0).RelPermalink -}}
+        {{- end -}}
+        <div class="activity-month">
+          {{- if $href -}}
+            <a class="{{ $class }}" href="{{ $href }}" data-when="{{ $when }}" data-label="{{ $label }}" aria-label="{{ $when }}. {{ $label }}"></a>
+          {{- else if $label -}}
+            <span class="{{ $class }}" data-when="{{ $when }}" data-label="{{ $label }}" role="img" aria-label="{{ $when }}. {{ $label }}"></span>
+          {{- else -}}
+            <span class="{{ $class }}"></span>
+          {{- end -}}
+        </div>
+      {{- end -}}
+    </div>
+    <div class="activity-tip" hidden></div>
+    <script>
+      (function () {
+        var section = document.currentScript.parentElement;
+        var tip = section.querySelector(".activity-tip");
+        if (!tip) return;
+        document.body.appendChild(tip);
+
+        var place = function (cell) {
+          var text = cell.getAttribute("data-label");
+          if (!text) {
+            tip.hidden = true;
+            return;
+          }
+          var when = cell.getAttribute("data-when");
+          tip.textContent = when ? when + "\n" + text : text;
+          tip.hidden = false;
+          tip.style.transform = "translate(-50%, calc(-100% - 8px))";
+          var rect = cell.getBoundingClientRect();
+          var x = rect.left + rect.width / 2;
+          var y = rect.top;
+          tip.style.left = x + "px";
+          tip.style.top = y + "px";
+          var box = tip.getBoundingClientRect();
+          if (box.top < 8) {
+            tip.style.transform = "translate(-50%, 8px)";
+            tip.style.top = rect.bottom + "px";
+          }
+          var edge = 8;
+          if (box.left < edge) tip.style.left = (x + (edge - box.left)) + "px";
+          if (box.right > window.innerWidth - edge) tip.style.left = (x - (box.right - (window.innerWidth - edge))) + "px";
+        };
+
+        section.addEventListener("pointerover", function (event) {
+          var cell = event.target.closest(".activity-cell");
+          if (cell) place(cell);
+        });
+        section.addEventListener("pointerout", function (event) {
+          var cell = event.target.closest(".activity-cell");
+          if (!cell || (event.relatedTarget && cell.contains(event.relatedTarget))) return;
+          tip.hidden = true;
+        });
+        section.addEventListener("focusin", function (event) {
+          var cell = event.target.closest(".activity-cell");
+          if (cell) place(cell);
+        });
+        section.addEventListener("focusout", function () { tip.hidden = true; });
+      })();
+    </script>
+  </section>
+{{- end -}}

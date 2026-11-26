@@ -5,6 +5,7 @@
     {{- with .Get "title" }}
     <h2 class="hero-title">{{ . | emojify }}</h2>
     {{- end }}
+    {{- partial "docs/activity.html" . -}}
   </div>
   {{- with .Get "caption" }}
   <figcaption>{{ . | markdownify }}</figcaption>

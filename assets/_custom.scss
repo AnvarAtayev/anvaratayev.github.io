@@ -94,7 +94,7 @@
 /* Hover effect for entire bibliography */
 .bibliography:hover {
     color: var(--body-font-color);  /* Darker text on hover */
-    border-top-color: var(--color-link);  /* Blue line on hover */
+    border-top-color: var(--color-link);
 }
 
 .bibliography h2 {
@@ -105,7 +105,7 @@
 }
 
 .bibliography:hover h2 {
-    color: var(--color-link);  /* Blue heading on hover */
+    color: var(--color-link);
 }
 
 .bibliography:hover li {
@@ -152,7 +152,7 @@
 
 .bibliography a:hover {
     text-decoration: underline;
-    color: var(--color-visited-link);  /* Darker blue on hover */
+    color: var(--color-visited-link);
 }
 
 /* Individual item link hover */
@@ -774,6 +774,79 @@ $deckstrip-gap: 3px;
 }
 
 
+// Home page writing calendar. One square per month, the last three years.
+// A bright mark is a new post, a dimmer mark is a later edit.
+.activity {
+  margin-top: 2rem;
+}
+
+.hero-frame .activity {
+  position: absolute;
+  z-index: 1;
+  left: 2rem;
+  right: 2rem;
+  bottom: 0.9rem;
+  margin: 0;
+
+  .activity-row {
+    flex-wrap: nowrap;
+  }
+
+  .activity-month {
+    flex: 1 1 8px;
+    max-width: 8px;
+    min-width: 4px;
+  }
+
+  .activity-cell {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+}
+
+.activity-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.activity-cell {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+  background: var(--gray-200);
+
+  &.is-post { background: var(--color-link); }
+  &.is-update { background: var(--color-update); }
+}
+
+a.activity-cell {
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    outline: 1px solid var(--body-font-color);
+    outline-offset: 1px;
+  }
+}
+
+.activity-tip {
+  position: fixed;
+  z-index: 30;
+  width: max-content;
+  max-width: 18rem;
+  padding: 0.25rem 0.45rem;
+  background: var(--body-font-color);
+  color: var(--body-background);
+  font-size: 0.75rem;
+  line-height: 1.35;
+  border-radius: 2px;
+  pointer-events: none;
+  white-space: pre-line;
+}
+
 // Home page recent posts list (shortcode: recent-posts)
 .recent-posts {
   margin-top: 2.5rem;
@@ -853,5 +926,11 @@ $deckstrip-gap: 3px;
   .markdown .hero-title {
     top: 1.25rem;
     left: 1.25rem;
+  }
+
+  .hero-frame .activity {
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 0.65rem;
   }
 }

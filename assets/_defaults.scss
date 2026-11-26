@@ -29,11 +29,12 @@ $mobile-breakpoint: $menu-width + $body-min-width * 1.2 + $toc-width !default;
   --gray-300: #d6d3d0;
   --gray-500: #807a76;
 
-  --color-link: #5a7e92;
-  --color-visited-link: #7a828a;
+  --color-link: #000000;
+  --color-visited-link: #5c656e;
+  --color-update: #9aa3ab;
 
-  --body-background: white;
-  --body-font-color: #2d2b2a;
+  --body-background: #ffffff;
+  --body-font-color: #2c3136;
 
   --icon-filter: none;
   --figure-invert-filter: none;
@@ -52,16 +53,17 @@ $mobile-breakpoint: $menu-width + $body-min-width * 1.2 + $toc-width !default;
 }
 
 @mixin theme-dark {
-  --gray-100: rgba(160, 148, 140, 0.08);
-  --gray-200: rgba(160, 148, 140, 0.15);
-  --gray-300: rgba(160, 148, 140, 0.22);
-  --gray-500: rgba(160, 148, 140, 0.4);
+  --gray-100: rgba(210, 220, 230, 0.06);
+  --gray-200: rgba(210, 220, 230, 0.14);
+  --gray-300: rgba(210, 220, 230, 0.22);
+  --gray-500: rgba(210, 220, 230, 0.46);
 
-  --color-link: #92b4cc;
-  --color-visited-link: #9ea8b0;
+  --color-link: #f4f7fa;
+  --color-visited-link: #9aa6b2;
+  --color-update: #667480;
 
-  --body-background: #0D0D0D;
-  --body-font-color: #e4e2e0;
+  --body-background: #000000;
+  --body-font-color: #c5ced6;
 
   --icon-filter: brightness(0) invert(1);
   --figure-invert-filter: invert(1) hue-rotate(180deg);
