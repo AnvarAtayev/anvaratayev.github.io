@@ -514,6 +514,21 @@ a.social-link {
   }
 }
 
+.github-holiday-hat {
+  display: none;
+  pointer-events: none;
+}
+
+[data-december] .social-link--github {
+  svg {
+    overflow: visible;
+  }
+
+  .github-holiday-hat {
+    display: inline;
+  }
+}
+
 .profile-icons {
   float: right;
   display: flex;
