@@ -63,13 +63,24 @@
         {{- if gt (len $styleParts) 0 -}}
             {{- $styleAttr = printf ` style="%s"` (delimit $styleParts " ") -}}
         {{- end -}}
+        {{/* Explicit alt, otherwise the plain text of the caption parameter or the shortcode body.
+             Drop TeX delimiters so the KaTeX build pass does not rewrite the attribute. */}}
+        {{- $alt := $.Get "alt" | strings.TrimSpace -}}
+        {{- if not $alt -}}
+            {{- with or ($.Get "caption") $.Inner | strings.TrimSpace -}}
+                {{- $alt = . | markdownify | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `\$` "" | replaceRE `\s+` " " | strings.TrimSpace -}}
+            {{- end -}}
+        {{- end -}}
         {{- if and $inline $resource -}}
-            <div{{ $styleAttr | safeHTMLAttr }}>{{ $resource.Content | safeHTML }}</div>
+            {{- $svg := $resource.Content -}}
+            {{- if and $alt (not (or (in $svg "aria-label") (in $svg "<title"))) -}}
+            <div role="img" aria-label="{{ $alt }}"{{ $styleAttr | safeHTMLAttr }}>{{ $svg | safeHTML }}</div>
+            {{- else -}}
+            <div{{ $styleAttr | safeHTMLAttr }}>{{ $svg | safeHTML }}</div>
+            {{- end -}}
         {{- else -}}
             <img src="{{$src | safeURL}}"
-                 {{- if or ($.Get "alt") ($.Get "caption") }}
-                     alt="{{ with $.Get "alt" }}{{ . }}{{ else }}{{ $.Get "caption" | markdownify | plainify }}{{ end }}"
-                 {{- end -}}
+                 {{- with $alt }} alt="{{ . }}"{{ end -}}
                  {{- if $widthIsNumber }} width="{{ $width }}"{{ end -}}
                  {{- if $heightIsNumber }} height="{{ $height }}"{{ end -}}
                  {{- if eq ($.Get "dark-invert") "true" }} class="tm-dark-invert"{{ end -}}

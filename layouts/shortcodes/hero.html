@@ -1,7 +1,7 @@
 {{- /* Thick banner image with an optional title over its top-left corner */ -}}
 <figure class="hero">
   <div class="hero-frame">
-    <img src="{{ .Get "src" | relURL }}" alt="{{ .Get "alt" }}">
+    <img src="{{ .Get "src" | relURL }}" alt="{{ with .Get "alt" | strings.TrimSpace }}{{ . }}{{ else }}{{ with .Get "caption" | strings.TrimSpace }}{{ . | markdownify | plainify | htmlUnescape | replaceRE `\s+` " " | replaceRE `\$` "" | replaceRE `\s+` " " | strings.TrimSpace }}{{ end }}{{ end }}">
     {{- with .Get "title" }}
     <h2 class="hero-title">{{ . | emojify }}</h2>
     {{- end }}
