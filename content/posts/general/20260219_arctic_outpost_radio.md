@@ -1,7 +1,7 @@
 ---
 title: "Arctic Outpost Radio"
 date: "2026-03-09"
-summary: "A short article on Arctic Outpost Radio AM1270, a vintage ratio station broadcasting from the top of the world."
+summary: "A short article on Arctic Outpost Radio AM1270, a vintage radio station broadcasting from the top of the world."
 ---
 
 A couple of years ago, whilst perusing the web, more specifically [RadioGarden](https://radio.garden), I came across the wonderful radio station [Arctic Outpost Radio AM1270](https://www.aor.am), broadcasting from the *top of the world* - more precisely Longyearbyen, Norway!
