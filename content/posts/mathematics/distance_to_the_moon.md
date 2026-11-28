@@ -31,7 +31,7 @@ We begin with an outline of the physics that will be necessary for this derivati
 
 ## 1.1 Newton's Law of Universal Gravitation
 
-{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/nlg.svg" float="right" width="30%" dark-invert="true" >}}{{< /tmfigure >}}
+{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/nlg.svg" float="right" width="30%" dark-invert="true" alt="Earth of mass m1 and the Moon of mass m2, a distance r apart, with the gravitational force F drawn from the Moon toward the Earth" >}}{{< /tmfigure >}}
 
 For two bodies of masses $m_1, m_2$ that are a distance $r$ apart (distance 
 between their centres of mass), the gravitational force exerted by one body 
@@ -45,7 +45,7 @@ where $G$ is the gravitational constant - which we need not know.
 
 ## 1.2 Newton's Second Law
 
-{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/newton-second-law.svg" float="left" width="20%" dark-invert="true" >}}{{< /tmfigure >}}
+{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/newton-second-law.svg" float="left" width="20%" dark-invert="true" alt="A body of mass m on the surface of the Earth, with the force F drawn downward into the Earth" >}}{{< /tmfigure >}}
 
 Newton's second law states that the acceleration of a body, $a$, is directly 
 proportional to the force experienced by it, $F$, and also inversely 
@@ -57,7 +57,7 @@ proportional to its mass, $m$; more commonly written as
 
 ## 1.3 Centripetal Force
 
-{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/centripetal.svg" float="right" width="30%" dark-invert="true" >}}{{< /tmfigure >}}
+{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/centripetal.svg" float="right" width="30%" dark-invert="true" alt="The Moon on a dashed circular orbit of radius r around the Earth, with tangential velocity v and centripetal acceleration a directed toward the Earth" >}}{{< /tmfigure >}}
 
 From the kinematics of curved motion, it is known that for an object moving at 
 tangential speed $v$ along a path with radius of curvature $r$, its acceleration
@@ -73,7 +73,7 @@ Using $v = \omega r$, we can also write this in terms of the angular velocity $\
 
 ## 1.4 Pendulum Period
 
-{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/pendulum.svg" float="left" width="20%" dark-invert="true" >}}{{< /tmfigure >}}
+{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/pendulum.svg" float="left" width="20%" dark-invert="true" alt="A simple pendulum of length ℓ at an angle θ from the vertical, with gravitational acceleration g acting downward on the bob" >}}{{< /tmfigure >}}
 
 The period of the swing of a simple pendulum, $T$, depends on the length of 
 the pendulum string, $\ell$, and the strength of local gravity $g$ via
@@ -232,7 +232,7 @@ the angle that the horizon makes versus when looking directly straight and
 perpendicular to where you are standing, calling this the drop angle, $\theta$. Drawing this 
 out in a diagram, we notice that the point from which we are standing, the point on the horizon that we can see and the centre of the Earth make a right-angled triangle, with hypotenuse $R_E + h$, adjacent $R_E$, and the angle between the hypotenuse and the adjacent being $\theta$.
 
-{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/earth-radius.svg" float="right" width="25%" dark-invert="true" >}}{{< /tmfigure >}}
+{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/earth-radius.svg" float="right" width="25%" dark-invert="true" alt="Right triangle for the Earth's radius: from a height h above the surface, the drop angle θ is measured from the horizontal down to the horizon. The line of sight is tangent to the Earth, the radius to the horizon is R_E, and the line from the centre to the observer is R_E + h, with the same angle θ at the centre" >}}{{< /tmfigure >}}
 
 By simple trigonometry (i.e. SOH**CAH**TOA), we can write
 
