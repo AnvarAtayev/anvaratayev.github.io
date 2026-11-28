@@ -1,5 +1,6 @@
 ---
 title: Home
+description: "A personal blog on personal interests including space, maths, the sciences, and finance."
 type: docs
 weight: 1
 bookToc: false

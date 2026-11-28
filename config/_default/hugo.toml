@@ -1,7 +1,8 @@
 # hugo server --minify --themesDir ../.. --baseURL=http://0.0.0.0:1313/theme/hugo-book/
 
 baseURL = 'https://anvaratayev.com/'
-languageCode = 'en-gb'
+languageCode = 'en-GB'
+enableRobotsTXT = true
 title = 'Anvar A.'
 
 # Core Hugo settings (must precede any [table] header, otherwise TOML scopes them to that table)

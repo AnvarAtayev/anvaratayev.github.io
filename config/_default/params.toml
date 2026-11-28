@@ -89,3 +89,9 @@ BookTranslatedOnly = false
   repoId = 'MDEwOlJlcG9zaXRvcnkzNzI3OTk3MDU='
   category = 'Announcements'
   categoryId = 'DIC_kwDOFjh42c4DLdHu'
+
+# Link-preview image (og:image / Twitter card) when a page has no cover or hero.
+# PNG of the site logo in favicon.svg; those previews do not reliably render SVG.
+[socialImage]
+  src = '/logo.png'
+  alt = 'Anvar A.'

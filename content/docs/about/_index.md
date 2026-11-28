@@ -1,6 +1,7 @@
 ---
 weight: 1
 title: "About"
+description: "About me page, outlining my education, experience, technical skills, and awards."
 ---
 ## Education
 
