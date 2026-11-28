@@ -57,7 +57,7 @@ proportional to its mass, $m$; more commonly written as
 
 ## 1.3 Centripetal Force
 
-{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/centripretal.svg" float="right" width="30%" dark-invert="true" alt="The Moon on a dashed circular orbit of radius r around the Earth, with tangential velocity v and centripetal acceleration a directed toward the Earth" >}}{{< /tmfigure >}}
+{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/centripetal.svg" float="right" width="30%" dark-invert="true" alt="The Moon on a dashed circular orbit of radius r around the Earth, with tangential velocity v and centripetal acceleration a directed toward the Earth" >}}{{< /tmfigure >}}
 
 From the kinematics of curved motion, it is known that for an object moving at 
 tangential speed $v$ along a path with radius of curvature $r$, its acceleration

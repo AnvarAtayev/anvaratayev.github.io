@@ -1,0 +1,36 @@
+name: Build site
+description: >-
+  Install the Hugo extended release pinned in .github/hugo-version, Pandoc,
+  and npm dependencies, then run ./bin/build with the GitHub Pages base URL.
+  Does not deploy.
+
+runs:
+  using: composite
+  steps:
+    - name: Install Hugo CLI
+      shell: bash
+      run: |
+        HUGO_VERSION="$(tr -d '[:space:]' < .github/hugo-version)"
+        test -n "$HUGO_VERSION"
+        wget -O ${{ runner.temp }}/hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+        hugo version
+
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v5
+
+    - name: Install Node.js dependencies
+      shell: bash
+      run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
+    - name: Install Pandoc
+      shell: bash
+      run: sudo apt-get update && sudo apt-get install -y pandoc
+
+    - name: Build (bibliography → Hugo → KaTeX)
+      shell: bash
+      env:
+        HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+        HUGO_ENVIRONMENT: production
+      run: ./bin/build --baseURL "${{ steps.pages.outputs.base_url }}/"
