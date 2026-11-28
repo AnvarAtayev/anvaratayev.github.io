@@ -1,14 +1,12 @@
 #!/usr/bin/env node
 /**
  * Build-time math rendering: walk Hugo's public/ HTML, replace TeX delimiters
- * with KaTeX HTML, copy KaTeX CSS/fonts into public/, strip any MathJax tags,
- * then compact the visual KaTeX tree (scripts/compact-katex.mjs). MathML stays.
+ * with KaTeX HTML, copy KaTeX CSS/fonts into public/, strip any MathJax tags.
  */
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import katex from 'katex';
-import { createVocab, scanHtml, finalizeVocab, compactHtml, rewriteCss } from './compact-katex.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
@@ -222,47 +220,6 @@ function processFile(file, stats) {
   return false;
 }
 
-function compactKatexOutput() {
-  const files = walkHtmlFiles(publicDir);
-  const vocab = createVocab();
-  const originals = new Map();
-  for (const file of files) {
-    const html = fs.readFileSync(file, 'utf8');
-    if (!html.includes('katex-html')) continue;
-    originals.set(file, html);
-    scanHtml(html, vocab);
-  }
-  if (!originals.size) return;
-  finalizeVocab(vocab);
-  if (!vocab.elements.length) {
-    // A second render-math pass sees tags instead of spans. Leave the rewritten CSS alone.
-    if ([...originals.values()].some((html) => html.includes('<k0'))) {
-      console.log('KaTeX compact: already compacted, skipped');
-    }
-    return;
-  }
-  let before = 0;
-  let after = 0;
-  for (const [file, html] of originals) {
-    const next = compactHtml(html, vocab);
-    const mathBefore = (html.match(/<math\b/g) || []).length;
-    const mathAfter = (next.match(/<math\b/g) || []).length;
-    if (mathBefore !== mathAfter) {
-      throw new Error(`KaTeX compact dropped MathML in ${path.relative(publicDir, file)}`);
-    }
-    fs.writeFileSync(file, next);
-    before += Buffer.byteLength(html);
-    after += Buffer.byteLength(next);
-  }
-  const cssPath = path.join(katexDist, 'katex.css');
-  const css = rewriteCss(fs.readFileSync(cssPath, 'utf8'), vocab);
-  fs.writeFileSync(path.join(publicDir, 'katex', 'katex.min.css'), css);
-  const saved = before ? ((before - after) / before) * 100 : 0;
-  console.log(
-    `KaTeX compact: ${originals.size} files, ${before} → ${after} bytes (${saved.toFixed(1)}% smaller), ${vocab.elements.length} class patterns, ${vocab.byStyle.size} styles`
-  );
-}
-
 function main() {
   if (!fs.existsSync(publicDir)) {
     console.error('public/ missing — run hugo first');
@@ -308,8 +265,6 @@ function main() {
     }
     if (stats.errors.length > 25) console.log(`  … ${stats.errors.length - 25} more`);
   }
-
-  compactKatexOutput();
 
   // Non-zero exit if many failures — still wrote error placeholders so pages are inspectable.
   const failRate = stats.attempted ? stats.failed / stats.attempted : 0;
