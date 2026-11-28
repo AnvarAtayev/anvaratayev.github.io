@@ -1,5 +1,6 @@
 ---
 title: Home
+description: "A small blog by Anvar, a quant, curious mind, and passionate learner, on space, maths, the sciences, and finance."
 type: docs
 weight: 1
 bookToc: false

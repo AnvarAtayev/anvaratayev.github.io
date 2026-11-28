@@ -89,3 +89,9 @@ BookTranslatedOnly = false
   repoId = 'MDEwOlJlcG9zaXRvcnkzNzI3OTk3MDU='
   category = 'Announcements'
   categoryId = 'DIC_kwDOFjh42c4DLdHu'
+
+# Fallback Open Graph / Twitter image when a page has no cover or hero.
+# The homepage hero (orbital sunrise).
+[socialImage]
+  src = '/images/orbital_rays.jpg'
+  alt = 'First rays of an orbital sunrise'
