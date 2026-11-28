@@ -13,6 +13,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "katex": "^0.16.21"
+    "katex": "0.19.1"
   }
 }

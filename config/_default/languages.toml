@@ -1,6 +1,6 @@
 [en]
-languageName = "English"
+label = "English"
 # html lang, og:locale, and RSS use this. With [en] defined, Hugo does not
-# fall back to the root languageCode (that path renders as "en").
-languageCode = "en-GB"
+# fall back to the root locale (that path renders as "en").
+locale = "en-GB"
 weight = 1

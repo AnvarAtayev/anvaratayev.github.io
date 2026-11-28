@@ -1,4 +1,4 @@
-{{- $bibEntries := .Site.Data.bib -}}
+{{- $bibEntries := hugo.Data.bib -}}
 {{- $page := .Page -}}
 {{- $citationList := $page.Store.Get "citationList" | default dict -}}
 {{- if $bibEntries -}}
