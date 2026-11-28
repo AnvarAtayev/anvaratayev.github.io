@@ -1,8 +1,8 @@
 name: Build site
 description: >-
-  Install the Hugo extended release pinned in .github/hugo-version, Pandoc,
-  and npm dependencies, then run ./bin/build with the GitHub Pages base URL.
-  Does not deploy.
+  Install the Hugo release pinned in .github/hugo-version, the Dart Sass
+  release pinned in .github/dart-sass-version, Pandoc, and npm dependencies,
+  then run ./bin/build with the GitHub Pages base URL. Does not deploy.
 
 runs:
   using: composite
@@ -12,9 +12,24 @@ runs:
       run: |
         HUGO_VERSION="$(tr -d '[:space:]' < .github/hugo-version)"
         test -n "$HUGO_VERSION"
-        wget -O ${{ runner.temp }}/hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb" \
+        # 0.170.0 retired the extended edition. The standard package includes
+        # the former extended features except embedded LibSass.
+        wget -O ${{ runner.temp }}/hugo.deb "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb" \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
         hugo version
+
+    - name: Install Dart Sass
+      shell: bash
+      run: |
+        SASS_VERSION="$(tr -d '[:space:]' < .github/dart-sass-version)"
+        test -n "$SASS_VERSION"
+        wget -O ${{ runner.temp }}/dart-sass.tar.gz "https://github.com/sass/dart-sass/releases/download/${SASS_VERSION}/dart-sass-${SASS_VERSION}-linux-x64.tar.gz"
+        rm -rf ${{ runner.temp }}/dart-sass
+        tar -C ${{ runner.temp }} -xzf ${{ runner.temp }}/dart-sass.tar.gz
+        sudo rm -rf /usr/local/dart-sass
+        sudo mv ${{ runner.temp }}/dart-sass /usr/local/dart-sass
+        sudo ln -sfn /usr/local/dart-sass/sass /usr/local/bin/sass
+        sass --version
 
     - name: Setup Pages
       id: pages

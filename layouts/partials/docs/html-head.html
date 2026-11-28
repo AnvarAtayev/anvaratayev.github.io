@@ -36,17 +36,20 @@
 <link rel="canonical" href="{{ .Permalink }}">
 
 {{- range .Translations }}
-<link rel="alternate" hreflang="{{ default .Language.Lang .Site.LanguageCode }}" href="{{ .Permalink }}"
+<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}"
   title="{{ partial " docs/title" . }}">
 {{- end -}}
 
-<!-- Theme stylesheet, you can customize scss by creating `assets/custom.scss` in your website -->
-{{- $styles := resources.Get "book.scss" | resources.ExecuteAsTemplate "book.scss" . | css.Sass |
+<!-- Theme stylesheet, you can customize scss by creating `assets/custom.scss` in your website.
+     hugo-book still uses Sass @import. Silence that deprecation until the theme moves to @use
+     (Dart Sass 3 removes @import). -->
+{{- $sassOpts := dict "silenceDeprecations" (slice "import") }}
+{{- $styles := resources.Get "book.scss" | resources.ExecuteAsTemplate "book.scss" . | css.Sass $sassOpts |
 resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" {{ template "integrity" $styles }}>
 
 {{- if default true .Site.Params.BookSearch -}}
-{{- $searchJSFile := printf "%s.search.js" .Language.Lang }}
+{{- $searchJSFile := printf "%s.search.js" .Language.Name }}
 {{- $searchJS := resources.Get "search.js" | resources.ExecuteAsTemplate $searchJSFile . | resources.Minify |
 resources.Fingerprint }}
 <script defer src="{{ " fuse.min.js" | relURL }}"></script>

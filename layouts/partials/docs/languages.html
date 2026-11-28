@@ -3,11 +3,11 @@
 {{ $translations := dict }}
 {{ if (eq $bookTranslatedOnly false ) }}
   {{ range .Site.Home.Translations }}
-    {{ $translations = merge $translations (dict .Language.Lang .) }}
+    {{ $translations = merge $translations (dict .Language.Name .) }}
   {{ end }}
 {{ end }}
 {{ range .Translations }}
-  {{ $translations = merge $translations (dict .Language.Lang .) }}
+  {{ $translations = merge $translations (dict .Language.Name .) }}
 {{ end }}
 
 <ul class="book-languages">
@@ -16,15 +16,15 @@
     <label for="languages" class="flex justify-between">
       <a role="button" class="flex align-center">
         <img src="{{ "svg/translate.svg" | relURL }}" class="book-icon" alt="Languages" />
-        {{ $.Site.Language.LanguageName }}
+        {{ $.Site.Language.Label }}
       </a>
     </label>
 
     <ul>
-      {{ range .Site.Languages }}{{ with index $translations .Lang }}
+      {{ range site.Languages }}{{ with index $translations .Name }}
       <li>
         <a href="{{ .Permalink }}">
-          {{ .Language.LanguageName }}
+          {{ .Language.Label }}
         </a>
       </li>
       {{ end }}{{ end }}

@@ -1,4 +1,4 @@
-{{- $poles := .Site.Data.poles -}}
+{{- $poles := hugo.Data.poles -}}
 {{- $id := .Get "id" -}}
 {{- if and $poles $id -}}
   {{- $matches := where $poles "id" "eq" $id -}}

@@ -29,7 +29,7 @@
       }
     };
 
-    {{- $poles := .Site.Data.poles | default (slice) -}}
+    {{- $poles := hugo.Data.poles | default (slice) -}}
     const poleData = {{ $poles | jsonify | safeJS }};
     const pointColors = {
       geographic: {
