@@ -1,6 +1,6 @@
 <div class="globe-embed" id="{{ .Get "id" }}" style="height:{{ .Get "height" | default "460px" }};"></div>
-<script src="https://unpkg.com/globe.gl"></script>
-<script src="https://unpkg.com/topojson-client@3"></script>
+<script src="https://unpkg.com/globe.gl@2.46.2/dist/globe.gl.min.js" integrity="sha384-1uolMBZ25k3zJcNwCLEv49+L+m2dZudqAzsoSAJfQTzDCSBxJzrMuZ2dkp/5JKiT" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
 <script>
   (function () {
     const el = document.getElementById("{{ .Get "id" }}");
