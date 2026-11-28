@@ -1,0 +1,32 @@
+# Same production build as "Deploy Hugo site to Pages", without deploying.
+name: Build Hugo site
+
+on:
+  pull_request:
+    branches: ["main"]
+
+# configure-pages reads the Pages site; this workflow never deploys.
+permissions:
+  contents: read
+  pages: read
+
+concurrency:
+  group: hugo-build-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Build (bibliography → Hugo → KaTeX)
+        uses: ./.github/actions/build-site
