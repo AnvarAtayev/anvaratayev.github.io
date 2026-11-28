@@ -90,8 +90,8 @@ BookTranslatedOnly = false
   category = 'Announcements'
   categoryId = 'DIC_kwDOFjh42c4DLdHu'
 
-# Fallback Open Graph / Twitter image when a page has no cover or hero.
-# The homepage hero (orbital sunrise).
+# Link-preview image (og:image / Twitter card) when a page has no cover or hero.
+# PNG of the site logo in favicon.svg; those previews do not reliably render SVG.
 [socialImage]
-  src = '/images/orbital_rays.jpg'
-  alt = 'First rays of an orbital sunrise'
+  src = '/logo.png'
+  alt = 'Anvar A.'

@@ -1,7 +1,7 @@
 ---
 weight: 1
 title: "About"
-description: "About Anvar: education, experience, awards, and technical skills, including a PhD in Mathematics and Statistics from the University of Warwick."
+description: "About me page, outlining my education, experience, technical skills, and awards."
 ---
 ## Education
 
