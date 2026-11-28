@@ -189,12 +189,12 @@
       "date-parts": [["2012", 9]]
     },
     "language": "en",
-    "license": "http://www.springer.com/tdm",
+    "license": "https://www.springer.com/tdm",
     "page": "739–752",
     "source": "DOI.org (Crossref)",
     "title": "Drawdowns and the Speed of Market Crash",
     "type": "article-journal",
-    "URL": "http://link.springer.com/10.1007/s11009-011-9262-7",
+    "URL": "https://link.springer.com/10.1007/s11009-011-9262-7",
     "volume": "14"
   },
   {
@@ -278,13 +278,13 @@
     "issued": {
       "date-parts": [["2002"]]
     },
-    "license": "http://www.springer.com/tdm",
+    "license": "https://www.springer.com/tdm",
     "publisher": "Birkhäuser",
     "publisher-place": "Basel",
     "source": "DOI.org (Crossref)",
     "title": "Handbook of Brownian Motion - Facts and Formulae",
     "type": "book",
-    "URL": "http://link.springer.com/10.1007/978-3-0348-8163-0"
+    "URL": "https://link.springer.com/10.1007/978-3-0348-8163-0"
   },
   {
     "id": "Shreve2008",
@@ -390,7 +390,7 @@
     "source": "DOI.org (Crossref)",
     "title": "An Empirical Approach to Economic Intelligence in World War II",
     "type": "article-journal",
-    "URL": "http://www.tandfonline.com/doi/abs/10.1080/01621459.1947.10501915",
+    "URL": "https://www.tandfonline.com/doi/abs/10.1080/01621459.1947.10501915",
     "volume": "42"
   },
   {
@@ -673,7 +673,7 @@
     "source": "arXiv.org",
     "title": "An overview of gradient descent optimization algorithms",
     "type": "article",
-    "URL": "http://arxiv.org/abs/1609.04747"
+    "URL": "https://arxiv.org/abs/1609.04747"
   },
   {
     "id": "Cauchy1897",
@@ -938,7 +938,7 @@
     "title": "Adam: A Method for Stochastic Optimization",
     "title-short": "Adam",
     "type": "article",
-    "URL": "http://arxiv.org/abs/1412.6980"
+    "URL": "https://arxiv.org/abs/1412.6980"
   },
   {
     "id": "Reddi2018",
@@ -996,7 +996,7 @@
     "source": "arXiv.org",
     "title": "Decoupled Weight Decay Regularization",
     "type": "article",
-    "URL": "http://arxiv.org/abs/1711.05101"
+    "URL": "https://arxiv.org/abs/1711.05101"
   },
   {
     "id": "ArtemisII2025",
