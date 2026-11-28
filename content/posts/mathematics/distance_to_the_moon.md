@@ -57,7 +57,7 @@ proportional to its mass, $m$; more commonly written as
 
 ## 1.3 Centripetal Force
 
-{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/centripretal.svg" float="right" width="30%" dark-invert="true" >}}{{< /tmfigure >}}
+{{< tmfigure src="/images/posts/mathematics/distance_to_the_moon/centripetal.svg" float="right" width="30%" dark-invert="true" >}}{{< /tmfigure >}}
 
 From the kinematics of curved motion, it is known that for an object moving at 
 tangential speed $v$ along a path with radius of curvature $r$, its acceleration
